@@ -1,0 +1,51 @@
+company_name,domain,industry,employees,revenue,country,technologies,email,website,decision_maker,linkedin_url,human_label
+CloudPilot Inc,cloudpilot.io,SaaS,180,12000000,United States,Salesforce,cto@cloudpilot.io,https://cloudpilot.io,Sarah Chen,https://linkedin.com/company/cloudpilot,HIGH
+ScaleForce,scaleforce.com,B2B SaaS,320,45000000,United States,HubSpot,hello@scaleforce.com,https://scaleforce.com,Mike Torres,,HIGH
+DataBridge Software,databridge.io,Software,90,8500000,United States,AWS,info@databridge.io,https://databridge.io,,,HIGH
+Reveno,reveno.com,SaaS,210,22000000,United States,CRM,james@reveno.com,https://reveno.com,James Liu,https://linkedin.com/company/reveno,HIGH
+PipelineAI,pipelineai.io,B2B SaaS,75,6000000,United States,Salesforce,team@pipelineai.io,https://pipelineai.io,Priya Shah,,HIGH
+TrackR SaaS,trackrsaas.com,SaaS,460,78000000,United States,cloud,sales@trackrsaas.com,https://trackrsaas.com,Emma Wright,https://linkedin.com/company/trackrsaas,HIGH
+Growlytics,growlytics.io,Software,130,15000000,United States,HubSpot,contact@growlytics.io,https://growlytics.io,Dan Park,,HIGH
+LeadStack,leadstack.com,B2B SaaS,250,30000000,United States,sales tooling,founders@leadstack.com,https://leadstack.com,Amy Ross,https://linkedin.com/company/leadstack,HIGH
+Omnideck,omnideck.io,SaaS,400,60000000,United States,AWS,hello@omnideck.io,https://omnideck.io,,,HIGH
+Pulsar CRM,pulsarcrm.com,Cloud Software,55,5500000,United States,CRM,ceo@pulsarcrm.com,https://pulsarcrm.com,Tom Reed,https://linkedin.com/company/pulsarcrm,HIGH
+Sendloop,sendloop.com,SaaS,620,120000000,United States,Salesforce,hello@sendloop.com,https://sendloop.com,Lisa Wong,,MEDIUM
+CloudNest,cloudnest.io,B2B SaaS,30,2000000,United States,HubSpot,info@cloudnest.io,https://cloudnest.io,,,MEDIUM
+Stackify,stackify.com,SaaS,280,35000000,Canada,cloud,team@stackify.com,https://stackify.com,Chris Moore,,MEDIUM
+Salesbridge UK,salesbridge.co.uk,Software,190,18000000,United Kingdom,CRM,sales@salesbridge.co.uk,https://salesbridge.co.uk,,,MEDIUM
+Pathwave,pathwave.io,SaaS,510,95000000,United States,AWS,hello@pathwave.io,https://pathwave.io,Raj Patel,,MEDIUM
+Amplify SaaS,amplifysaas.com,SaaS,22,1200000,United States,Salesforce,founders@amplifysaas.com,https://amplifysaas.com,Jen Kim,,MEDIUM
+Nexlify,nexlify.com,B2B SaaS,350,55000000,Germany,HubSpot,contact@nexlify.com,https://nexlify.com,Hans Mueller,https://linkedin.com/company/nexlify,MEDIUM
+RoutePro,routepro.io,Software,88,7500000,Australia,cloud,hello@routepro.io,https://routepro.io,,,MEDIUM
+VaultBase,vaultbase.com,SaaS,1200,200000000,United States,Salesforce,info@vaultbase.com,https://vaultbase.com,,,MEDIUM
+Segmentra,segmentra.io,Cloud Software,40,3500000,United States,AWS,team@segmentra.io,https://segmentra.io,Casey Hill,,MEDIUM
+RetailEdge,retailedge.com,E-commerce,200,25000000,United States,Salesforce,hello@retailedge.com,https://retailedge.com,Nina Scott,,LOW
+BuildTrack,buildtrack.io,Construction Tech,150,14000000,United States,cloud,info@buildtrack.io,https://buildtrack.io,,,LOW
+MediSync,medisync.com,HealthTech,300,40000000,United States,AWS,contact@medisync.com,https://medisync.com,Dr. Patel,,LOW
+EduFlow,eduflow.io,EdTech,120,10000000,United States,HubSpot,hello@eduflow.io,https://eduflow.io,Maria Lopez,,LOW
+LegalMind,legalmind.com,LegalTech,85,7000000,United States,CRM,team@legalmind.com,https://legalmind.com,,,LOW
+FinEdge,finedge.com,Fintech,400,65000000,United States,Salesforce,info@finedge.com,https://finedge.com,Arun Mehta,https://linkedin.com/company/finedge,LOW
+FarmLedger,farmledger.io,AgriTech,75,5000000,United States,cloud,hello@farmledger.io,https://farmledger.io,,,LOW
+TruckLink,trucklink.com,Logistics,250,30000000,United States,sales tooling,contact@trucklink.com,https://trucklink.com,Sam Carter,,LOW
+PropTechNow,proptechnow.com,Real Estate Tech,180,20000000,United States,AWS,info@proptechnow.com,https://proptechnow.com,,,LOW
+HRConnect,hrconnect.io,HR Tech,95,8000000,United States,HubSpot,team@hrconnect.io,https://hrconnect.io,Jane Ford,,LOW
+GhostApp,,SaaS,,,,,,,,,VERY_LOW
+Unnamed Startup,,,,,,,,,,https://linkedin.com/company/unnamed,VERY_LOW
+OldCo Inc,oldco.com,Manufacturing,8000,500000000,United States,,,,,,VERY_LOW
+TinyShop,tinyshop.biz,E-commerce,3,80000,United States,,,https://tinyshop.biz,,,VERY_LOW
+EuroData GmbH,eurodata.de,Software,700,150000000,Germany,,,https://eurodata.de,,,VERY_LOW
+MegaBank Corp,megabank.com,Financial Services,50000,10000000000,United States,Salesforce,,https://megabank.com,,,VERY_LOW
+FoodDeliver,fooddeliver.com,Food Delivery,1500,80000000,United States,,,,,,VERY_LOW
+PrintShop Pro,printshop.com,Printing,45,2000000,United States,,info@printshop.com,https://printshop.com,,,VERY_LOW
+LocalNews Inc,localnews.com,Media,60,4000000,United States,,hello@localnews.com,https://localnews.com,,,VERY_LOW
+GymTech,gymtech.io,Fitness Tech,20,900000,United States,,,https://gymtech.io,,,VERY_LOW
+NovaSaaS,novasaas.com,SaaS,270,32000000,United States,GCP,ceo@novasaas.com,https://novasaas.com,Alex Rivera,https://linkedin.com/company/novasaas,HIGH
+Clickstream,clickstream.io,B2B SaaS,110,9000000,United States,Azure,contact@clickstream.io,https://clickstream.io,,,HIGH
+DemoForge,demoforge.com,Software,65,5800000,United States,sales tooling,hi@demoforge.com,https://demoforge.com,Bob Chan,,HIGH
+Koreto,koreto.io,SaaS,380,58000000,United States,HubSpot,info@koreto.io,https://koreto.io,Lena Park,https://linkedin.com/company/koreto,HIGH
+BridgeCRM,bridgecrm.com,Cloud Software,220,28000000,United States,CRM,sales@bridgecrm.com,https://bridgecrm.com,,,HIGH
+Loopwise,loopwise.io,SaaS,450,70000000,United States,Salesforce,hello@loopwise.io,https://loopwise.io,Tom Ng,https://linkedin.com/company/loopwise,HIGH
+Marpipe,marpipe.com,MarTech,140,11000000,United States,AWS,,https://marpipe.com,,,MEDIUM
+DataFarm,datafarm.io,Software,600,105000000,United States,cloud,info@datafarm.io,https://datafarm.io,,,MEDIUM
+Voxel Systems,voxelsystems.com,SaaS,55,5200000,Singapore,HubSpot,hello@voxelsystems.com,https://voxelsystems.com,,,MEDIUM
+RetentionLab,retentionlab.com,B2B SaaS,15,800000,United States,Salesforce,team@retentionlab.com,https://retentionlab.com,,,MEDIUM
