@@ -10,11 +10,11 @@
  *  - scoreLead() is the only public API. Everything else is internal.
  *
  * SCORING TABLE (total = 100):
- *  Industry match    25 pts
- *  Employee range    20 pts  (partial credit for near-miss)
- *  Revenue fit       15 pts  (partial credit for near-miss)
+ *  Industry match    25 pts  (half credit for a related category)
+ *  Employee range    20 pts  (75% or half credit for near-miss)
+ *  Revenue fit       15 pts  (75% or half credit for near-miss)
  *  Geography         10 pts
- *  Technology match  10 pts
+ *  Technology match  10 pts  (half credit for one match)
  *  Website validity   5 pts
  *  Email validity     5 pts
  *  Decision maker     5 pts
@@ -64,6 +64,7 @@ if (TOTAL_WEIGHT !== 100) {
 // ─────────────────────────────────────────────────────────────────────────────
 
 const NEAR_MISS_BUFFER = 0.25; // 25% tolerance
+const STRONG_PARTIAL_BUFFER = 0.10; // 10% tolerance earns 75% credit
 
 // ─────────────────────────────────────────────────────────────────────────────
 // INDIVIDUAL SCORING FACTORS
@@ -74,8 +75,8 @@ const NEAR_MISS_BUFFER = 0.25; // 25% tolerance
  * FACTOR 1 — Industry match (25 pts)
  *
  * Full points if lead's industry matches any of the ICP's target industries.
- * Matching is case-insensitive and trims whitespace.
- * Zero if no match or if either side is missing.
+ * A shared meaningful word or phrase earns half credit so adjacent categories
+ * are visible without being promoted to an exact ICP fit.
  */
 function scoreIndustry(lead, icp) {
   const max = WEIGHTS.industry;
@@ -88,15 +89,27 @@ function scoreIndustry(lead, icp) {
     return { points: 0, reason: 'ICP has no target industries defined' };
   }
 
-  const leadIndustry = lead.industry.toLowerCase().trim();
-  const match = icp.target_industries.some(
-    (t) => t.toLowerCase().trim() === leadIndustry
+  const leadIndustry = normalizeMatchText(lead.industry);
+  const exactMatch = icp.target_industries.some(
+    (t) => normalizeMatchText(t) === leadIndustry
   );
 
-  if (match) {
+  if (exactMatch) {
     return {
       points: max,
       reason: `"${lead.industry}" matches target industry`,
+    };
+  }
+
+  const relatedMatch = icp.target_industries.find((target) =>
+    hasRelatedIndustrySignal(leadIndustry, normalizeMatchText(target))
+  );
+
+  if (relatedMatch) {
+    const points = Math.round(max / 2);
+    return {
+      points,
+      reason: `"${lead.industry}" is adjacent to target industry "${relatedMatch}" — partial credit`,
     };
   }
 
@@ -110,7 +123,8 @@ function scoreIndustry(lead, icp) {
  * FACTOR 2 — Employee range (20 pts, with partial credit)
  *
  * Full points:    lead.employees is within [min, max]
- * Half points:    lead.employees misses by ≤ 25% on either side
+ * 75% points:     lead.employees misses by ≤ 10% on either side
+ * Half points:    lead.employees misses by >10% and ≤25% on either side
  * Zero:           missing data OR too far outside range
  */
 function scoreEmployees(lead, icp) {
@@ -144,11 +158,12 @@ function scoreEmployees(lead, icp) {
   const tooHigh = maxRange != null && e > maxRange;
 
   if (tooLow) {
-    const ratio = min / e; // e.g. min=50, e=40 → 1.25 → 25% off
-    if (ratio - 1 <= NEAR_MISS_BUFFER) {
+    const ratio = min / Math.max(e, 1); // e.g. min=50, e=40 → 1.25 → 25% off
+    const points = rangePartialPoints(max, ratio);
+    if (points > 0) {
       return {
-        points: Math.round(max / 2),
-        reason: `${e} employees is slightly below target minimum (${min}), partial credit`,
+        points,
+        reason: `${e} employees is slightly below target minimum (${min}), ${points}/${max} partial credit`,
       };
     }
     return {
@@ -159,10 +174,11 @@ function scoreEmployees(lead, icp) {
 
   if (tooHigh) {
     const ratio = e / maxRange; // e.g. e=600, max=500 → 1.20 → 20% over
-    if (ratio - 1 <= NEAR_MISS_BUFFER) {
+    const points = rangePartialPoints(max, ratio);
+    if (points > 0) {
       return {
-        points: Math.round(max / 2),
-        reason: `${e} employees slightly exceeds target maximum (${maxRange}), partial credit`,
+        points,
+        reason: `${e} employees slightly exceeds target maximum (${maxRange}), ${points}/${max} partial credit`,
       };
     }
     return {
@@ -209,11 +225,12 @@ function scoreRevenue(lead, icp) {
   const tooHigh = maxRange != null && r > Number(maxRange);
 
   if (tooLow) {
-    const ratio = Number(min) / r;
-    if (ratio - 1 <= NEAR_MISS_BUFFER) {
+    const ratio = Number(min) / Math.max(r, 1);
+    const points = rangePartialPoints(max, ratio);
+    if (points > 0) {
       return {
-        points: Math.round(max / 2),
-        reason: `Revenue $${fmtMoney(r)} is slightly below target minimum ($${fmtMoney(min)}), partial credit`,
+        points,
+        reason: `Revenue $${fmtMoney(r)} is slightly below target minimum ($${fmtMoney(min)}), ${points}/${max} partial credit`,
       };
     }
     return {
@@ -224,10 +241,11 @@ function scoreRevenue(lead, icp) {
 
   if (tooHigh) {
     const ratio = r / Number(maxRange);
-    if (ratio - 1 <= NEAR_MISS_BUFFER) {
+    const points = rangePartialPoints(max, ratio);
+    if (points > 0) {
       return {
-        points: Math.round(max / 2),
-        reason: `Revenue $${fmtMoney(r)} slightly exceeds target maximum ($${fmtMoney(maxRange)}), partial credit`,
+        points,
+        reason: `Revenue $${fmtMoney(r)} slightly exceeds target maximum ($${fmtMoney(maxRange)}), ${points}/${max} partial credit`,
       };
     }
     return {
@@ -275,12 +293,9 @@ function scoreGeography(lead, icp) {
 /**
  * FACTOR 5 — Technology match (10 pts)
  *
- * Full points if lead has ANY technology that appears in icp.technologies.
- * Case-insensitive. Even one match = full points.
- *
- * WHY all-or-nothing here (not partial)?
- * Because one tech match already signals "they're a buyer of tools like ours."
- * More matches don't make them a better lead — they're already warm.
+ * One matching technology earns half credit; two or more matching technologies
+ * earn full credit. This rewards meaningful stack overlap without making a
+ * single incidental tool look like a complete technology fit.
  */
 function scoreTechnology(lead, icp) {
   const max = WEIGHTS.technology;
@@ -293,15 +308,19 @@ function scoreTechnology(lead, icp) {
     return { points: 0, reason: 'ICP has no target technologies defined' };
   }
 
-  const icpTechLower = icp.technologies.map((t) => t.toLowerCase().trim());
-  const matches = lead.technologies.filter((t) =>
-    icpTechLower.includes(t.toLowerCase().trim())
+  const icpTechLower = icp.technologies.map(normalizeMatchText);
+  const uniqueLeadTechnologies = [...new Map(
+    lead.technologies.map((technology) => [normalizeMatchText(technology), technology])
+  ).values()];
+  const matches = uniqueLeadTechnologies.filter((t) =>
+    icpTechLower.includes(normalizeMatchText(t))
   );
 
   if (matches.length > 0) {
+    const points = matches.length >= 2 ? max : Math.round(max / 2);
     return {
-      points: max,
-      reason: `Uses ${matches.join(', ')} — matching target technology signal`,
+      points,
+      reason: `Uses ${matches.join(', ')} — ${points === max ? 'strong' : 'partial'} target technology overlap`,
     };
   }
 
@@ -419,6 +438,19 @@ function priorityFromScore(score) {
   return 'VERY_LOW';
 }
 
+// A lead should not become HIGH only because its record is complete. ICP fit
+// is a gate for priority; contact data improves readiness, not relevance.
+function priorityForLead(score, factors) {
+  const points = Object.fromEntries(factors.map((factor) => [factor.factor, factor.points]));
+  const industryFit = points.industry === WEIGHTS.industry;
+  const geographyFit = points.geography === WEIGHTS.geography;
+
+  if (score >= 80 && industryFit && geographyFit) return 'HIGH';
+  if (score >= 60 && industryFit) return 'MEDIUM';
+  if (score >= 40) return 'LOW';
+  return 'VERY_LOW';
+}
+
 // ─────────────────────────────────────────────────────────────────────────────
 // PUBLIC API — scoreLead()
 //
@@ -457,7 +489,18 @@ function scoreLead(lead, icp) {
     factors.reduce((sum, f) => sum + f.points, 0)
   );
 
-  const priority = priorityFromScore(totalScore);
+  const fitMax = WEIGHTS.industry + WEIGHTS.employees + WEIGHTS.revenue +
+    WEIGHTS.geography + WEIGHTS.technology;
+  const fitPoints = factors
+    .filter((factor) => ['industry', 'employees', 'revenue', 'geography', 'technology'].includes(factor.factor))
+    .reduce((sum, factor) => sum + factor.points, 0);
+  const readinessMax = WEIGHTS.website + WEIGHTS.email + WEIGHTS.decision_maker + WEIGHTS.growth_trigger;
+  const readinessPoints = factors
+    .filter((factor) => ['website', 'email', 'decision_maker', 'growth_trigger'].includes(factor.factor))
+    .reduce((sum, factor) => sum + factor.points, 0);
+  const fitScore = Math.round((fitPoints / fitMax) * 100);
+  const readinessScore = Math.round((readinessPoints / readinessMax) * 100);
+  const priority = priorityForLead(totalScore, factors);
 
   // Build the component_scores map (factor → points) for DB storage
   const componentScores = {};
@@ -468,6 +511,8 @@ function scoreLead(lead, icp) {
   return {
     leadId:          lead.id ?? null,
     score:           totalScore,
+    fitScore,
+    readinessScore,
     priority,
     componentScores,
     reasons: factors.map((f) => ({
@@ -496,6 +541,29 @@ function fmtMoney(n) {
   return String(n);
 }
 
+function normalizeMatchText(value) {
+  return String(value || '')
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, ' ')
+    .trim()
+    .replace(/\s+/g, ' ');
+}
+
+function hasRelatedIndustrySignal(leadIndustry, targetIndustry) {
+  if (!leadIndustry || !targetIndustry) return false;
+  if (leadIndustry.includes(targetIndustry) || targetIndustry.includes(leadIndustry)) return true;
+
+  const leadTokens = new Set(leadIndustry.split(' ').filter((token) => token.length >= 4));
+  return targetIndustry.split(' ').some((token) => token.length >= 4 && leadTokens.has(token));
+}
+
+function rangePartialPoints(max, ratio) {
+  const distance = ratio - 1;
+  if (distance < 0 || distance > NEAR_MISS_BUFFER) return 0;
+  if (distance <= STRONG_PARTIAL_BUFFER + Number.EPSILON) return Math.round(max * 0.75);
+  return Math.round(max / 2);
+}
+
 // ─────────────────────────────────────────────────────────────────────────────
 // Exports
 // ─────────────────────────────────────────────────────────────────────────────
@@ -504,6 +572,7 @@ module.exports = {
   scoreLead,
   priorityFromScore,
   WEIGHTS,
+  priorityForLead,
   // Exported for unit testing individual factors
   _factors: {
     scoreIndustry,

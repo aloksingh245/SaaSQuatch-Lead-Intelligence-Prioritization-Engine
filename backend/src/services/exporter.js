@@ -28,6 +28,8 @@ const EXPORT_COLUMNS = [
   { key: 'decision_maker', header: 'Decision Maker' },
   { key: 'linkedin_url',   header: 'LinkedIn URL'   },
   { key: 'total_score',    header: 'Score'          },
+  { key: 'fit_score',      header: 'ICP Fit Score'  },
+  { key: 'readiness_score',header: 'Readiness Score'},
   { key: 'priority',       header: 'Priority'       },
 ];
 
@@ -46,9 +48,12 @@ async function exportLeadsCsv(res, filters = {}) {
       l.company_name, l.domain, l.industry, l.employees,
       l.revenue, l.country, l.technologies, l.email,
       l.website, l.decision_maker, l.linkedin_url,
-      ls.total_score, ls.priority
+      ls.total_score, ls.fit_score, ls.readiness_score, ls.priority
     FROM leads l
-    JOIN lead_scores ls ON ls.lead_id = l.id
+    JOIN LATERAL (
+      SELECT total_score, fit_score, readiness_score, priority
+      FROM lead_scores WHERE lead_id = l.id ORDER BY created_at DESC LIMIT 1
+    ) ls ON TRUE
     ${whereClause}
     ORDER BY ls.total_score DESC
   `;
@@ -111,6 +116,15 @@ function buildWhereClause(filters) {
     conditions.push(`LOWER(l.industry) = LOWER($${idx++})`);
     values.push(filters.industry);
   }
+  if (filters.q) {
+    conditions.push(`(l.company_name ILIKE $${idx} OR l.domain ILIKE $${idx})`);
+    values.push(`%${String(filters.q).trim()}%`);
+    idx++;
+  }
+  if (filters.hasEmail === 'true') conditions.push(`NULLIF(l.email, '') IS NOT NULL`);
+  if (filters.hasEmail === 'false') conditions.push(`NULLIF(l.email, '') IS NULL`);
+  if (filters.hasDecisionMaker === 'true') conditions.push(`NULLIF(l.decision_maker, '') IS NOT NULL`);
+  if (filters.hasDecisionMaker === 'false') conditions.push(`NULLIF(l.decision_maker, '') IS NULL`);
 
   const whereClause = conditions.length > 0
     ? 'WHERE ' + conditions.join(' AND ')

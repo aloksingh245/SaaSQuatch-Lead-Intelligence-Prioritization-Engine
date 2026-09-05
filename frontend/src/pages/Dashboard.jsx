@@ -1,256 +1,166 @@
-import { useState, useEffect } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
+import { Link } from 'react-router-dom';
+import {
+  ArrowUpRight, Building2, Check, ChevronLeft, ChevronRight, Download,
+  Filter, Mail, RefreshCw, Search, Target, UserRound, X, Zap,
+} from 'lucide-react';
 import { LeadsAPI } from '../lib/api';
-import { Download, Filter, ChevronLeft, ChevronRight, X, Building2, Target } from 'lucide-react';
+import { Button } from '../components/ui/Button';
+
+const EMPTY_FILTERS = {
+  q: '', priority: '', country: '', industry: '', minScore: '',
+  hasEmail: '', hasDecisionMaker: '',
+};
+
+const priorityCopy = {
+  HIGH: { label: 'High priority', className: 'status-high' },
+  MEDIUM: { label: 'Worth reviewing', className: 'status-medium' },
+  LOW: { label: 'Low priority', className: 'status-low' },
+  VERY_LOW: { label: 'Deprioritized', className: 'status-muted' },
+};
+
+function PriorityBadge({ priority }) {
+  const item = priorityCopy[priority] || priorityCopy.VERY_LOW;
+  return <span className={`status-badge ${item.className}`}><span className="status-dot" />{item.label}</span>;
+}
+
+function ScoreBar({ value, tone = 'blue' }) {
+  return <div className="score-meter" aria-label={`${value ?? 0} out of 100`}><span className={`score-meter-fill score-${tone}`} style={{ width: `${Math.max(0, Math.min(100, value ?? 0))}%` }} /></div>;
+}
+
+function SkeletonRows() {
+  return [...Array(5)].map((_, index) => (
+    <div className="table-row skeleton-row" key={index} aria-hidden="true">
+      <span className="skeleton skeleton-company" /><span className="skeleton skeleton-short" />
+      <span className="skeleton skeleton-score" /><span className="skeleton skeleton-badge" />
+      <span className="skeleton skeleton-short" />
+    </div>
+  ));
+}
+
+function DetailDialog({ lead, onClose, onRescore, rescoring }) {
+  const closeRef = useRef(null);
+  const triggerRef = useRef(null);
+
+  useEffect(() => {
+    triggerRef.current = document.activeElement;
+    closeRef.current?.focus();
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+    const dialog = document.getElementById('lead-detail-dialog');
+    const onKeyDown = (event) => {
+      if (event.key === 'Escape') onClose();
+      if (event.key !== 'Tab') return;
+      const focusable = dialog.querySelectorAll('button, a[href], input, select, textarea, [tabindex]:not([tabindex="-1"])');
+      if (!focusable.length) return;
+      const first = focusable[0];
+      const last = focusable[focusable.length - 1];
+      if (event.shiftKey && document.activeElement === first) { event.preventDefault(); last.focus(); }
+      else if (!event.shiftKey && document.activeElement === last) { event.preventDefault(); first.focus(); }
+    };
+    dialog?.addEventListener('keydown', onKeyDown);
+    return () => {
+      document.body.style.overflow = previousOverflow;
+      dialog?.removeEventListener('keydown', onKeyDown);
+      triggerRef.current?.focus?.();
+    };
+  }, [onClose]);
+
+  const reasons = lead.explanation?.reasons || [];
+  const missing = [!lead.email && 'verified email', !lead.decision_maker && 'decision maker', !lead.website && 'website', !lead.linkedin_url && 'LinkedIn profile'].filter(Boolean);
+  const fitScore = lead.fit_score ?? lead.fitScore ?? 0;
+  const readinessScore = lead.readiness_score ?? lead.readinessScore ?? 0;
+
+  return (
+    <div className="dialog-backdrop" role="presentation">
+      <div id="lead-detail-dialog" className="detail-dialog" role="dialog" aria-modal="true" aria-labelledby="lead-detail-title" tabIndex="-1">
+        <div className="dialog-header">
+          <div><p className="eyebrow">Lead profile</p><h2 id="lead-detail-title">{lead.company_name || 'Unnamed company'}</h2><p className="dialog-subtitle">{lead.domain || 'No domain available'}</p></div>
+          <button ref={closeRef} className="icon-button" type="button" onClick={onClose} aria-label="Close lead details"><X size={18} /></button>
+        </div>
+
+        <div className="dialog-scroll">
+          <div className="detail-score-grid">
+            <div className="score-hero"><span className="score-label">Overall priority score</span><strong>{lead.total_score ?? 0}<small>/100</small></strong><PriorityBadge priority={lead.priority} /></div>
+            <div className="score-card"><div className="score-card-title"><span>ICP fit</span><strong>{fitScore}</strong></div><ScoreBar value={fitScore} tone="green" /><p>How closely this company matches the target profile.</p></div>
+            <div className="score-card"><div className="score-card-title"><span>Readiness</span><strong>{readinessScore}</strong></div><ScoreBar value={readinessScore} tone="blue" /><p>How much contact information is ready for outreach.</p></div>
+          </div>
+
+          <div className="detail-section"><div className="section-heading"><h3>Company signals</h3><span>Normalized from source data</span></div><div className="detail-facts">
+            <div><span>Industry</span><strong>{lead.industry || 'Not provided'}</strong></div><div><span>Location</span><strong>{lead.country || 'Not provided'}</strong></div>
+            <div><span>Employees</span><strong>{lead.employees?.toLocaleString() || 'Not provided'}</strong></div><div><span>Revenue</span><strong>{lead.revenue ? `$${Number(lead.revenue).toLocaleString()}` : 'Not provided'}</strong></div>
+            <div><span>Technology</span><strong>{lead.technologies?.join(', ') || 'Not provided'}</strong></div><div><span>Decision maker</span><strong>{lead.decision_maker || 'Not identified'}</strong></div>
+          </div></div>
+
+          <div className="detail-section"><div className="section-heading"><h3>Outreach readiness</h3><span>{missing.length ? `${missing.length} missing` : 'Ready to contact'}</span></div>
+            {missing.length ? <div className="missing-callout"><Zap size={16} /><span>Add {missing.join(', ')} to make this lead easier to act on.</span></div> : <div className="ready-callout"><Check size={16} /><span>This record has the key fields needed for first outreach.</span></div>}
+            <div className="contact-links">{lead.email && <a href={`mailto:${lead.email}`}><Mail size={15} />{lead.email}</a>}{lead.linkedin_url && <a href={lead.linkedin_url} target="_blank" rel="noreferrer"><ArrowUpRight size={15} />LinkedIn profile</a>}{lead.website && <a href={lead.website} target="_blank" rel="noreferrer"><ArrowUpRight size={15} />Company website</a>}</div>
+          </div>
+
+          <div className="detail-section"><div className="section-heading"><h3>Why this score?</h3><span>Transparent scoring</span></div><div className="reason-list">{reasons.map((reason) => <div className="reason-row" key={reason.factor}><div><strong>{reason.factor.replaceAll('_', ' ')}</strong><span>{reason.reason}</span></div><b className={reason.points > 0 ? 'points-positive' : 'points-zero'}>+{reason.points}<small>/{reason.maxPoints}</small></b></div>)}</div></div>
+        </div>
+        <div className="dialog-footer"><span className="muted-note">Scores are calculated from the active ICP.</span><Button variant="secondary" type="button" onClick={onRescore} disabled={rescoring}><RefreshCw size={15} className={rescoring ? 'spin' : ''} />{rescoring ? 'Re-scoring…' : 'Re-score lead'}</Button></div>
+      </div>
+    </div>
+  );
+}
 
 export default function Dashboard() {
   const [leads, setLeads] = useState([]);
+  const [summary, setSummary] = useState(null);
   const [loading, setLoading] = useState(true);
-  
-  // Pagination & Filters
+  const [error, setError] = useState(null);
   const [page, setPage] = useState(1);
   const [pagination, setPagination] = useState({ total: 0, pages: 1 });
-  const [filters, setFilters] = useState({ priority: '', minScore: '' });
-
-  // Modal state
+  const [filters, setFilters] = useState(EMPTY_FILTERS);
   const [selectedLead, setSelectedLead] = useState(null);
-
-  useEffect(() => {
-    loadLeads();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [page, filters.priority, filters.minScore]);
+  const [rescoring, setRescoring] = useState(false);
+  const hasFilters = useMemo(() => Object.values(filters).some(Boolean), [filters]);
 
   const loadLeads = async () => {
-    setLoading(true);
+    setLoading(true); setError(null);
     try {
       const data = await LeadsAPI.getLeads({ ...filters, page, limit: 15 });
-      setLeads(data.data);
-      setPagination(data.pagination);
-    } catch (err) {
-      console.error('Failed to load leads:', err);
-    } finally {
-      setLoading(false);
-    }
+      setLeads(data.data || []); setPagination(data.pagination || { total: 0, pages: 1 }); setSummary(data.summary || null);
+    } catch (err) { setError(err.response?.data?.error || 'The pipeline could not be loaded. Check the backend connection.'); }
+    finally { setLoading(false); }
   };
 
-  const handleFilterChange = (e) => {
-    setFilters({ ...filters, [e.target.name]: e.target.value });
-    setPage(1); // Reset to first page on filter change
+  // Loading remote data is the intentional synchronization this effect owns.
+  // oxlint-disable-next-line react/set-state-in-effect
+  useEffect(() => { loadLeads(); }, [page, filters]); // eslint-disable-line react-hooks/exhaustive-deps
+  const handleFilterChange = (event) => { setFilters((current) => ({ ...current, [event.target.name]: event.target.value })); setPage(1); };
+  const clearFilters = () => { setFilters(EMPTY_FILTERS); setPage(1); };
+  const openLeadDetail = async (lead, event) => {
+    event?.currentTarget?.focus();
+    try { setSelectedLead(await LeadsAPI.getLead(lead.id)); }
+    catch (err) { setError(err.response?.data?.error || 'Lead details could not be loaded.'); }
   };
-
-  const getPriorityBadge = (priority) => {
-    const styles = {
-      HIGH: 'bg-green-50 text-green-700 ring-green-600/20',
-      MEDIUM: 'bg-blue-50 text-blue-700 ring-blue-600/20',
-      LOW: 'bg-orange-50 text-orange-700 ring-orange-600/20',
-      VERY_LOW: 'bg-gray-50 text-gray-600 ring-gray-500/10',
-    };
-    return `inline-flex items-center rounded-md px-2 py-1 text-xs font-medium ring-1 ring-inset ${styles[priority] || styles.VERY_LOW}`;
-  };
-
-  const openLeadDetail = async (leadId) => {
+  const rescoreLead = async () => {
+    if (!selectedLead) return;
+    setRescoring(true);
     try {
-      const fullLead = await LeadsAPI.getLead(leadId);
-      setSelectedLead(fullLead);
-    } catch (err) {
-      console.error(err);
-    }
+      const result = await LeadsAPI.rescoreLead(selectedLead.id);
+      setSelectedLead((current) => ({ ...current, total_score: result.score, fit_score: result.fitScore, readiness_score: result.readinessScore, priority: result.priority, explanation: { reasons: result.reasons } }));
+      await loadLeads();
+    } catch (err) { setError(err.response?.data?.error || 'This lead could not be re-scored.'); }
+    finally { setRescoring(false); }
   };
 
   return (
-    <div className="max-w-7xl mx-auto">
-      {/* Header & Actions */}
-      <div className="sm:flex sm:items-center sm:justify-between mb-8">
-        <div>
-          <h1 className="text-2xl font-semibold leading-6 text-gray-900">Pipeline</h1>
-          <p className="mt-2 text-sm text-gray-500">
-            A ranked list of all processed leads, prioritized by your ICP rules.
-          </p>
-        </div>
-        <div className="mt-4 sm:ml-16 sm:mt-0 sm:flex-none">
-          <a
-            href={LeadsAPI.getExportUrl(filters)}
-            download
-            className="inline-flex items-center rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50"
-          >
-            <Download className="h-4 w-4 mr-2 text-gray-400" />
-            Export CSV
-          </a>
-        </div>
-      </div>
+    <div className="dashboard-page">
+      <div className="page-header"><div><p className="eyebrow">Sales workspace</p><h1>Pipeline, with a reason.</h1><p className="page-lede">Find the accounts that fit your ICP and are ready for a useful first conversation.</p></div><div className="header-actions"><a className="button button-secondary" href={LeadsAPI.getExportUrl(filters)} download><Download size={16} />Export CSV</a><Link className="button button-primary" to="/import"><Zap size={16} />Import leads</Link></div></div>
 
-      {/* Filters */}
-      <div className="bg-white p-4 rounded-t-xl border border-gray-200 border-b-0 flex gap-4 items-end">
-        <div className="flex items-center text-sm font-medium text-gray-700 mr-2 mb-2">
-          <Filter className="h-4 w-4 mr-2" /> Filters
-        </div>
-        <div>
-          <label className="block text-xs font-medium text-gray-500 mb-1">Priority</label>
-          <select
-            name="priority"
-            value={filters.priority}
-            onChange={handleFilterChange}
-            className="block w-40 rounded-md border-0 py-1.5 pl-3 pr-10 text-gray-900 ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-blue-600 sm:text-sm sm:leading-6"
-          >
-            <option value="">All</option>
-            <option value="HIGH">High (80-100)</option>
-            <option value="MEDIUM">Medium (60-79)</option>
-            <option value="LOW">Low (40-59)</option>
-            <option value="VERY_LOW">Very Low (0-39)</option>
-          </select>
-        </div>
-        <div>
-          <label className="block text-xs font-medium text-gray-500 mb-1">Min Score</label>
-          <input
-            type="number"
-            name="minScore"
-            placeholder="0"
-            value={filters.minScore}
-            onChange={handleFilterChange}
-            className="block w-24 rounded-md border-0 py-1.5 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-blue-600 sm:text-sm sm:leading-6"
-          />
-        </div>
-      </div>
+      <div className="metric-strip" aria-label="Pipeline summary"><div><span>Total pipeline</span><strong>{summary?.total ?? pagination.total ?? 0}</strong><small>processed records</small></div><div><span>High priority</span><strong>{summary?.high ?? 0}</strong><small>ICP fit + ready signals</small></div><div><span>Contactable now</span><strong>{summary?.contactable ?? 0}</strong><small>with a verified email</small></div><div className="metric-note"><Target size={18} /><span>Priorities are gated by ICP fit, so complete data cannot mask a poor match.</span></div></div>
 
-      {/* Data Table */}
-      <div className="bg-white border border-gray-200 rounded-b-xl shadow-sm overflow-hidden">
-        <table className="min-w-full divide-y divide-gray-200">
-          <thead className="bg-gray-50">
-            <tr>
-              <th scope="col" className="py-3.5 pl-4 pr-3 text-left text-sm font-semibold text-gray-900 sm:pl-6">Company</th>
-              <th scope="col" className="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">Industry</th>
-              <th scope="col" className="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">Location</th>
-              <th scope="col" className="px-3 py-3.5 text-right text-sm font-semibold text-gray-900">Score</th>
-              <th scope="col" className="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">Priority</th>
-            </tr>
-          </thead>
-          <tbody className="divide-y divide-gray-200">
-            {loading ? (
-              <tr>
-                <td colSpan="5" className="py-12 text-center text-sm text-gray-500">Loading leads...</td>
-              </tr>
-            ) : leads.length === 0 ? (
-              <tr>
-                <td colSpan="5" className="py-12 text-center text-sm text-gray-500">No leads found matching these filters.</td>
-              </tr>
-            ) : (
-              leads.map((lead) => (
-                <tr 
-                  key={lead.id} 
-                  onClick={() => openLeadDetail(lead.id)}
-                  className="hover:bg-gray-50 cursor-pointer transition-colors"
-                >
-                  <td className="whitespace-nowrap py-4 pl-4 pr-3 sm:pl-6">
-                    <div className="flex items-center">
-                      <div className="h-8 w-8 flex-shrink-0 rounded-full bg-gray-100 flex items-center justify-center">
-                        <Building2 className="h-4 w-4 text-gray-500" />
-                      </div>
-                      <div className="ml-4">
-                        <div className="font-medium text-gray-900">{lead.company_name}</div>
-                        <div className="text-gray-500 text-xs">{lead.domain}</div>
-                      </div>
-                    </div>
-                  </td>
-                  <td className="whitespace-nowrap px-3 py-4 text-sm text-gray-500">{lead.industry || '—'}</td>
-                  <td className="whitespace-nowrap px-3 py-4 text-sm text-gray-500">{lead.country || '—'}</td>
-                  <td className="whitespace-nowrap px-3 py-4 text-sm text-gray-900 font-semibold text-right">{lead.total_score}</td>
-                  <td className="whitespace-nowrap px-3 py-4 text-sm text-gray-500">
-                    <span className={getPriorityBadge(lead.priority)}>{lead.priority}</span>
-                  </td>
-                </tr>
-              ))
-            )}
-          </tbody>
-        </table>
-        
-        {/* Pagination */}
-        <div className="flex items-center justify-between border-t border-gray-200 bg-white px-4 py-3 sm:px-6">
-          <div className="hidden sm:block">
-            <p className="text-sm text-gray-700">
-              Showing page <span className="font-medium">{pagination.page}</span> of <span className="font-medium">{pagination.pages}</span> ({pagination.total} total leads)
-            </p>
-          </div>
-          <div className="flex flex-1 justify-between sm:justify-end gap-2">
-            <button
-              onClick={() => setPage(p => Math.max(1, p - 1))}
-              disabled={page === 1}
-              className="relative inline-flex items-center rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 disabled:opacity-50"
-            >
-              <ChevronLeft className="h-4 w-4" />
-            </button>
-            <button
-              onClick={() => setPage(p => Math.min(pagination.pages, p + 1))}
-              disabled={page === pagination.pages || pagination.pages === 0}
-              className="relative inline-flex items-center rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 disabled:opacity-50"
-            >
-              <ChevronRight className="h-4 w-4" />
-            </button>
-          </div>
-        </div>
-      </div>
-
-      {/* X-Ray Modal (Lead Detail & Score Explanation) */}
-      {selectedLead && (
-        <div className="relative z-50" aria-labelledby="modal-title" role="dialog" aria-modal="true">
-          {/* Backdrop */}
-          <div className="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity"></div>
-
-          <div className="fixed inset-0 z-10 w-screen overflow-y-auto">
-            <div className="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0">
-              <div className="relative transform overflow-hidden rounded-xl bg-white px-4 pb-4 pt-5 text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-2xl sm:p-6">
-                
-                {/* Close Button */}
-                <div className="absolute right-0 top-0 hidden pr-4 pt-4 sm:block">
-                  <button
-                    type="button"
-                    onClick={() => setSelectedLead(null)}
-                    className="rounded-md bg-white text-gray-400 hover:text-gray-500 focus:outline-none"
-                  >
-                    <X className="h-6 w-6" />
-                  </button>
-                </div>
-
-                <div className="sm:flex sm:items-start">
-                  <div className="mt-3 text-center sm:mt-0 sm:text-left w-full">
-                    <h3 className="text-xl font-semibold leading-6 text-gray-900 flex items-center gap-3" id="modal-title">
-                      {selectedLead.company_name}
-                      <span className={getPriorityBadge(selectedLead.priority)}>{selectedLead.priority}</span>
-                    </h3>
-                    <p className="text-sm text-gray-500 mt-1">{selectedLead.domain}</p>
-
-                    <div className="mt-8 border-t border-gray-200 pt-6">
-                      <div className="flex items-center justify-between mb-4">
-                        <h4 className="text-base font-semibold text-gray-900 flex items-center">
-                          <Target className="h-5 w-5 mr-2 text-blue-600" />
-                          Score X-Ray
-                        </h4>
-                        <span className="text-3xl font-bold text-gray-900">{selectedLead.total_score} <span className="text-sm font-normal text-gray-500">/ 100</span></span>
-                      </div>
-                      
-                      {/* Score Breakdown List */}
-                      <ul className="mt-4 space-y-3">
-                        {selectedLead.explanation?.reasons?.map((reason, idx) => (
-                          <li key={idx} className="flex justify-between items-center bg-gray-50 p-3 rounded-lg border border-gray-100">
-                            <div>
-                              <span className="font-medium text-gray-900 text-sm block">{reason.factor}</span>
-                              <span className="text-gray-500 text-sm">{reason.reason}</span>
-                            </div>
-                            <div className="text-right ml-4 flex-shrink-0">
-                              <span className={`font-semibold ${reason.points > 0 ? 'text-green-600' : 'text-gray-400'}`}>
-                                +{reason.points}
-                              </span>
-                              <span className="text-gray-400 text-xs ml-1">/ {reason.maxPoints}</span>
-                            </div>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      )}
+      <section className="workspace-panel" aria-label="Lead pipeline">
+        <div className="filter-toolbar"><div className="search-field"><Search size={17} /><input name="q" value={filters.q} onChange={handleFilterChange} placeholder="Search company or domain" aria-label="Search company or domain" /></div><div className="filter-field"><label htmlFor="priority">Priority</label><select id="priority" name="priority" value={filters.priority} onChange={handleFilterChange}><option value="">All priorities</option><option value="HIGH">High priority</option><option value="MEDIUM">Worth reviewing</option><option value="LOW">Low priority</option><option value="VERY_LOW">Deprioritized</option></select></div><div className="filter-field"><label htmlFor="country">Country</label><input id="country" name="country" value={filters.country} onChange={handleFilterChange} placeholder="Any country" /></div><div className="filter-field"><label htmlFor="industry">Industry</label><input id="industry" name="industry" value={filters.industry} onChange={handleFilterChange} placeholder="Any industry" /></div><div className="filter-field"><label htmlFor="minScore">Min score</label><input id="minScore" name="minScore" type="number" min="0" max="100" value={filters.minScore} onChange={handleFilterChange} placeholder="0" /></div><div className="filter-field"><label htmlFor="hasEmail">Reachability</label><select id="hasEmail" name="hasEmail" value={filters.hasEmail} onChange={handleFilterChange}><option value="">Any record</option><option value="true">Has email</option><option value="false">Missing email</option></select></div><div className="filter-field"><label htmlFor="hasDecisionMaker">Decision maker</label><select id="hasDecisionMaker" name="hasDecisionMaker" value={filters.hasDecisionMaker} onChange={handleFilterChange}><option value="">Any record</option><option value="true">Identified</option><option value="false">Missing</option></select></div>{hasFilters && <button className="clear-filter" type="button" onClick={clearFilters}><Filter size={14} />Clear filters</button>}</div>
+        {error && <div className="error-banner" role="alert"><span><strong>Pipeline unavailable.</strong> {error}</span><Button variant="secondary" size="sm" type="button" onClick={loadLeads}>Try again</Button></div>}
+        <div className="table-head"><span>Company</span><span>ICP fit</span><span>Readiness</span><span>Priority</span><span>Contact</span></div>
+        <div className="table-body">{loading ? <SkeletonRows /> : leads.length === 0 ? <div className="empty-state"><div className="empty-icon"><Building2 size={22} /></div><h2>{hasFilters ? 'No leads match those filters' : 'Your pipeline is ready for its first import'}</h2><p>{hasFilters ? 'Try a broader search or clear the filters to see the full pipeline.' : 'Import a CSV or Excel file to normalize, score, and prioritize your first batch.'}</p>{hasFilters ? <Button variant="secondary" type="button" onClick={clearFilters}>Clear filters</Button> : <Link className="button button-primary" to="/import">Import your first file</Link>}</div> : leads.map((lead, index) => <button className="table-row lead-row" style={{ '--row-index': index }} key={lead.id} type="button" onClick={(event) => openLeadDetail(lead, event)}><span className="company-cell"><span className="company-avatar"><Building2 size={16} /></span><span><strong>{lead.company_name || 'Unnamed company'}</strong><small>{lead.domain || 'No domain'}</small></span></span><span className="score-cell"><strong>{lead.fit_score ?? 0}</strong><ScoreBar value={lead.fit_score} tone="green" /></span><span className="score-cell"><strong>{lead.readiness_score ?? 0}</strong><ScoreBar value={lead.readiness_score} tone="blue" /></span><span><PriorityBadge priority={lead.priority} /></span><span className="contact-cell">{lead.email ? <><Mail size={15} />Email ready</> : lead.decision_maker ? <><UserRound size={15} />Decision maker</> : <span className="muted-note">Needs enrichment</span>}</span></button>)}</div>
+        <div className="table-footer"><span>Showing page <strong>{pagination.page || 1}</strong> of <strong>{Math.max(1, pagination.pages || 1)}</strong> · {pagination.total || 0} records</span><div className="pagination-actions"><button aria-label="Previous page" className="icon-button" type="button" onClick={() => setPage((value) => Math.max(1, value - 1))} disabled={page === 1}><ChevronLeft size={17} /></button><button aria-label="Next page" className="icon-button" type="button" onClick={() => setPage((value) => Math.min(pagination.pages, value + 1))} disabled={page >= (pagination.pages || 1)}><ChevronRight size={17} /></button></div></div>
+      </section>
+      {selectedLead && <DetailDialog lead={selectedLead} onClose={() => setSelectedLead(null)} onRescore={rescoreLead} rescoring={rescoring} />}
     </div>
   );
 }

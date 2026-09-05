@@ -8,11 +8,11 @@
  *   - Rows with no label → EXCLUDED, counted, warned about. Never guessed.
  *   - Zero labeled rows → hard error.
  *
- * LABELING CRITERIA (our domain-knowledge rules for the POC sample):
- *   HIGH     = SaaS/Software + employees 50–500 + United States
- *   MEDIUM   = SaaS/Software + (wrong size OR not US)
- *   LOW      = Non-SaaS + right size + US
- *   VERY_LOW = Wrong industry + wrong size, or near-empty data
+ * LABELING CRITERIA (the bundled sample uses scenario labels):
+ *   HIGH     = exact ICP fit with enough contact/readiness signal
+ *   MEDIUM   = exact industry fit with a partial, missing, or geography signal
+ *   LOW      = adjacent or wrong industry, or a lower-range partial fit
+ *   VERY_LOW = wrong industry/size with sparse or near-empty data
  *
  *   These rules are SIMPLER than the scoring engine on purpose.
  *   The gap between them is what the benchmark measures.

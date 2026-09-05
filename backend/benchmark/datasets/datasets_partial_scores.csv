@@ -1,0 +1,121 @@
+company_name,domain,industry,employees,revenue,country,technologies,email,website,decision_maker,linkedin_url,scenario
+near range account 501,near-range-501.io,SaaS,550,110000000,United States,"Salesforce, AWS",contact501@near-range-501.io,https://near-range-501.io,Maya Patel,https://linkedin.com/company/near-range-501,near_range
+partial stack account 502,partial-stack-502.io,SaaS,280,28000000,United States,Salesforce,,,,,partial_stack
+adjacent industry account 503,adjacent-industry-503.io,Cloud Infrastructure,305,32000000,United States,"Salesforce, AWS",contact503@adjacent-industry-503.io,https://adjacent-industry-503.io,Ari Gomez,https://linkedin.com/company/adjacent-industry-503,adjacent_industry
+missing firmographics account 504,missing-firmographics-504.io,SaaS,,,United States,HubSpot,contact504@missing-firmographics-504.io,https://missing-firmographics-504.io,Leah Chen,https://linkedin.com/company/missing-firmographics-504,missing_firmographics
+wrong geography account 505,wrong-geography-505.io,SaaS,180,8000000,Germany,"Salesforce, AWS",contact505@wrong-geography-505.io,https://wrong-geography-505.io,Maya Patel,https://linkedin.com/company/wrong-geography-505,wrong_geography
+near lower range account 506,near-lower-range-506.io,SaaS,45,4000000,United States,HubSpot,,,,,near_lower_range
+near range account 507,near-range-507.io,SaaS,550,110000000,United States,"Salesforce, AWS",contact507@near-range-507.io,https://near-range-507.io,Ari Gomez,https://linkedin.com/company/near-range-507,near_range
+partial stack account 508,partial-stack-508.io,SaaS,255,20000000,United States,Salesforce,,,,,partial_stack
+adjacent industry account 509,adjacent-industry-509.io,Cloud Infrastructure,280,24000000,United States,"Salesforce, AWS",contact509@adjacent-industry-509.io,https://adjacent-industry-509.io,Maya Patel,https://linkedin.com/company/adjacent-industry-509,adjacent_industry
+missing firmographics account 510,missing-firmographics-510.io,SaaS,,,United States,HubSpot,contact510@missing-firmographics-510.io,https://missing-firmographics-510.io,Jon Bell,https://linkedin.com/company/missing-firmographics-510,missing_firmographics
+wrong geography account 511,wrong-geography-511.io,SaaS,330,32000000,Germany,"Salesforce, AWS",contact511@wrong-geography-511.io,https://wrong-geography-511.io,Ari Gomez,https://linkedin.com/company/wrong-geography-511,wrong_geography
+near lower range account 512,near-lower-range-512.io,SaaS,45,4000000,United States,HubSpot,,,,,near_lower_range
+near range account 513,near-range-513.io,SaaS,550,110000000,United States,"Salesforce, AWS",contact513@near-range-513.io,https://near-range-513.io,Maya Patel,https://linkedin.com/company/near-range-513,near_range
+partial stack account 514,partial-stack-514.io,SaaS,230,12000000,United States,Salesforce,,,,,partial_stack
+adjacent industry account 515,adjacent-industry-515.io,Cloud Infrastructure,255,16000000,United States,"Salesforce, AWS",contact515@adjacent-industry-515.io,https://adjacent-industry-515.io,Ari Gomez,https://linkedin.com/company/adjacent-industry-515,adjacent_industry
+missing firmographics account 516,missing-firmographics-516.io,SaaS,,,United States,HubSpot,contact516@missing-firmographics-516.io,https://missing-firmographics-516.io,Leah Chen,https://linkedin.com/company/missing-firmographics-516,missing_firmographics
+wrong geography account 517,wrong-geography-517.io,SaaS,305,24000000,Germany,"Salesforce, AWS",contact517@wrong-geography-517.io,https://wrong-geography-517.io,Maya Patel,https://linkedin.com/company/wrong-geography-517,wrong_geography
+near lower range account 518,near-lower-range-518.io,SaaS,45,4000000,United States,HubSpot,,,,,near_lower_range
+near range account 519,near-range-519.io,SaaS,550,110000000,United States,"Salesforce, AWS",contact519@near-range-519.io,https://near-range-519.io,Ari Gomez,https://linkedin.com/company/near-range-519,near_range
+partial stack account 520,partial-stack-520.io,SaaS,205,36000000,United States,Salesforce,,,,,partial_stack
+adjacent industry account 521,adjacent-industry-521.io,Cloud Infrastructure,230,8000000,United States,"Salesforce, AWS",contact521@adjacent-industry-521.io,https://adjacent-industry-521.io,Maya Patel,https://linkedin.com/company/adjacent-industry-521,adjacent_industry
+missing firmographics account 522,missing-firmographics-522.io,SaaS,,,United States,HubSpot,contact522@missing-firmographics-522.io,https://missing-firmographics-522.io,Jon Bell,https://linkedin.com/company/missing-firmographics-522,missing_firmographics
+wrong geography account 523,wrong-geography-523.io,SaaS,280,16000000,Germany,"Salesforce, AWS",contact523@wrong-geography-523.io,https://wrong-geography-523.io,Ari Gomez,https://linkedin.com/company/wrong-geography-523,wrong_geography
+near lower range account 524,near-lower-range-524.io,SaaS,45,4000000,United States,HubSpot,,,,,near_lower_range
+near range account 525,near-range-525.io,SaaS,550,110000000,United States,"Salesforce, AWS",contact525@near-range-525.io,https://near-range-525.io,Maya Patel,https://linkedin.com/company/near-range-525,near_range
+partial stack account 526,partial-stack-526.io,SaaS,180,28000000,United States,Salesforce,,,,,partial_stack
+adjacent industry account 527,adjacent-industry-527.io,Cloud Infrastructure,205,32000000,United States,"Salesforce, AWS",contact527@adjacent-industry-527.io,https://adjacent-industry-527.io,Ari Gomez,https://linkedin.com/company/adjacent-industry-527,adjacent_industry
+missing firmographics account 528,missing-firmographics-528.io,SaaS,,,United States,HubSpot,contact528@missing-firmographics-528.io,https://missing-firmographics-528.io,Leah Chen,https://linkedin.com/company/missing-firmographics-528,missing_firmographics
+wrong geography account 529,wrong-geography-529.io,SaaS,255,8000000,Germany,"Salesforce, AWS",contact529@wrong-geography-529.io,https://wrong-geography-529.io,Maya Patel,https://linkedin.com/company/wrong-geography-529,wrong_geography
+near lower range account 530,near-lower-range-530.io,SaaS,45,4000000,United States,HubSpot,,,,,near_lower_range
+near range account 531,near-range-531.io,SaaS,550,110000000,United States,"Salesforce, AWS",contact531@near-range-531.io,https://near-range-531.io,Ari Gomez,https://linkedin.com/company/near-range-531,near_range
+partial stack account 532,partial-stack-532.io,SaaS,330,20000000,United States,Salesforce,,,,,partial_stack
+adjacent industry account 533,adjacent-industry-533.io,Cloud Infrastructure,180,24000000,United States,"Salesforce, AWS",contact533@adjacent-industry-533.io,https://adjacent-industry-533.io,Maya Patel,https://linkedin.com/company/adjacent-industry-533,adjacent_industry
+missing firmographics account 534,missing-firmographics-534.io,SaaS,,,United States,HubSpot,contact534@missing-firmographics-534.io,https://missing-firmographics-534.io,Jon Bell,https://linkedin.com/company/missing-firmographics-534,missing_firmographics
+wrong geography account 535,wrong-geography-535.io,SaaS,230,32000000,Germany,"Salesforce, AWS",contact535@wrong-geography-535.io,https://wrong-geography-535.io,Ari Gomez,https://linkedin.com/company/wrong-geography-535,wrong_geography
+near lower range account 536,near-lower-range-536.io,SaaS,45,4000000,United States,HubSpot,,,,,near_lower_range
+near range account 537,near-range-537.io,SaaS,550,110000000,United States,"Salesforce, AWS",contact537@near-range-537.io,https://near-range-537.io,Maya Patel,https://linkedin.com/company/near-range-537,near_range
+partial stack account 538,partial-stack-538.io,SaaS,305,12000000,United States,Salesforce,,,,,partial_stack
+adjacent industry account 539,adjacent-industry-539.io,Cloud Infrastructure,330,16000000,United States,"Salesforce, AWS",contact539@adjacent-industry-539.io,https://adjacent-industry-539.io,Ari Gomez,https://linkedin.com/company/adjacent-industry-539,adjacent_industry
+missing firmographics account 540,missing-firmographics-540.io,SaaS,,,United States,HubSpot,contact540@missing-firmographics-540.io,https://missing-firmographics-540.io,Leah Chen,https://linkedin.com/company/missing-firmographics-540,missing_firmographics
+wrong geography account 541,wrong-geography-541.io,SaaS,205,24000000,Germany,"Salesforce, AWS",contact541@wrong-geography-541.io,https://wrong-geography-541.io,Maya Patel,https://linkedin.com/company/wrong-geography-541,wrong_geography
+near lower range account 542,near-lower-range-542.io,SaaS,45,4000000,United States,HubSpot,,,,,near_lower_range
+near range account 543,near-range-543.io,SaaS,550,110000000,United States,"Salesforce, AWS",contact543@near-range-543.io,https://near-range-543.io,Ari Gomez,https://linkedin.com/company/near-range-543,near_range
+partial stack account 544,partial-stack-544.io,SaaS,280,36000000,United States,Salesforce,,,,,partial_stack
+adjacent industry account 545,adjacent-industry-545.io,Cloud Infrastructure,305,8000000,United States,"Salesforce, AWS",contact545@adjacent-industry-545.io,https://adjacent-industry-545.io,Maya Patel,https://linkedin.com/company/adjacent-industry-545,adjacent_industry
+missing firmographics account 546,missing-firmographics-546.io,SaaS,,,United States,HubSpot,contact546@missing-firmographics-546.io,https://missing-firmographics-546.io,Jon Bell,https://linkedin.com/company/missing-firmographics-546,missing_firmographics
+wrong geography account 547,wrong-geography-547.io,SaaS,180,16000000,Germany,"Salesforce, AWS",contact547@wrong-geography-547.io,https://wrong-geography-547.io,Ari Gomez,https://linkedin.com/company/wrong-geography-547,wrong_geography
+near lower range account 548,near-lower-range-548.io,SaaS,45,4000000,United States,HubSpot,,,,,near_lower_range
+near range account 549,near-range-549.io,SaaS,550,110000000,United States,"Salesforce, AWS",contact549@near-range-549.io,https://near-range-549.io,Maya Patel,https://linkedin.com/company/near-range-549,near_range
+partial stack account 550,partial-stack-550.io,SaaS,255,28000000,United States,Salesforce,,,,,partial_stack
+adjacent industry account 551,adjacent-industry-551.io,Cloud Infrastructure,280,32000000,United States,"Salesforce, AWS",contact551@adjacent-industry-551.io,https://adjacent-industry-551.io,Ari Gomez,https://linkedin.com/company/adjacent-industry-551,adjacent_industry
+missing firmographics account 552,missing-firmographics-552.io,SaaS,,,United States,HubSpot,contact552@missing-firmographics-552.io,https://missing-firmographics-552.io,Leah Chen,https://linkedin.com/company/missing-firmographics-552,missing_firmographics
+wrong geography account 553,wrong-geography-553.io,SaaS,330,8000000,Germany,"Salesforce, AWS",contact553@wrong-geography-553.io,https://wrong-geography-553.io,Maya Patel,https://linkedin.com/company/wrong-geography-553,wrong_geography
+near lower range account 554,near-lower-range-554.io,SaaS,45,4000000,United States,HubSpot,,,,,near_lower_range
+near range account 555,near-range-555.io,SaaS,550,110000000,United States,"Salesforce, AWS",contact555@near-range-555.io,https://near-range-555.io,Ari Gomez,https://linkedin.com/company/near-range-555,near_range
+partial stack account 556,partial-stack-556.io,SaaS,230,20000000,United States,Salesforce,,,,,partial_stack
+adjacent industry account 557,adjacent-industry-557.io,Cloud Infrastructure,255,24000000,United States,"Salesforce, AWS",contact557@adjacent-industry-557.io,https://adjacent-industry-557.io,Maya Patel,https://linkedin.com/company/adjacent-industry-557,adjacent_industry
+missing firmographics account 558,missing-firmographics-558.io,SaaS,,,United States,HubSpot,contact558@missing-firmographics-558.io,https://missing-firmographics-558.io,Jon Bell,https://linkedin.com/company/missing-firmographics-558,missing_firmographics
+wrong geography account 559,wrong-geography-559.io,SaaS,305,32000000,Germany,"Salesforce, AWS",contact559@wrong-geography-559.io,https://wrong-geography-559.io,Ari Gomez,https://linkedin.com/company/wrong-geography-559,wrong_geography
+near lower range account 560,near-lower-range-560.io,SaaS,45,4000000,United States,HubSpot,,,,,near_lower_range
+near range account 561,near-range-561.io,SaaS,550,110000000,United States,"Salesforce, AWS",contact561@near-range-561.io,https://near-range-561.io,Maya Patel,https://linkedin.com/company/near-range-561,near_range
+partial stack account 562,partial-stack-562.io,SaaS,205,12000000,United States,Salesforce,,,,,partial_stack
+adjacent industry account 563,adjacent-industry-563.io,Cloud Infrastructure,230,16000000,United States,"Salesforce, AWS",contact563@adjacent-industry-563.io,https://adjacent-industry-563.io,Ari Gomez,https://linkedin.com/company/adjacent-industry-563,adjacent_industry
+missing firmographics account 564,missing-firmographics-564.io,SaaS,,,United States,HubSpot,contact564@missing-firmographics-564.io,https://missing-firmographics-564.io,Leah Chen,https://linkedin.com/company/missing-firmographics-564,missing_firmographics
+wrong geography account 565,wrong-geography-565.io,SaaS,280,24000000,Germany,"Salesforce, AWS",contact565@wrong-geography-565.io,https://wrong-geography-565.io,Maya Patel,https://linkedin.com/company/wrong-geography-565,wrong_geography
+near lower range account 566,near-lower-range-566.io,SaaS,45,4000000,United States,HubSpot,,,,,near_lower_range
+near range account 567,near-range-567.io,SaaS,550,110000000,United States,"Salesforce, AWS",contact567@near-range-567.io,https://near-range-567.io,Ari Gomez,https://linkedin.com/company/near-range-567,near_range
+partial stack account 568,partial-stack-568.io,SaaS,180,36000000,United States,Salesforce,,,,,partial_stack
+adjacent industry account 569,adjacent-industry-569.io,Cloud Infrastructure,205,8000000,United States,"Salesforce, AWS",contact569@adjacent-industry-569.io,https://adjacent-industry-569.io,Maya Patel,https://linkedin.com/company/adjacent-industry-569,adjacent_industry
+missing firmographics account 570,missing-firmographics-570.io,SaaS,,,United States,HubSpot,contact570@missing-firmographics-570.io,https://missing-firmographics-570.io,Jon Bell,https://linkedin.com/company/missing-firmographics-570,missing_firmographics
+wrong geography account 571,wrong-geography-571.io,SaaS,255,16000000,Germany,"Salesforce, AWS",contact571@wrong-geography-571.io,https://wrong-geography-571.io,Ari Gomez,https://linkedin.com/company/wrong-geography-571,wrong_geography
+near lower range account 572,near-lower-range-572.io,SaaS,45,4000000,United States,HubSpot,,,,,near_lower_range
+near range account 573,near-range-573.io,SaaS,550,110000000,United States,"Salesforce, AWS",contact573@near-range-573.io,https://near-range-573.io,Maya Patel,https://linkedin.com/company/near-range-573,near_range
+partial stack account 574,partial-stack-574.io,SaaS,330,28000000,United States,Salesforce,,,,,partial_stack
+adjacent industry account 575,adjacent-industry-575.io,Cloud Infrastructure,180,32000000,United States,"Salesforce, AWS",contact575@adjacent-industry-575.io,https://adjacent-industry-575.io,Ari Gomez,https://linkedin.com/company/adjacent-industry-575,adjacent_industry
+missing firmographics account 576,missing-firmographics-576.io,SaaS,,,United States,HubSpot,contact576@missing-firmographics-576.io,https://missing-firmographics-576.io,Leah Chen,https://linkedin.com/company/missing-firmographics-576,missing_firmographics
+wrong geography account 577,wrong-geography-577.io,SaaS,230,8000000,Germany,"Salesforce, AWS",contact577@wrong-geography-577.io,https://wrong-geography-577.io,Maya Patel,https://linkedin.com/company/wrong-geography-577,wrong_geography
+near lower range account 578,near-lower-range-578.io,SaaS,45,4000000,United States,HubSpot,,,,,near_lower_range
+near range account 579,near-range-579.io,SaaS,550,110000000,United States,"Salesforce, AWS",contact579@near-range-579.io,https://near-range-579.io,Ari Gomez,https://linkedin.com/company/near-range-579,near_range
+partial stack account 580,partial-stack-580.io,SaaS,305,20000000,United States,Salesforce,,,,,partial_stack
+adjacent industry account 581,adjacent-industry-581.io,Cloud Infrastructure,330,24000000,United States,"Salesforce, AWS",contact581@adjacent-industry-581.io,https://adjacent-industry-581.io,Maya Patel,https://linkedin.com/company/adjacent-industry-581,adjacent_industry
+missing firmographics account 582,missing-firmographics-582.io,SaaS,,,United States,HubSpot,contact582@missing-firmographics-582.io,https://missing-firmographics-582.io,Jon Bell,https://linkedin.com/company/missing-firmographics-582,missing_firmographics
+wrong geography account 583,wrong-geography-583.io,SaaS,205,32000000,Germany,"Salesforce, AWS",contact583@wrong-geography-583.io,https://wrong-geography-583.io,Ari Gomez,https://linkedin.com/company/wrong-geography-583,wrong_geography
+near lower range account 584,near-lower-range-584.io,SaaS,45,4000000,United States,HubSpot,,,,,near_lower_range
+near range account 585,near-range-585.io,SaaS,550,110000000,United States,"Salesforce, AWS",contact585@near-range-585.io,https://near-range-585.io,Maya Patel,https://linkedin.com/company/near-range-585,near_range
+partial stack account 586,partial-stack-586.io,SaaS,280,12000000,United States,Salesforce,,,,,partial_stack
+adjacent industry account 587,adjacent-industry-587.io,Cloud Infrastructure,305,16000000,United States,"Salesforce, AWS",contact587@adjacent-industry-587.io,https://adjacent-industry-587.io,Ari Gomez,https://linkedin.com/company/adjacent-industry-587,adjacent_industry
+missing firmographics account 588,missing-firmographics-588.io,SaaS,,,United States,HubSpot,contact588@missing-firmographics-588.io,https://missing-firmographics-588.io,Leah Chen,https://linkedin.com/company/missing-firmographics-588,missing_firmographics
+wrong geography account 589,wrong-geography-589.io,SaaS,180,24000000,Germany,"Salesforce, AWS",contact589@wrong-geography-589.io,https://wrong-geography-589.io,Maya Patel,https://linkedin.com/company/wrong-geography-589,wrong_geography
+near lower range account 590,near-lower-range-590.io,SaaS,45,4000000,United States,HubSpot,,,,,near_lower_range
+near range account 591,near-range-591.io,SaaS,550,110000000,United States,"Salesforce, AWS",contact591@near-range-591.io,https://near-range-591.io,Ari Gomez,https://linkedin.com/company/near-range-591,near_range
+partial stack account 592,partial-stack-592.io,SaaS,255,36000000,United States,Salesforce,,,,,partial_stack
+adjacent industry account 593,adjacent-industry-593.io,Cloud Infrastructure,280,8000000,United States,"Salesforce, AWS",contact593@adjacent-industry-593.io,https://adjacent-industry-593.io,Maya Patel,https://linkedin.com/company/adjacent-industry-593,adjacent_industry
+missing firmographics account 594,missing-firmographics-594.io,SaaS,,,United States,HubSpot,contact594@missing-firmographics-594.io,https://missing-firmographics-594.io,Jon Bell,https://linkedin.com/company/missing-firmographics-594,missing_firmographics
+wrong geography account 595,wrong-geography-595.io,SaaS,330,16000000,Germany,"Salesforce, AWS",contact595@wrong-geography-595.io,https://wrong-geography-595.io,Ari Gomez,https://linkedin.com/company/wrong-geography-595,wrong_geography
+near lower range account 596,near-lower-range-596.io,SaaS,45,4000000,United States,HubSpot,,,,,near_lower_range
+near range account 597,near-range-597.io,SaaS,550,110000000,United States,"Salesforce, AWS",contact597@near-range-597.io,https://near-range-597.io,Maya Patel,https://linkedin.com/company/near-range-597,near_range
+partial stack account 598,partial-stack-598.io,SaaS,230,28000000,United States,Salesforce,,,,,partial_stack
+adjacent industry account 599,adjacent-industry-599.io,Cloud Infrastructure,255,32000000,United States,"Salesforce, AWS",contact599@adjacent-industry-599.io,https://adjacent-industry-599.io,Ari Gomez,https://linkedin.com/company/adjacent-industry-599,adjacent_industry
+missing firmographics account 600,missing-firmographics-600.io,SaaS,,,United States,HubSpot,contact600@missing-firmographics-600.io,https://missing-firmographics-600.io,Leah Chen,https://linkedin.com/company/missing-firmographics-600,missing_firmographics
+wrong geography account 601,wrong-geography-601.io,SaaS,305,8000000,Germany,"Salesforce, AWS",contact601@wrong-geography-601.io,https://wrong-geography-601.io,Maya Patel,https://linkedin.com/company/wrong-geography-601,wrong_geography
+near lower range account 602,near-lower-range-602.io,SaaS,45,4000000,United States,HubSpot,,,,,near_lower_range
+near range account 603,near-range-603.io,SaaS,550,110000000,United States,"Salesforce, AWS",contact603@near-range-603.io,https://near-range-603.io,Ari Gomez,https://linkedin.com/company/near-range-603,near_range
+partial stack account 604,partial-stack-604.io,SaaS,205,20000000,United States,Salesforce,,,,,partial_stack
+adjacent industry account 605,adjacent-industry-605.io,Cloud Infrastructure,230,24000000,United States,"Salesforce, AWS",contact605@adjacent-industry-605.io,https://adjacent-industry-605.io,Maya Patel,https://linkedin.com/company/adjacent-industry-605,adjacent_industry
+missing firmographics account 606,missing-firmographics-606.io,SaaS,,,United States,HubSpot,contact606@missing-firmographics-606.io,https://missing-firmographics-606.io,Jon Bell,https://linkedin.com/company/missing-firmographics-606,missing_firmographics
+wrong geography account 607,wrong-geography-607.io,SaaS,280,32000000,Germany,"Salesforce, AWS",contact607@wrong-geography-607.io,https://wrong-geography-607.io,Ari Gomez,https://linkedin.com/company/wrong-geography-607,wrong_geography
+near lower range account 608,near-lower-range-608.io,SaaS,45,4000000,United States,HubSpot,,,,,near_lower_range
+near range account 609,near-range-609.io,SaaS,550,110000000,United States,"Salesforce, AWS",contact609@near-range-609.io,https://near-range-609.io,Maya Patel,https://linkedin.com/company/near-range-609,near_range
+partial stack account 610,partial-stack-610.io,SaaS,180,12000000,United States,Salesforce,,,,,partial_stack
+adjacent industry account 611,adjacent-industry-611.io,Cloud Infrastructure,205,16000000,United States,"Salesforce, AWS",contact611@adjacent-industry-611.io,https://adjacent-industry-611.io,Ari Gomez,https://linkedin.com/company/adjacent-industry-611,adjacent_industry
+missing firmographics account 612,missing-firmographics-612.io,SaaS,,,United States,HubSpot,contact612@missing-firmographics-612.io,https://missing-firmographics-612.io,Leah Chen,https://linkedin.com/company/missing-firmographics-612,missing_firmographics
+wrong geography account 613,wrong-geography-613.io,SaaS,255,24000000,Germany,"Salesforce, AWS",contact613@wrong-geography-613.io,https://wrong-geography-613.io,Maya Patel,https://linkedin.com/company/wrong-geography-613,wrong_geography
+near lower range account 614,near-lower-range-614.io,SaaS,45,4000000,United States,HubSpot,,,,,near_lower_range
+near range account 615,near-range-615.io,SaaS,550,110000000,United States,"Salesforce, AWS",contact615@near-range-615.io,https://near-range-615.io,Ari Gomez,https://linkedin.com/company/near-range-615,near_range
+partial stack account 616,partial-stack-616.io,SaaS,330,36000000,United States,Salesforce,,,,,partial_stack
+adjacent industry account 617,adjacent-industry-617.io,Cloud Infrastructure,180,8000000,United States,"Salesforce, AWS",contact617@adjacent-industry-617.io,https://adjacent-industry-617.io,Maya Patel,https://linkedin.com/company/adjacent-industry-617,adjacent_industry
+missing firmographics account 618,missing-firmographics-618.io,SaaS,,,United States,HubSpot,contact618@missing-firmographics-618.io,https://missing-firmographics-618.io,Jon Bell,https://linkedin.com/company/missing-firmographics-618,missing_firmographics
+wrong geography account 619,wrong-geography-619.io,SaaS,230,16000000,Germany,"Salesforce, AWS",contact619@wrong-geography-619.io,https://wrong-geography-619.io,Ari Gomez,https://linkedin.com/company/wrong-geography-619,wrong_geography
+near lower range account 620,near-lower-range-620.io,SaaS,45,4000000,United States,HubSpot,,,,,near_lower_range

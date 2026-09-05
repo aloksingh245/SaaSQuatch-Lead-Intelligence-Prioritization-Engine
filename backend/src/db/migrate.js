@@ -73,6 +73,8 @@ CREATE TABLE IF NOT EXISTS lead_scores (
   id               SERIAL      PRIMARY KEY,
   lead_id          UUID        NOT NULL REFERENCES leads(id) ON DELETE CASCADE,
   total_score      INTEGER     NOT NULL DEFAULT 0,
+  fit_score        INTEGER     NOT NULL DEFAULT 0,
+  readiness_score  INTEGER     NOT NULL DEFAULT 0,
   priority         TEXT        NOT NULL DEFAULT 'VERY_LOW'
                                CHECK (priority IN ('HIGH','MEDIUM','LOW','VERY_LOW')),
   component_scores JSONB       NOT NULL DEFAULT '{}',
@@ -80,6 +82,10 @@ CREATE TABLE IF NOT EXISTS lead_scores (
   icp_profile_id   INTEGER     REFERENCES icp_profiles(id),
   created_at       TIMESTAMPTZ NOT NULL DEFAULT NOW()
 );
+
+-- Safe upgrades for databases created by earlier POC versions.
+ALTER TABLE lead_scores ADD COLUMN IF NOT EXISTS fit_score INTEGER NOT NULL DEFAULT 0;
+ALTER TABLE lead_scores ADD COLUMN IF NOT EXISTS readiness_score INTEGER NOT NULL DEFAULT 0;
 
 CREATE INDEX IF NOT EXISTS lead_scores_lead_id_idx ON lead_scores (lead_id);
 CREATE INDEX IF NOT EXISTS lead_scores_total_idx   ON lead_scores (total_score DESC);

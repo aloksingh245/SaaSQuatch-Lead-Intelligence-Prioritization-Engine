@@ -1,0 +1,181 @@
+Company,Website,Sector,Employee Count,Annual Revenue,Location,Tech Stack,Contact Email,Contact,LinkedIn URL,Source Tag
+exact fit account 801,exact-fit-801.io,saas,190-270,$8.0M,US,"Salesforce,AWS; Slack | Notion",not-an-email,,,crm-export-1
+near range account 802,https://near-range-802.io,software as a service,~600,120M-122M,U.S.A.,"Salesforce,AWS; Slack | Notion",contact802@near-range-802.io,Jon Bell,https://linkedin.com/company/near-range-802,crm-export-2
+partial stack account 803,,cloud software,0.3k,16000000,United States of America,Salesforce; Slack | Notion,,,,crm-export-3
+missing firmographics account 804,https://missing-firmographics-804.io,b2b saas,-40-40,$0.0M,Canada,HubSpot; Slack | Notion,contact804@missing-firmographics-804.io,Leah Chen,https://linkedin.com/company/missing-firmographics-804,crm-export-4
+wrong geography account 805,https://wrong-geography-805.io,financial technology,~330,24M-26M,US,"Salesforce,AWS; Slack | Notion",contact805@wrong-geography-805.io,Maya Patel,https://linkedin.com/company/wrong-geography-805,crm-export-1
+exact fit account 806,https://exact-fit-806.io,saas,0.2k,28000000,U.S.A.,"Salesforce,AWS; Slack | Notion",contact806@exact-fit-806.io,Jon Bell,https://linkedin.com/company/exact-fit-806,crm-export-2
+near range account 807,https://near-range-807.io,software as a service,510-590,$110.0M,United States of America,"Salesforce,AWS; Slack | Notion",contact807@near-range-807.io,Ari Gomez,https://linkedin.com/company/near-range-807,crm-export-3
+partial stack account 808,,cloud software,~230,36M-38M,Canada,Salesforce; Slack | Notion,,,,crm-export-4
+missing firmographics account 809,https://missing-firmographics-809.io,b2b saas,0.0k,null,US,HubSpot; Slack | Notion,contact809@missing-firmographics-809.io,,https://linkedin.com/company/missing-firmographics-809,crm-export-1
+wrong geography account 810,wrong-geography-810.io,financial technology,240-320,$12.0M,U.S.A.,"Salesforce,AWS; Slack | Notion",contact810@wrong-geography-810.io,Jon Bell,https://linkedin.com/company/wrong-geography-810,crm-export-2
+exact fit account 811,https://exact-fit-811.io,saas,~305,16M-18M,United States of America,"Salesforce,AWS; Slack | Notion",contact811@exact-fit-811.io,Ari Gomez,https://linkedin.com/company/exact-fit-811,crm-export-3
+near range account 812,https://near-range-812.io,software as a service,0.6k,120000000,Canada,"Salesforce,AWS; Slack | Notion",not-an-email,Leah Chen,https://linkedin.com/company/near-range-812,crm-export-4
+partial stack account 813,,cloud software,140-220,$24.0M,US,Salesforce; Slack | Notion,,,,crm-export-1
+missing firmographics account 814,https://missing-firmographics-814.io,b2b saas,~null,0M-2M,U.S.A.,HubSpot; Slack | Notion,contact814@missing-firmographics-814.io,Jon Bell,,crm-export-2
+wrong geography account 815,https://wrong-geography-815.io,financial technology,0.2k,32000000,United States of America,"Salesforce,AWS; Slack | Notion",contact815@wrong-geography-815.io,Ari Gomez,https://linkedin.com/company/wrong-geography-815,crm-export-3
+exact fit account 816,https://exact-fit-816.io,saas,215-295,$36.0M,Canada,"Salesforce,AWS; Slack | Notion",contact816@exact-fit-816.io,Leah Chen,https://linkedin.com/company/exact-fit-816,crm-export-4
+near range account 817,https://near-range-817.io,software as a service,~550,110M-112M,US,"Salesforce,AWS; Slack | Notion",contact817@near-range-817.io,,https://linkedin.com/company/near-range-817,crm-export-1
+partial stack account 818,,cloud software,0.3k,12000000,U.S.A.,Salesforce; Slack | Notion,,,,crm-export-2
+missing firmographics account 819,missing-firmographics-819.io,b2b saas,-40-40,$0.0M,United States of America,HubSpot; Slack | Notion,contact819@missing-firmographics-819.io,Ari Gomez,https://linkedin.com/company/missing-firmographics-819,crm-export-3
+wrong geography account 820,https://wrong-geography-820.io,financial technology,~180,20M-22M,Canada,"Salesforce,AWS; Slack | Notion",contact820@wrong-geography-820.io,Leah Chen,https://linkedin.com/company/wrong-geography-820,crm-export-4
+exact fit account 821,https://exact-fit-821.io,saas,0.2k,24000000,US,"Salesforce,AWS; Slack | Notion",contact821@exact-fit-821.io,Maya Patel,https://linkedin.com/company/exact-fit-821,crm-export-1
+near range account 822,https://near-range-822.io,software as a service,560-640,$120.0M,U.S.A.,"Salesforce,AWS; Slack | Notion",contact822@near-range-822.io,Jon Bell,https://linkedin.com/company/near-range-822,crm-export-2
+partial stack account 823,,cloud software,~255,32M-34M,United States of America,Salesforce; Slack | Notion,not-an-email,,,crm-export-3
+missing firmographics account 824,https://missing-firmographics-824.io,b2b saas,0.0k,null,Canada,HubSpot; Slack | Notion,contact824@missing-firmographics-824.io,Leah Chen,https://linkedin.com/company/missing-firmographics-824,crm-export-4
+wrong geography account 825,https://wrong-geography-825.io,financial technology,265-345,$8.0M,US,"Salesforce,AWS; Slack | Notion",contact825@wrong-geography-825.io,,https://linkedin.com/company/wrong-geography-825,crm-export-1
+exact fit account 826,https://exact-fit-826.io,saas,~330,12M-14M,U.S.A.,"Salesforce,AWS; Slack | Notion",contact826@exact-fit-826.io,Jon Bell,https://linkedin.com/company/exact-fit-826,crm-export-2
+near range account 827,https://near-range-827.io,software as a service,0.6k,110000000,United States of America,"Salesforce,AWS; Slack | Notion",contact827@near-range-827.io,Ari Gomez,,crm-export-3
+partial stack account 828,partial-stack-828.io,cloud software,165-245,$20.0M,Canada,Salesforce; Slack | Notion,,,,crm-export-4
+missing firmographics account 829,https://missing-firmographics-829.io,b2b saas,~null,0M-2M,US,HubSpot; Slack | Notion,contact829@missing-firmographics-829.io,Maya Patel,https://linkedin.com/company/missing-firmographics-829,crm-export-1
+wrong geography account 830,https://wrong-geography-830.io,financial technology,0.3k,28000000,U.S.A.,"Salesforce,AWS; Slack | Notion",contact830@wrong-geography-830.io,Jon Bell,https://linkedin.com/company/wrong-geography-830,crm-export-2
+exact fit account 831,https://exact-fit-831.io,saas,240-320,$32.0M,United States of America,"Salesforce,AWS; Slack | Notion",contact831@exact-fit-831.io,Ari Gomez,https://linkedin.com/company/exact-fit-831,crm-export-3
+near range account 832,https://near-range-832.io,software as a service,~600,120M-122M,Canada,"Salesforce,AWS; Slack | Notion",contact832@near-range-832.io,Leah Chen,https://linkedin.com/company/near-range-832,crm-export-4
+partial stack account 833,,cloud software,0.3k,8000000,US,Salesforce; Slack | Notion,,,,crm-export-1
+missing firmographics account 834,https://missing-firmographics-834.io,b2b saas,-40-40,$0.0M,U.S.A.,HubSpot; Slack | Notion,not-an-email,Jon Bell,https://linkedin.com/company/missing-firmographics-834,crm-export-2
+wrong geography account 835,https://wrong-geography-835.io,financial technology,~205,16M-18M,United States of America,"Salesforce,AWS; Slack | Notion",contact835@wrong-geography-835.io,Ari Gomez,https://linkedin.com/company/wrong-geography-835,crm-export-3
+exact fit account 836,https://exact-fit-836.io,saas,0.2k,20000000,Canada,"Salesforce,AWS; Slack | Notion",contact836@exact-fit-836.io,Leah Chen,https://linkedin.com/company/exact-fit-836,crm-export-4
+near range account 837,near-range-837.io,software as a service,510-590,$110.0M,US,"Salesforce,AWS; Slack | Notion",contact837@near-range-837.io,Maya Patel,https://linkedin.com/company/near-range-837,crm-export-1
+partial stack account 838,,cloud software,~280,28M-30M,U.S.A.,Salesforce; Slack | Notion,,,,crm-export-2
+missing firmographics account 839,https://missing-firmographics-839.io,b2b saas,0.0k,null,United States of America,HubSpot; Slack | Notion,contact839@missing-firmographics-839.io,Ari Gomez,https://linkedin.com/company/missing-firmographics-839,crm-export-3
+wrong geography account 840,https://wrong-geography-840.io,financial technology,290-370,$36.0M,Canada,"Salesforce,AWS; Slack | Notion",contact840@wrong-geography-840.io,Leah Chen,,crm-export-4
+exact fit account 841,https://exact-fit-841.io,saas,~180,8M-10M,US,"Salesforce,AWS; Slack | Notion",contact841@exact-fit-841.io,,https://linkedin.com/company/exact-fit-841,crm-export-1
+near range account 842,https://near-range-842.io,software as a service,0.6k,120000000,U.S.A.,"Salesforce,AWS; Slack | Notion",contact842@near-range-842.io,Jon Bell,https://linkedin.com/company/near-range-842,crm-export-2
+partial stack account 843,,cloud software,190-270,$16.0M,United States of America,Salesforce; Slack | Notion,,,,crm-export-3
+missing firmographics account 844,https://missing-firmographics-844.io,b2b saas,~null,0M-2M,Canada,HubSpot; Slack | Notion,contact844@missing-firmographics-844.io,Leah Chen,https://linkedin.com/company/missing-firmographics-844,crm-export-4
+wrong geography account 845,https://wrong-geography-845.io,financial technology,0.3k,24000000,US,"Salesforce,AWS; Slack | Notion",not-an-email,Maya Patel,https://linkedin.com/company/wrong-geography-845,crm-export-1
+exact fit account 846,exact-fit-846.io,saas,265-345,$28.0M,U.S.A.,"Salesforce,AWS; Slack | Notion",contact846@exact-fit-846.io,Jon Bell,https://linkedin.com/company/exact-fit-846,crm-export-2
+near range account 847,https://near-range-847.io,software as a service,~550,110M-112M,United States of America,"Salesforce,AWS; Slack | Notion",contact847@near-range-847.io,Ari Gomez,https://linkedin.com/company/near-range-847,crm-export-3
+partial stack account 848,,cloud software,0.2k,36000000,Canada,Salesforce; Slack | Notion,,,,crm-export-4
+missing firmographics account 849,https://missing-firmographics-849.io,b2b saas,-40-40,$0.0M,US,HubSpot; Slack | Notion,contact849@missing-firmographics-849.io,,https://linkedin.com/company/missing-firmographics-849,crm-export-1
+wrong geography account 850,https://wrong-geography-850.io,financial technology,~230,12M-14M,U.S.A.,"Salesforce,AWS; Slack | Notion",contact850@wrong-geography-850.io,Jon Bell,https://linkedin.com/company/wrong-geography-850,crm-export-2
+exact fit account 851,https://exact-fit-851.io,saas,0.3k,16000000,United States of America,"Salesforce,AWS; Slack | Notion",contact851@exact-fit-851.io,Ari Gomez,https://linkedin.com/company/exact-fit-851,crm-export-3
+near range account 852,https://near-range-852.io,software as a service,560-640,$120.0M,Canada,"Salesforce,AWS; Slack | Notion",contact852@near-range-852.io,Leah Chen,https://linkedin.com/company/near-range-852,crm-export-4
+partial stack account 853,,cloud software,~305,24M-26M,US,Salesforce; Slack | Notion,,,,crm-export-1
+missing firmographics account 854,https://missing-firmographics-854.io,b2b saas,0.0k,null,U.S.A.,HubSpot; Slack | Notion,contact854@missing-firmographics-854.io,Jon Bell,https://linkedin.com/company/missing-firmographics-854,crm-export-2
+wrong geography account 855,wrong-geography-855.io,financial technology,140-220,$32.0M,United States of America,"Salesforce,AWS; Slack | Notion",contact855@wrong-geography-855.io,Ari Gomez,https://linkedin.com/company/wrong-geography-855,crm-export-3
+exact fit account 856,https://exact-fit-856.io,saas,~205,36M-38M,Canada,"Salesforce,AWS; Slack | Notion",not-an-email,Leah Chen,https://linkedin.com/company/exact-fit-856,crm-export-4
+near range account 857,https://near-range-857.io,software as a service,0.6k,110000000,US,"Salesforce,AWS; Slack | Notion",contact857@near-range-857.io,,https://linkedin.com/company/near-range-857,crm-export-1
+partial stack account 858,,cloud software,215-295,$12.0M,U.S.A.,Salesforce; Slack | Notion,,,,crm-export-2
+missing firmographics account 859,https://missing-firmographics-859.io,b2b saas,~null,0M-2M,United States of America,HubSpot; Slack | Notion,contact859@missing-firmographics-859.io,Ari Gomez,https://linkedin.com/company/missing-firmographics-859,crm-export-3
+wrong geography account 860,https://wrong-geography-860.io,financial technology,0.3k,20000000,Canada,"Salesforce,AWS; Slack | Notion",contact860@wrong-geography-860.io,Leah Chen,https://linkedin.com/company/wrong-geography-860,crm-export-4
+exact fit account 861,https://exact-fit-861.io,saas,290-370,$24.0M,US,"Salesforce,AWS; Slack | Notion",contact861@exact-fit-861.io,Maya Patel,https://linkedin.com/company/exact-fit-861,crm-export-1
+near range account 862,https://near-range-862.io,software as a service,~600,120M-122M,U.S.A.,"Salesforce,AWS; Slack | Notion",contact862@near-range-862.io,Jon Bell,https://linkedin.com/company/near-range-862,crm-export-2
+partial stack account 863,,cloud software,0.2k,32000000,United States of America,Salesforce; Slack | Notion,,,,crm-export-3
+missing firmographics account 864,missing-firmographics-864.io,b2b saas,-40-40,$0.0M,Canada,HubSpot; Slack | Notion,contact864@missing-firmographics-864.io,Leah Chen,https://linkedin.com/company/missing-firmographics-864,crm-export-4
+wrong geography account 865,https://wrong-geography-865.io,financial technology,~255,8M-10M,US,"Salesforce,AWS; Slack | Notion",contact865@wrong-geography-865.io,,https://linkedin.com/company/wrong-geography-865,crm-export-1
+exact fit account 866,https://exact-fit-866.io,saas,0.3k,12000000,U.S.A.,"Salesforce,AWS; Slack | Notion",contact866@exact-fit-866.io,Jon Bell,,crm-export-2
+near range account 867,https://near-range-867.io,software as a service,510-590,$110.0M,United States of America,"Salesforce,AWS; Slack | Notion",not-an-email,Ari Gomez,https://linkedin.com/company/near-range-867,crm-export-3
+partial stack account 868,,cloud software,~330,20M-22M,Canada,Salesforce; Slack | Notion,,,,crm-export-4
+missing firmographics account 869,https://missing-firmographics-869.io,b2b saas,0.0k,null,US,HubSpot; Slack | Notion,contact869@missing-firmographics-869.io,Maya Patel,https://linkedin.com/company/missing-firmographics-869,crm-export-1
+wrong geography account 870,https://wrong-geography-870.io,financial technology,165-245,$28.0M,U.S.A.,"Salesforce,AWS; Slack | Notion",contact870@wrong-geography-870.io,Jon Bell,https://linkedin.com/company/wrong-geography-870,crm-export-2
+exact fit account 871,https://exact-fit-871.io,saas,~230,32M-34M,United States of America,"Salesforce,AWS; Slack | Notion",contact871@exact-fit-871.io,Ari Gomez,https://linkedin.com/company/exact-fit-871,crm-export-3
+near range account 872,https://near-range-872.io,software as a service,0.6k,120000000,Canada,"Salesforce,AWS; Slack | Notion",contact872@near-range-872.io,Leah Chen,https://linkedin.com/company/near-range-872,crm-export-4
+partial stack account 873,partial-stack-873.io,cloud software,240-320,$8.0M,US,Salesforce; Slack | Notion,,,,crm-export-1
+missing firmographics account 874,https://missing-firmographics-874.io,b2b saas,~null,0M-2M,U.S.A.,HubSpot; Slack | Notion,contact874@missing-firmographics-874.io,Jon Bell,https://linkedin.com/company/missing-firmographics-874,crm-export-2
+wrong geography account 875,https://wrong-geography-875.io,financial technology,0.3k,16000000,United States of America,"Salesforce,AWS; Slack | Notion",contact875@wrong-geography-875.io,Ari Gomez,https://linkedin.com/company/wrong-geography-875,crm-export-3
+exact fit account 876,https://exact-fit-876.io,saas,140-220,$20.0M,Canada,"Salesforce,AWS; Slack | Notion",contact876@exact-fit-876.io,Leah Chen,https://linkedin.com/company/exact-fit-876,crm-export-4
+near range account 877,https://near-range-877.io,software as a service,~550,110M-112M,US,"Salesforce,AWS; Slack | Notion",contact877@near-range-877.io,Maya Patel,https://linkedin.com/company/near-range-877,crm-export-1
+partial stack account 878,,cloud software,0.2k,28000000,U.S.A.,Salesforce; Slack | Notion,not-an-email,,,crm-export-2
+missing firmographics account 879,https://missing-firmographics-879.io,b2b saas,-40-40,$0.0M,United States of America,HubSpot; Slack | Notion,contact879@missing-firmographics-879.io,Ari Gomez,,crm-export-3
+wrong geography account 880,https://wrong-geography-880.io,financial technology,~280,36M-38M,Canada,"Salesforce,AWS; Slack | Notion",contact880@wrong-geography-880.io,Leah Chen,https://linkedin.com/company/wrong-geography-880,crm-export-4
+exact fit account 881,https://exact-fit-881.io,saas,0.3k,8000000,US,"Salesforce,AWS; Slack | Notion",contact881@exact-fit-881.io,,https://linkedin.com/company/exact-fit-881,crm-export-1
+near range account 882,near-range-882.io,software as a service,560-640,$120.0M,U.S.A.,"Salesforce,AWS; Slack | Notion",contact882@near-range-882.io,Jon Bell,https://linkedin.com/company/near-range-882,crm-export-2
+partial stack account 883,,cloud software,~180,16M-18M,United States of America,Salesforce; Slack | Notion,,,,crm-export-3
+missing firmographics account 884,https://missing-firmographics-884.io,b2b saas,0.0k,null,Canada,HubSpot; Slack | Notion,contact884@missing-firmographics-884.io,Leah Chen,https://linkedin.com/company/missing-firmographics-884,crm-export-4
+wrong geography account 885,https://wrong-geography-885.io,financial technology,190-270,$24.0M,US,"Salesforce,AWS; Slack | Notion",contact885@wrong-geography-885.io,Maya Patel,https://linkedin.com/company/wrong-geography-885,crm-export-1
+exact fit account 886,https://exact-fit-886.io,saas,~255,28M-30M,U.S.A.,"Salesforce,AWS; Slack | Notion",contact886@exact-fit-886.io,Jon Bell,https://linkedin.com/company/exact-fit-886,crm-export-2
+near range account 887,https://near-range-887.io,software as a service,0.6k,110000000,United States of America,"Salesforce,AWS; Slack | Notion",contact887@near-range-887.io,Ari Gomez,https://linkedin.com/company/near-range-887,crm-export-3
+partial stack account 888,,cloud software,265-345,$36.0M,Canada,Salesforce; Slack | Notion,,,,crm-export-4
+missing firmographics account 889,https://missing-firmographics-889.io,b2b saas,~null,0M-2M,US,HubSpot; Slack | Notion,not-an-email,,https://linkedin.com/company/missing-firmographics-889,crm-export-1
+wrong geography account 890,https://wrong-geography-890.io,financial technology,0.2k,12000000,U.S.A.,"Salesforce,AWS; Slack | Notion",contact890@wrong-geography-890.io,Jon Bell,https://linkedin.com/company/wrong-geography-890,crm-export-2
+exact fit account 891,exact-fit-891.io,saas,165-245,$16.0M,United States of America,"Salesforce,AWS; Slack | Notion",contact891@exact-fit-891.io,Ari Gomez,https://linkedin.com/company/exact-fit-891,crm-export-3
+near range account 892,https://near-range-892.io,software as a service,~600,120M-122M,Canada,"Salesforce,AWS; Slack | Notion",contact892@near-range-892.io,Leah Chen,,crm-export-4
+partial stack account 893,,cloud software,0.3k,24000000,US,Salesforce; Slack | Notion,,,,crm-export-1
+missing firmographics account 894,https://missing-firmographics-894.io,b2b saas,-40-40,$0.0M,U.S.A.,HubSpot; Slack | Notion,contact894@missing-firmographics-894.io,Jon Bell,https://linkedin.com/company/missing-firmographics-894,crm-export-2
+wrong geography account 895,https://wrong-geography-895.io,financial technology,~305,32M-34M,United States of America,"Salesforce,AWS; Slack | Notion",contact895@wrong-geography-895.io,Ari Gomez,https://linkedin.com/company/wrong-geography-895,crm-export-3
+exact fit account 896,https://exact-fit-896.io,saas,0.3k,36000000,Canada,"Salesforce,AWS; Slack | Notion",contact896@exact-fit-896.io,Leah Chen,https://linkedin.com/company/exact-fit-896,crm-export-4
+near range account 897,https://near-range-897.io,software as a service,510-590,$110.0M,US,"Salesforce,AWS; Slack | Notion",contact897@near-range-897.io,,https://linkedin.com/company/near-range-897,crm-export-1
+partial stack account 898,,cloud software,~205,12M-14M,U.S.A.,Salesforce; Slack | Notion,,,,crm-export-2
+missing firmographics account 899,https://missing-firmographics-899.io,b2b saas,0.0k,null,United States of America,HubSpot; Slack | Notion,contact899@missing-firmographics-899.io,Ari Gomez,https://linkedin.com/company/missing-firmographics-899,crm-export-3
+wrong geography account 900,wrong-geography-900.io,financial technology,215-295,$20.0M,Canada,"Salesforce,AWS; Slack | Notion",not-an-email,Leah Chen,https://linkedin.com/company/wrong-geography-900,crm-export-4
+exact fit account 901,https://exact-fit-901.io,saas,~280,24M-26M,US,"Salesforce,AWS; Slack | Notion",contact901@exact-fit-901.io,Maya Patel,https://linkedin.com/company/exact-fit-901,crm-export-1
+near range account 902,https://near-range-902.io,software as a service,0.6k,120000000,U.S.A.,"Salesforce,AWS; Slack | Notion",contact902@near-range-902.io,Jon Bell,https://linkedin.com/company/near-range-902,crm-export-2
+partial stack account 903,,cloud software,290-370,$32.0M,United States of America,Salesforce; Slack | Notion,,,,crm-export-3
+missing firmographics account 904,https://missing-firmographics-904.io,b2b saas,~null,0M-2M,Canada,HubSpot; Slack | Notion,contact904@missing-firmographics-904.io,Leah Chen,https://linkedin.com/company/missing-firmographics-904,crm-export-4
+wrong geography account 905,https://wrong-geography-905.io,financial technology,0.2k,8000000,US,"Salesforce,AWS; Slack | Notion",contact905@wrong-geography-905.io,,,crm-export-1
+exact fit account 906,https://exact-fit-906.io,saas,190-270,$12.0M,U.S.A.,"Salesforce,AWS; Slack | Notion",contact906@exact-fit-906.io,Jon Bell,https://linkedin.com/company/exact-fit-906,crm-export-2
+near range account 907,https://near-range-907.io,software as a service,~550,110M-112M,United States of America,"Salesforce,AWS; Slack | Notion",contact907@near-range-907.io,Ari Gomez,https://linkedin.com/company/near-range-907,crm-export-3
+partial stack account 908,,cloud software,0.3k,20000000,Canada,Salesforce; Slack | Notion,,,,crm-export-4
+missing firmographics account 909,missing-firmographics-909.io,b2b saas,-40-40,$0.0M,US,HubSpot; Slack | Notion,contact909@missing-firmographics-909.io,Maya Patel,https://linkedin.com/company/missing-firmographics-909,crm-export-1
+wrong geography account 910,https://wrong-geography-910.io,financial technology,~330,28M-30M,U.S.A.,"Salesforce,AWS; Slack | Notion",contact910@wrong-geography-910.io,Jon Bell,https://linkedin.com/company/wrong-geography-910,crm-export-2
+exact fit account 911,https://exact-fit-911.io,saas,0.2k,32000000,United States of America,"Salesforce,AWS; Slack | Notion",not-an-email,Ari Gomez,https://linkedin.com/company/exact-fit-911,crm-export-3
+near range account 912,https://near-range-912.io,software as a service,560-640,$120.0M,Canada,"Salesforce,AWS; Slack | Notion",contact912@near-range-912.io,Leah Chen,https://linkedin.com/company/near-range-912,crm-export-4
+partial stack account 913,,cloud software,~230,8M-10M,US,Salesforce; Slack | Notion,,,,crm-export-1
+missing firmographics account 914,https://missing-firmographics-914.io,b2b saas,0.0k,null,U.S.A.,HubSpot; Slack | Notion,contact914@missing-firmographics-914.io,Jon Bell,https://linkedin.com/company/missing-firmographics-914,crm-export-2
+wrong geography account 915,https://wrong-geography-915.io,financial technology,240-320,$16.0M,United States of America,"Salesforce,AWS; Slack | Notion",contact915@wrong-geography-915.io,Ari Gomez,https://linkedin.com/company/wrong-geography-915,crm-export-3
+exact fit account 916,https://exact-fit-916.io,saas,~305,20M-22M,Canada,"Salesforce,AWS; Slack | Notion",contact916@exact-fit-916.io,Leah Chen,https://linkedin.com/company/exact-fit-916,crm-export-4
+near range account 917,https://near-range-917.io,software as a service,0.6k,110000000,US,"Salesforce,AWS; Slack | Notion",contact917@near-range-917.io,Maya Patel,https://linkedin.com/company/near-range-917,crm-export-1
+partial stack account 918,partial-stack-918.io,cloud software,140-220,$28.0M,U.S.A.,Salesforce; Slack | Notion,,,,crm-export-2
+missing firmographics account 919,https://missing-firmographics-919.io,b2b saas,~null,0M-2M,United States of America,HubSpot; Slack | Notion,contact919@missing-firmographics-919.io,Ari Gomez,https://linkedin.com/company/missing-firmographics-919,crm-export-3
+wrong geography account 920,https://wrong-geography-920.io,financial technology,0.2k,36000000,Canada,"Salesforce,AWS; Slack | Notion",contact920@wrong-geography-920.io,Leah Chen,https://linkedin.com/company/wrong-geography-920,crm-export-4
+exact fit account 921,https://exact-fit-921.io,saas,215-295,$8.0M,US,"Salesforce,AWS; Slack | Notion",contact921@exact-fit-921.io,,https://linkedin.com/company/exact-fit-921,crm-export-1
+near range account 922,https://near-range-922.io,software as a service,~600,120M-122M,U.S.A.,"Salesforce,AWS; Slack | Notion",not-an-email,Jon Bell,https://linkedin.com/company/near-range-922,crm-export-2
+partial stack account 923,,cloud software,0.3k,16000000,United States of America,Salesforce; Slack | Notion,,,,crm-export-3
+missing firmographics account 924,https://missing-firmographics-924.io,b2b saas,-40-40,$0.0M,Canada,HubSpot; Slack | Notion,contact924@missing-firmographics-924.io,Leah Chen,https://linkedin.com/company/missing-firmographics-924,crm-export-4
+wrong geography account 925,https://wrong-geography-925.io,financial technology,~180,24M-26M,US,"Salesforce,AWS; Slack | Notion",contact925@wrong-geography-925.io,Maya Patel,https://linkedin.com/company/wrong-geography-925,crm-export-1
+exact fit account 926,https://exact-fit-926.io,saas,0.2k,28000000,U.S.A.,"Salesforce,AWS; Slack | Notion",contact926@exact-fit-926.io,Jon Bell,https://linkedin.com/company/exact-fit-926,crm-export-2
+near range account 927,near-range-927.io,software as a service,510-590,$110.0M,United States of America,"Salesforce,AWS; Slack | Notion",contact927@near-range-927.io,Ari Gomez,https://linkedin.com/company/near-range-927,crm-export-3
+partial stack account 928,,cloud software,~255,36M-38M,Canada,Salesforce; Slack | Notion,,,,crm-export-4
+missing firmographics account 929,https://missing-firmographics-929.io,b2b saas,0.0k,null,US,HubSpot; Slack | Notion,contact929@missing-firmographics-929.io,,https://linkedin.com/company/missing-firmographics-929,crm-export-1
+wrong geography account 930,https://wrong-geography-930.io,financial technology,265-345,$12.0M,U.S.A.,"Salesforce,AWS; Slack | Notion",contact930@wrong-geography-930.io,Jon Bell,https://linkedin.com/company/wrong-geography-930,crm-export-2
+exact fit account 931,https://exact-fit-931.io,saas,~330,16M-18M,United States of America,"Salesforce,AWS; Slack | Notion",contact931@exact-fit-931.io,Ari Gomez,,crm-export-3
+near range account 932,https://near-range-932.io,software as a service,0.6k,120000000,Canada,"Salesforce,AWS; Slack | Notion",contact932@near-range-932.io,Leah Chen,https://linkedin.com/company/near-range-932,crm-export-4
+partial stack account 933,,cloud software,165-245,$24.0M,US,Salesforce; Slack | Notion,not-an-email,,,crm-export-1
+missing firmographics account 934,https://missing-firmographics-934.io,b2b saas,~null,0M-2M,U.S.A.,HubSpot; Slack | Notion,contact934@missing-firmographics-934.io,Jon Bell,https://linkedin.com/company/missing-firmographics-934,crm-export-2
+wrong geography account 935,https://wrong-geography-935.io,financial technology,0.3k,32000000,United States of America,"Salesforce,AWS; Slack | Notion",contact935@wrong-geography-935.io,Ari Gomez,https://linkedin.com/company/wrong-geography-935,crm-export-3
+exact fit account 936,exact-fit-936.io,saas,240-320,$36.0M,Canada,"Salesforce,AWS; Slack | Notion",contact936@exact-fit-936.io,Leah Chen,https://linkedin.com/company/exact-fit-936,crm-export-4
+near range account 937,https://near-range-937.io,software as a service,~550,110M-112M,US,"Salesforce,AWS; Slack | Notion",contact937@near-range-937.io,,https://linkedin.com/company/near-range-937,crm-export-1
+partial stack account 938,,cloud software,0.3k,12000000,U.S.A.,Salesforce; Slack | Notion,,,,crm-export-2
+missing firmographics account 939,https://missing-firmographics-939.io,b2b saas,-40-40,$0.0M,United States of America,HubSpot; Slack | Notion,contact939@missing-firmographics-939.io,Ari Gomez,https://linkedin.com/company/missing-firmographics-939,crm-export-3
+wrong geography account 940,https://wrong-geography-940.io,financial technology,~205,20M-22M,Canada,"Salesforce,AWS; Slack | Notion",contact940@wrong-geography-940.io,Leah Chen,https://linkedin.com/company/wrong-geography-940,crm-export-4
+exact fit account 941,https://exact-fit-941.io,saas,0.2k,24000000,US,"Salesforce,AWS; Slack | Notion",contact941@exact-fit-941.io,Maya Patel,https://linkedin.com/company/exact-fit-941,crm-export-1
+near range account 942,https://near-range-942.io,software as a service,560-640,$120.0M,U.S.A.,"Salesforce,AWS; Slack | Notion",contact942@near-range-942.io,Jon Bell,https://linkedin.com/company/near-range-942,crm-export-2
+partial stack account 943,,cloud software,~280,32M-34M,United States of America,Salesforce; Slack | Notion,,,,crm-export-3
+missing firmographics account 944,https://missing-firmographics-944.io,b2b saas,0.0k,null,Canada,HubSpot; Slack | Notion,not-an-email,Leah Chen,,crm-export-4
+wrong geography account 945,wrong-geography-945.io,financial technology,290-370,$8.0M,US,"Salesforce,AWS; Slack | Notion",contact945@wrong-geography-945.io,,https://linkedin.com/company/wrong-geography-945,crm-export-1
+exact fit account 946,https://exact-fit-946.io,saas,~180,12M-14M,U.S.A.,"Salesforce,AWS; Slack | Notion",contact946@exact-fit-946.io,Jon Bell,https://linkedin.com/company/exact-fit-946,crm-export-2
+near range account 947,https://near-range-947.io,software as a service,0.6k,110000000,United States of America,"Salesforce,AWS; Slack | Notion",contact947@near-range-947.io,Ari Gomez,https://linkedin.com/company/near-range-947,crm-export-3
+partial stack account 948,,cloud software,190-270,$20.0M,Canada,Salesforce; Slack | Notion,,,,crm-export-4
+missing firmographics account 949,https://missing-firmographics-949.io,b2b saas,~null,0M-2M,US,HubSpot; Slack | Notion,contact949@missing-firmographics-949.io,Maya Patel,https://linkedin.com/company/missing-firmographics-949,crm-export-1
+wrong geography account 950,https://wrong-geography-950.io,financial technology,0.3k,28000000,U.S.A.,"Salesforce,AWS; Slack | Notion",contact950@wrong-geography-950.io,Jon Bell,https://linkedin.com/company/wrong-geography-950,crm-export-2
+exact fit account 951,https://exact-fit-951.io,saas,265-345,$32.0M,United States of America,"Salesforce,AWS; Slack | Notion",contact951@exact-fit-951.io,Ari Gomez,https://linkedin.com/company/exact-fit-951,crm-export-3
+near range account 952,https://near-range-952.io,software as a service,~600,120M-122M,Canada,"Salesforce,AWS; Slack | Notion",contact952@near-range-952.io,Leah Chen,https://linkedin.com/company/near-range-952,crm-export-4
+partial stack account 953,,cloud software,0.2k,8000000,US,Salesforce; Slack | Notion,,,,crm-export-1
+missing firmographics account 954,missing-firmographics-954.io,b2b saas,-40-40,$0.0M,U.S.A.,HubSpot; Slack | Notion,contact954@missing-firmographics-954.io,Jon Bell,https://linkedin.com/company/missing-firmographics-954,crm-export-2
+wrong geography account 955,https://wrong-geography-955.io,financial technology,~230,16M-18M,United States of America,"Salesforce,AWS; Slack | Notion",not-an-email,Ari Gomez,https://linkedin.com/company/wrong-geography-955,crm-export-3
+exact fit account 956,https://exact-fit-956.io,saas,0.3k,20000000,Canada,"Salesforce,AWS; Slack | Notion",contact956@exact-fit-956.io,Leah Chen,https://linkedin.com/company/exact-fit-956,crm-export-4
+near range account 957,https://near-range-957.io,software as a service,510-590,$110.0M,US,"Salesforce,AWS; Slack | Notion",contact957@near-range-957.io,Maya Patel,,crm-export-1
+partial stack account 958,,cloud software,~305,28M-30M,U.S.A.,Salesforce; Slack | Notion,,,,crm-export-2
+missing firmographics account 959,https://missing-firmographics-959.io,b2b saas,0.0k,null,United States of America,HubSpot; Slack | Notion,contact959@missing-firmographics-959.io,Ari Gomez,https://linkedin.com/company/missing-firmographics-959,crm-export-3
+wrong geography account 960,https://wrong-geography-960.io,financial technology,140-220,$36.0M,Canada,"Salesforce,AWS; Slack | Notion",contact960@wrong-geography-960.io,Leah Chen,https://linkedin.com/company/wrong-geography-960,crm-export-4
+exact fit account 961,https://exact-fit-961.io,saas,~205,8M-10M,US,"Salesforce,AWS; Slack | Notion",contact961@exact-fit-961.io,,https://linkedin.com/company/exact-fit-961,crm-export-1
+near range account 962,https://near-range-962.io,software as a service,0.6k,120000000,U.S.A.,"Salesforce,AWS; Slack | Notion",contact962@near-range-962.io,Jon Bell,https://linkedin.com/company/near-range-962,crm-export-2
+partial stack account 963,partial-stack-963.io,cloud software,215-295,$16.0M,United States of America,Salesforce; Slack | Notion,,,,crm-export-3
+missing firmographics account 964,https://missing-firmographics-964.io,b2b saas,~null,0M-2M,Canada,HubSpot; Slack | Notion,contact964@missing-firmographics-964.io,Leah Chen,https://linkedin.com/company/missing-firmographics-964,crm-export-4
+wrong geography account 965,https://wrong-geography-965.io,financial technology,0.3k,24000000,US,"Salesforce,AWS; Slack | Notion",contact965@wrong-geography-965.io,Maya Patel,https://linkedin.com/company/wrong-geography-965,crm-export-1
+exact fit account 966,https://exact-fit-966.io,saas,290-370,$28.0M,U.S.A.,"Salesforce,AWS; Slack | Notion",not-an-email,Jon Bell,https://linkedin.com/company/exact-fit-966,crm-export-2
+near range account 967,https://near-range-967.io,software as a service,~550,110M-112M,United States of America,"Salesforce,AWS; Slack | Notion",contact967@near-range-967.io,Ari Gomez,https://linkedin.com/company/near-range-967,crm-export-3
+partial stack account 968,,cloud software,0.2k,36000000,Canada,Salesforce; Slack | Notion,,,,crm-export-4
+missing firmographics account 969,https://missing-firmographics-969.io,b2b saas,-40-40,$0.0M,US,HubSpot; Slack | Notion,contact969@missing-firmographics-969.io,,https://linkedin.com/company/missing-firmographics-969,crm-export-1
+wrong geography account 970,https://wrong-geography-970.io,financial technology,~255,12M-14M,U.S.A.,"Salesforce,AWS; Slack | Notion",contact970@wrong-geography-970.io,Jon Bell,,crm-export-2
+exact fit account 971,https://exact-fit-971.io,saas,0.3k,16000000,United States of America,"Salesforce,AWS; Slack | Notion",contact971@exact-fit-971.io,Ari Gomez,https://linkedin.com/company/exact-fit-971,crm-export-3
+near range account 972,near-range-972.io,software as a service,560-640,$120.0M,Canada,"Salesforce,AWS; Slack | Notion",contact972@near-range-972.io,Leah Chen,https://linkedin.com/company/near-range-972,crm-export-4
+partial stack account 973,,cloud software,~330,24M-26M,US,Salesforce; Slack | Notion,,,,crm-export-1
+missing firmographics account 974,https://missing-firmographics-974.io,b2b saas,0.0k,null,U.S.A.,HubSpot; Slack | Notion,contact974@missing-firmographics-974.io,Jon Bell,https://linkedin.com/company/missing-firmographics-974,crm-export-2
+wrong geography account 975,https://wrong-geography-975.io,financial technology,165-245,$32.0M,United States of America,"Salesforce,AWS; Slack | Notion",contact975@wrong-geography-975.io,Ari Gomez,https://linkedin.com/company/wrong-geography-975,crm-export-3
+exact fit account 976,https://exact-fit-976.io,saas,~230,36M-38M,Canada,"Salesforce,AWS; Slack | Notion",contact976@exact-fit-976.io,Leah Chen,https://linkedin.com/company/exact-fit-976,crm-export-4
+near range account 977,https://near-range-977.io,software as a service,0.6k,110000000,US,"Salesforce,AWS; Slack | Notion",not-an-email,,https://linkedin.com/company/near-range-977,crm-export-1
+partial stack account 978,,cloud software,240-320,$12.0M,U.S.A.,Salesforce; Slack | Notion,,,,crm-export-2
+missing firmographics account 979,https://missing-firmographics-979.io,b2b saas,~null,0M-2M,United States of America,HubSpot; Slack | Notion,contact979@missing-firmographics-979.io,Ari Gomez,https://linkedin.com/company/missing-firmographics-979,crm-export-3
+wrong geography account 980,https://wrong-geography-980.io,financial technology,0.3k,20000000,Canada,"Salesforce,AWS; Slack | Notion",contact980@wrong-geography-980.io,Leah Chen,https://linkedin.com/company/wrong-geography-980,crm-export-4

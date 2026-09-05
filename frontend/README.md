@@ -1,16 +1,20 @@
-# React + Vite
+# Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+React 19 + Vite frontend for the SaaSQuatch Lead Intelligence demo.
 
-Currently, two official plugins are available:
+## Commands
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+```bash
+npm ci
+npm run dev
+npm run build
+npm run lint
+```
 
-## React Compiler
+The Vite dev server runs on port 5173 and proxies `/api` requests to the backend on port 3000.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Screens
 
-## Expanding the Oxlint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+- **Pipeline**: searchable, filterable ranked lead queue with ICP-fit/readiness scores and an accessible lead detail dialog.
+- **Import**: CSV/XLSX/XLS upload with active ICP summary and live processing counts.
+- **ICP Settings**: edit the active scoring profile; saving does not trigger web scraping.

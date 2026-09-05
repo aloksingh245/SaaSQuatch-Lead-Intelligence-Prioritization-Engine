@@ -1,51 +1,241 @@
-company_name,domain,industry,employees,revenue,country,technologies,email,website,decision_maker,linkedin_url,human_label
-CloudPilot Inc,cloudpilot.io,SaaS,180,12000000,United States,Salesforce,cto@cloudpilot.io,https://cloudpilot.io,Sarah Chen,https://linkedin.com/company/cloudpilot,HIGH
-ScaleForce,scaleforce.com,B2B SaaS,320,45000000,United States,HubSpot,hello@scaleforce.com,https://scaleforce.com,Mike Torres,,HIGH
-DataBridge Software,databridge.io,Software,90,8500000,United States,AWS,info@databridge.io,https://databridge.io,,,HIGH
-Reveno,reveno.com,SaaS,210,22000000,United States,CRM,james@reveno.com,https://reveno.com,James Liu,https://linkedin.com/company/reveno,HIGH
-PipelineAI,pipelineai.io,B2B SaaS,75,6000000,United States,Salesforce,team@pipelineai.io,https://pipelineai.io,Priya Shah,,HIGH
-TrackR SaaS,trackrsaas.com,SaaS,460,78000000,United States,cloud,sales@trackrsaas.com,https://trackrsaas.com,Emma Wright,https://linkedin.com/company/trackrsaas,HIGH
-Growlytics,growlytics.io,Software,130,15000000,United States,HubSpot,contact@growlytics.io,https://growlytics.io,Dan Park,,HIGH
-LeadStack,leadstack.com,B2B SaaS,250,30000000,United States,sales tooling,founders@leadstack.com,https://leadstack.com,Amy Ross,https://linkedin.com/company/leadstack,HIGH
-Omnideck,omnideck.io,SaaS,400,60000000,United States,AWS,hello@omnideck.io,https://omnideck.io,,,HIGH
-Pulsar CRM,pulsarcrm.com,Cloud Software,55,5500000,United States,CRM,ceo@pulsarcrm.com,https://pulsarcrm.com,Tom Reed,https://linkedin.com/company/pulsarcrm,HIGH
-Sendloop,sendloop.com,SaaS,620,120000000,United States,Salesforce,hello@sendloop.com,https://sendloop.com,Lisa Wong,,MEDIUM
-CloudNest,cloudnest.io,B2B SaaS,30,2000000,United States,HubSpot,info@cloudnest.io,https://cloudnest.io,,,MEDIUM
-Stackify,stackify.com,SaaS,280,35000000,Canada,cloud,team@stackify.com,https://stackify.com,Chris Moore,,MEDIUM
-Salesbridge UK,salesbridge.co.uk,Software,190,18000000,United Kingdom,CRM,sales@salesbridge.co.uk,https://salesbridge.co.uk,,,MEDIUM
-Pathwave,pathwave.io,SaaS,510,95000000,United States,AWS,hello@pathwave.io,https://pathwave.io,Raj Patel,,MEDIUM
-Amplify SaaS,amplifysaas.com,SaaS,22,1200000,United States,Salesforce,founders@amplifysaas.com,https://amplifysaas.com,Jen Kim,,MEDIUM
-Nexlify,nexlify.com,B2B SaaS,350,55000000,Germany,HubSpot,contact@nexlify.com,https://nexlify.com,Hans Mueller,https://linkedin.com/company/nexlify,MEDIUM
-RoutePro,routepro.io,Software,88,7500000,Australia,cloud,hello@routepro.io,https://routepro.io,,,MEDIUM
-VaultBase,vaultbase.com,SaaS,1200,200000000,United States,Salesforce,info@vaultbase.com,https://vaultbase.com,,,MEDIUM
-Segmentra,segmentra.io,Cloud Software,40,3500000,United States,AWS,team@segmentra.io,https://segmentra.io,Casey Hill,,MEDIUM
-RetailEdge,retailedge.com,E-commerce,200,25000000,United States,Salesforce,hello@retailedge.com,https://retailedge.com,Nina Scott,,LOW
-BuildTrack,buildtrack.io,Construction Tech,150,14000000,United States,cloud,info@buildtrack.io,https://buildtrack.io,,,LOW
-MediSync,medisync.com,HealthTech,300,40000000,United States,AWS,contact@medisync.com,https://medisync.com,Dr. Patel,,LOW
-EduFlow,eduflow.io,EdTech,120,10000000,United States,HubSpot,hello@eduflow.io,https://eduflow.io,Maria Lopez,,LOW
-LegalMind,legalmind.com,LegalTech,85,7000000,United States,CRM,team@legalmind.com,https://legalmind.com,,,LOW
-FinEdge,finedge.com,Fintech,400,65000000,United States,Salesforce,info@finedge.com,https://finedge.com,Arun Mehta,https://linkedin.com/company/finedge,LOW
-FarmLedger,farmledger.io,AgriTech,75,5000000,United States,cloud,hello@farmledger.io,https://farmledger.io,,,LOW
-TruckLink,trucklink.com,Logistics,250,30000000,United States,sales tooling,contact@trucklink.com,https://trucklink.com,Sam Carter,,LOW
-PropTechNow,proptechnow.com,Real Estate Tech,180,20000000,United States,AWS,info@proptechnow.com,https://proptechnow.com,,,LOW
-HRConnect,hrconnect.io,HR Tech,95,8000000,United States,HubSpot,team@hrconnect.io,https://hrconnect.io,Jane Ford,,LOW
-GhostApp,,SaaS,,,,,,,,,VERY_LOW
-Unnamed Startup,,,,,,,,,,https://linkedin.com/company/unnamed,VERY_LOW
-OldCo Inc,oldco.com,Manufacturing,8000,500000000,United States,,,,,,VERY_LOW
-TinyShop,tinyshop.biz,E-commerce,3,80000,United States,,,https://tinyshop.biz,,,VERY_LOW
-EuroData GmbH,eurodata.de,Software,700,150000000,Germany,,,https://eurodata.de,,,VERY_LOW
-MegaBank Corp,megabank.com,Financial Services,50000,10000000000,United States,Salesforce,,https://megabank.com,,,VERY_LOW
-FoodDeliver,fooddeliver.com,Food Delivery,1500,80000000,United States,,,,,,VERY_LOW
-PrintShop Pro,printshop.com,Printing,45,2000000,United States,,info@printshop.com,https://printshop.com,,,VERY_LOW
-LocalNews Inc,localnews.com,Media,60,4000000,United States,,hello@localnews.com,https://localnews.com,,,VERY_LOW
-GymTech,gymtech.io,Fitness Tech,20,900000,United States,,,https://gymtech.io,,,VERY_LOW
-NovaSaaS,novasaas.com,SaaS,270,32000000,United States,GCP,ceo@novasaas.com,https://novasaas.com,Alex Rivera,https://linkedin.com/company/novasaas,HIGH
-Clickstream,clickstream.io,B2B SaaS,110,9000000,United States,Azure,contact@clickstream.io,https://clickstream.io,,,HIGH
-DemoForge,demoforge.com,Software,65,5800000,United States,sales tooling,hi@demoforge.com,https://demoforge.com,Bob Chan,,HIGH
-Koreto,koreto.io,SaaS,380,58000000,United States,HubSpot,info@koreto.io,https://koreto.io,Lena Park,https://linkedin.com/company/koreto,HIGH
-BridgeCRM,bridgecrm.com,Cloud Software,220,28000000,United States,CRM,sales@bridgecrm.com,https://bridgecrm.com,,,HIGH
-Loopwise,loopwise.io,SaaS,450,70000000,United States,Salesforce,hello@loopwise.io,https://loopwise.io,Tom Ng,https://linkedin.com/company/loopwise,HIGH
-Marpipe,marpipe.com,MarTech,140,11000000,United States,AWS,,https://marpipe.com,,,MEDIUM
-DataFarm,datafarm.io,Software,600,105000000,United States,cloud,info@datafarm.io,https://datafarm.io,,,MEDIUM
-Voxel Systems,voxelsystems.com,SaaS,55,5200000,Singapore,HubSpot,hello@voxelsystems.com,https://voxelsystems.com,,,MEDIUM
-RetentionLab,retentionlab.com,B2B SaaS,15,800000,United States,Salesforce,team@retentionlab.com,https://retentionlab.com,,,MEDIUM
+company_name,domain,industry,employees,revenue,country,technologies,email,website,decision_maker,linkedin_url,scenario,human_label
+exact fit account 001,exact-fit-001.io,SaaS,180,8000000,United States,"Salesforce, AWS",contact001@exact-fit-001.io,https://exact-fit-001.io,Maya Patel,https://linkedin.com/company/exact-fit-001,exact_fit,HIGH
+exact fit account 002,exact-fit-002.io,SaaS,205,12000000,United States,"Salesforce, AWS",contact002@exact-fit-002.io,https://exact-fit-002.io,Jon Bell,https://linkedin.com/company/exact-fit-002,exact_fit,HIGH
+exact fit account 003,exact-fit-003.io,SaaS,230,16000000,United States,"Salesforce, AWS",contact003@exact-fit-003.io,https://exact-fit-003.io,Ari Gomez,https://linkedin.com/company/exact-fit-003,exact_fit,HIGH
+exact fit account 004,exact-fit-004.io,SaaS,255,20000000,United States,"Salesforce, AWS",contact004@exact-fit-004.io,https://exact-fit-004.io,Leah Chen,https://linkedin.com/company/exact-fit-004,exact_fit,HIGH
+exact fit account 005,exact-fit-005.io,SaaS,280,24000000,United States,"Salesforce, AWS",contact005@exact-fit-005.io,https://exact-fit-005.io,Maya Patel,https://linkedin.com/company/exact-fit-005,exact_fit,HIGH
+exact fit account 006,exact-fit-006.io,SaaS,305,28000000,United States,"Salesforce, AWS",contact006@exact-fit-006.io,https://exact-fit-006.io,Jon Bell,https://linkedin.com/company/exact-fit-006,exact_fit,HIGH
+exact fit account 007,exact-fit-007.io,SaaS,330,32000000,United States,"Salesforce, AWS",contact007@exact-fit-007.io,https://exact-fit-007.io,Ari Gomez,https://linkedin.com/company/exact-fit-007,exact_fit,HIGH
+exact fit account 008,exact-fit-008.io,SaaS,180,36000000,United States,"Salesforce, AWS",contact008@exact-fit-008.io,https://exact-fit-008.io,Leah Chen,https://linkedin.com/company/exact-fit-008,exact_fit,HIGH
+exact fit account 009,exact-fit-009.io,SaaS,205,8000000,United States,"Salesforce, AWS",contact009@exact-fit-009.io,https://exact-fit-009.io,Maya Patel,https://linkedin.com/company/exact-fit-009,exact_fit,HIGH
+exact fit account 010,exact-fit-010.io,SaaS,230,12000000,United States,"Salesforce, AWS",contact010@exact-fit-010.io,https://exact-fit-010.io,Jon Bell,https://linkedin.com/company/exact-fit-010,exact_fit,HIGH
+exact fit account 011,exact-fit-011.io,SaaS,255,16000000,United States,"Salesforce, AWS",contact011@exact-fit-011.io,https://exact-fit-011.io,Ari Gomez,https://linkedin.com/company/exact-fit-011,exact_fit,HIGH
+exact fit account 012,exact-fit-012.io,SaaS,280,20000000,United States,"Salesforce, AWS",contact012@exact-fit-012.io,https://exact-fit-012.io,Leah Chen,https://linkedin.com/company/exact-fit-012,exact_fit,HIGH
+exact fit account 013,exact-fit-013.io,SaaS,305,24000000,United States,"Salesforce, AWS",contact013@exact-fit-013.io,https://exact-fit-013.io,Maya Patel,https://linkedin.com/company/exact-fit-013,exact_fit,HIGH
+exact fit account 014,exact-fit-014.io,SaaS,330,28000000,United States,"Salesforce, AWS",contact014@exact-fit-014.io,https://exact-fit-014.io,Jon Bell,https://linkedin.com/company/exact-fit-014,exact_fit,HIGH
+exact fit account 015,exact-fit-015.io,SaaS,180,32000000,United States,"Salesforce, AWS",contact015@exact-fit-015.io,https://exact-fit-015.io,Ari Gomez,https://linkedin.com/company/exact-fit-015,exact_fit,HIGH
+exact fit account 016,exact-fit-016.io,SaaS,205,36000000,United States,"Salesforce, AWS",contact016@exact-fit-016.io,https://exact-fit-016.io,Leah Chen,https://linkedin.com/company/exact-fit-016,exact_fit,HIGH
+exact fit account 017,exact-fit-017.io,SaaS,230,8000000,United States,"Salesforce, AWS",contact017@exact-fit-017.io,https://exact-fit-017.io,Maya Patel,https://linkedin.com/company/exact-fit-017,exact_fit,HIGH
+exact fit account 018,exact-fit-018.io,SaaS,255,12000000,United States,"Salesforce, AWS",contact018@exact-fit-018.io,https://exact-fit-018.io,Jon Bell,https://linkedin.com/company/exact-fit-018,exact_fit,HIGH
+exact fit account 019,exact-fit-019.io,SaaS,280,16000000,United States,"Salesforce, AWS",contact019@exact-fit-019.io,https://exact-fit-019.io,Ari Gomez,https://linkedin.com/company/exact-fit-019,exact_fit,HIGH
+exact fit account 020,exact-fit-020.io,SaaS,305,20000000,United States,"Salesforce, AWS",contact020@exact-fit-020.io,https://exact-fit-020.io,Leah Chen,https://linkedin.com/company/exact-fit-020,exact_fit,HIGH
+exact fit account 021,exact-fit-021.io,SaaS,330,24000000,United States,"Salesforce, AWS",contact021@exact-fit-021.io,https://exact-fit-021.io,Maya Patel,https://linkedin.com/company/exact-fit-021,exact_fit,HIGH
+exact fit account 022,exact-fit-022.io,SaaS,180,28000000,United States,"Salesforce, AWS",contact022@exact-fit-022.io,https://exact-fit-022.io,Jon Bell,https://linkedin.com/company/exact-fit-022,exact_fit,HIGH
+exact fit account 023,exact-fit-023.io,SaaS,205,32000000,United States,"Salesforce, AWS",contact023@exact-fit-023.io,https://exact-fit-023.io,Ari Gomez,https://linkedin.com/company/exact-fit-023,exact_fit,HIGH
+exact fit account 024,exact-fit-024.io,SaaS,230,36000000,United States,"Salesforce, AWS",contact024@exact-fit-024.io,https://exact-fit-024.io,Leah Chen,https://linkedin.com/company/exact-fit-024,exact_fit,HIGH
+near range account 025,near-range-025.io,SaaS,550,110000000,United States,"Salesforce, AWS",contact025@near-range-025.io,https://near-range-025.io,Maya Patel,https://linkedin.com/company/near-range-025,near_range,HIGH
+near range account 026,near-range-026.io,SaaS,600,120000000,United States,"Salesforce, AWS",contact026@near-range-026.io,https://near-range-026.io,Jon Bell,https://linkedin.com/company/near-range-026,near_range,HIGH
+near range account 027,near-range-027.io,SaaS,550,110000000,United States,"Salesforce, AWS",contact027@near-range-027.io,https://near-range-027.io,Ari Gomez,https://linkedin.com/company/near-range-027,near_range,HIGH
+near range account 028,near-range-028.io,SaaS,600,120000000,United States,"Salesforce, AWS",contact028@near-range-028.io,https://near-range-028.io,Leah Chen,https://linkedin.com/company/near-range-028,near_range,HIGH
+near range account 029,near-range-029.io,SaaS,550,110000000,United States,"Salesforce, AWS",contact029@near-range-029.io,https://near-range-029.io,Maya Patel,https://linkedin.com/company/near-range-029,near_range,HIGH
+near range account 030,near-range-030.io,SaaS,600,120000000,United States,"Salesforce, AWS",contact030@near-range-030.io,https://near-range-030.io,Jon Bell,https://linkedin.com/company/near-range-030,near_range,HIGH
+near range account 031,near-range-031.io,SaaS,550,110000000,United States,"Salesforce, AWS",contact031@near-range-031.io,https://near-range-031.io,Ari Gomez,https://linkedin.com/company/near-range-031,near_range,HIGH
+near range account 032,near-range-032.io,SaaS,600,120000000,United States,"Salesforce, AWS",contact032@near-range-032.io,https://near-range-032.io,Leah Chen,https://linkedin.com/company/near-range-032,near_range,HIGH
+near range account 033,near-range-033.io,SaaS,550,110000000,United States,"Salesforce, AWS",contact033@near-range-033.io,https://near-range-033.io,Maya Patel,https://linkedin.com/company/near-range-033,near_range,HIGH
+near range account 034,near-range-034.io,SaaS,600,120000000,United States,"Salesforce, AWS",contact034@near-range-034.io,https://near-range-034.io,Jon Bell,https://linkedin.com/company/near-range-034,near_range,HIGH
+near range account 035,near-range-035.io,SaaS,550,110000000,United States,"Salesforce, AWS",contact035@near-range-035.io,https://near-range-035.io,Ari Gomez,https://linkedin.com/company/near-range-035,near_range,HIGH
+near range account 036,near-range-036.io,SaaS,600,120000000,United States,"Salesforce, AWS",contact036@near-range-036.io,https://near-range-036.io,Leah Chen,https://linkedin.com/company/near-range-036,near_range,HIGH
+near range account 037,near-range-037.io,SaaS,550,110000000,United States,"Salesforce, AWS",contact037@near-range-037.io,https://near-range-037.io,Maya Patel,https://linkedin.com/company/near-range-037,near_range,HIGH
+near range account 038,near-range-038.io,SaaS,600,120000000,United States,"Salesforce, AWS",contact038@near-range-038.io,https://near-range-038.io,Jon Bell,https://linkedin.com/company/near-range-038,near_range,HIGH
+near range account 039,near-range-039.io,SaaS,550,110000000,United States,"Salesforce, AWS",contact039@near-range-039.io,https://near-range-039.io,Ari Gomez,https://linkedin.com/company/near-range-039,near_range,HIGH
+near range account 040,near-range-040.io,SaaS,600,120000000,United States,"Salesforce, AWS",contact040@near-range-040.io,https://near-range-040.io,Leah Chen,https://linkedin.com/company/near-range-040,near_range,HIGH
+near range account 041,near-range-041.io,SaaS,550,110000000,United States,"Salesforce, AWS",contact041@near-range-041.io,https://near-range-041.io,Maya Patel,https://linkedin.com/company/near-range-041,near_range,HIGH
+near range account 042,near-range-042.io,SaaS,600,120000000,United States,"Salesforce, AWS",contact042@near-range-042.io,https://near-range-042.io,Jon Bell,https://linkedin.com/company/near-range-042,near_range,HIGH
+near range account 043,near-range-043.io,SaaS,550,110000000,United States,"Salesforce, AWS",contact043@near-range-043.io,https://near-range-043.io,Ari Gomez,https://linkedin.com/company/near-range-043,near_range,HIGH
+near range account 044,near-range-044.io,SaaS,600,120000000,United States,"Salesforce, AWS",contact044@near-range-044.io,https://near-range-044.io,Leah Chen,https://linkedin.com/company/near-range-044,near_range,HIGH
+near range account 045,near-range-045.io,SaaS,550,110000000,United States,"Salesforce, AWS",contact045@near-range-045.io,https://near-range-045.io,Maya Patel,https://linkedin.com/company/near-range-045,near_range,HIGH
+near range account 046,near-range-046.io,SaaS,600,120000000,United States,"Salesforce, AWS",contact046@near-range-046.io,https://near-range-046.io,Jon Bell,https://linkedin.com/company/near-range-046,near_range,HIGH
+near range account 047,near-range-047.io,SaaS,550,110000000,United States,"Salesforce, AWS",contact047@near-range-047.io,https://near-range-047.io,Ari Gomez,https://linkedin.com/company/near-range-047,near_range,HIGH
+near range account 048,near-range-048.io,SaaS,600,120000000,United States,"Salesforce, AWS",contact048@near-range-048.io,https://near-range-048.io,Leah Chen,https://linkedin.com/company/near-range-048,near_range,HIGH
+partial stack account 049,partial-stack-049.io,SaaS,330,8000000,United States,Salesforce,,,,,partial_stack,MEDIUM
+partial stack account 050,partial-stack-050.io,SaaS,180,12000000,United States,Salesforce,,,,,partial_stack,MEDIUM
+partial stack account 051,partial-stack-051.io,SaaS,205,16000000,United States,Salesforce,,,,,partial_stack,MEDIUM
+partial stack account 052,partial-stack-052.io,SaaS,230,20000000,United States,Salesforce,,,,,partial_stack,MEDIUM
+partial stack account 053,partial-stack-053.io,SaaS,255,24000000,United States,Salesforce,,,,,partial_stack,MEDIUM
+partial stack account 054,partial-stack-054.io,SaaS,280,28000000,United States,Salesforce,,,,,partial_stack,MEDIUM
+partial stack account 055,partial-stack-055.io,SaaS,305,32000000,United States,Salesforce,,,,,partial_stack,MEDIUM
+partial stack account 056,partial-stack-056.io,SaaS,330,36000000,United States,Salesforce,,,,,partial_stack,MEDIUM
+partial stack account 057,partial-stack-057.io,SaaS,180,8000000,United States,Salesforce,,,,,partial_stack,MEDIUM
+partial stack account 058,partial-stack-058.io,SaaS,205,12000000,United States,Salesforce,,,,,partial_stack,MEDIUM
+partial stack account 059,partial-stack-059.io,SaaS,230,16000000,United States,Salesforce,,,,,partial_stack,MEDIUM
+partial stack account 060,partial-stack-060.io,SaaS,255,20000000,United States,Salesforce,,,,,partial_stack,MEDIUM
+partial stack account 061,partial-stack-061.io,SaaS,280,24000000,United States,Salesforce,,,,,partial_stack,MEDIUM
+partial stack account 062,partial-stack-062.io,SaaS,305,28000000,United States,Salesforce,,,,,partial_stack,MEDIUM
+partial stack account 063,partial-stack-063.io,SaaS,330,32000000,United States,Salesforce,,,,,partial_stack,MEDIUM
+partial stack account 064,partial-stack-064.io,SaaS,180,36000000,United States,Salesforce,,,,,partial_stack,MEDIUM
+partial stack account 065,partial-stack-065.io,SaaS,205,8000000,United States,Salesforce,,,,,partial_stack,MEDIUM
+partial stack account 066,partial-stack-066.io,SaaS,230,12000000,United States,Salesforce,,,,,partial_stack,MEDIUM
+partial stack account 067,partial-stack-067.io,SaaS,255,16000000,United States,Salesforce,,,,,partial_stack,MEDIUM
+partial stack account 068,partial-stack-068.io,SaaS,280,20000000,United States,Salesforce,,,,,partial_stack,MEDIUM
+partial stack account 069,partial-stack-069.io,SaaS,305,24000000,United States,Salesforce,,,,,partial_stack,MEDIUM
+partial stack account 070,partial-stack-070.io,SaaS,330,28000000,United States,Salesforce,,,,,partial_stack,MEDIUM
+partial stack account 071,partial-stack-071.io,SaaS,180,32000000,United States,Salesforce,,,,,partial_stack,MEDIUM
+partial stack account 072,partial-stack-072.io,SaaS,205,36000000,United States,Salesforce,,,,,partial_stack,MEDIUM
+adjacent industry account 073,adjacent-industry-073.io,Cloud Infrastructure,230,8000000,United States,"Salesforce, AWS",contact073@adjacent-industry-073.io,https://adjacent-industry-073.io,Maya Patel,https://linkedin.com/company/adjacent-industry-073,adjacent_industry,LOW
+adjacent industry account 074,adjacent-industry-074.io,Cloud Infrastructure,255,12000000,United States,"Salesforce, AWS",contact074@adjacent-industry-074.io,https://adjacent-industry-074.io,Jon Bell,https://linkedin.com/company/adjacent-industry-074,adjacent_industry,LOW
+adjacent industry account 075,adjacent-industry-075.io,Cloud Infrastructure,280,16000000,United States,"Salesforce, AWS",contact075@adjacent-industry-075.io,https://adjacent-industry-075.io,Ari Gomez,https://linkedin.com/company/adjacent-industry-075,adjacent_industry,LOW
+adjacent industry account 076,adjacent-industry-076.io,Cloud Infrastructure,305,20000000,United States,"Salesforce, AWS",contact076@adjacent-industry-076.io,https://adjacent-industry-076.io,Leah Chen,https://linkedin.com/company/adjacent-industry-076,adjacent_industry,LOW
+adjacent industry account 077,adjacent-industry-077.io,Cloud Infrastructure,330,24000000,United States,"Salesforce, AWS",contact077@adjacent-industry-077.io,https://adjacent-industry-077.io,Maya Patel,https://linkedin.com/company/adjacent-industry-077,adjacent_industry,LOW
+adjacent industry account 078,adjacent-industry-078.io,Cloud Infrastructure,180,28000000,United States,"Salesforce, AWS",contact078@adjacent-industry-078.io,https://adjacent-industry-078.io,Jon Bell,https://linkedin.com/company/adjacent-industry-078,adjacent_industry,LOW
+adjacent industry account 079,adjacent-industry-079.io,Cloud Infrastructure,205,32000000,United States,"Salesforce, AWS",contact079@adjacent-industry-079.io,https://adjacent-industry-079.io,Ari Gomez,https://linkedin.com/company/adjacent-industry-079,adjacent_industry,LOW
+adjacent industry account 080,adjacent-industry-080.io,Cloud Infrastructure,230,36000000,United States,"Salesforce, AWS",contact080@adjacent-industry-080.io,https://adjacent-industry-080.io,Leah Chen,https://linkedin.com/company/adjacent-industry-080,adjacent_industry,LOW
+adjacent industry account 081,adjacent-industry-081.io,Cloud Infrastructure,255,8000000,United States,"Salesforce, AWS",contact081@adjacent-industry-081.io,https://adjacent-industry-081.io,Maya Patel,https://linkedin.com/company/adjacent-industry-081,adjacent_industry,LOW
+adjacent industry account 082,adjacent-industry-082.io,Cloud Infrastructure,280,12000000,United States,"Salesforce, AWS",contact082@adjacent-industry-082.io,https://adjacent-industry-082.io,Jon Bell,https://linkedin.com/company/adjacent-industry-082,adjacent_industry,LOW
+adjacent industry account 083,adjacent-industry-083.io,Cloud Infrastructure,305,16000000,United States,"Salesforce, AWS",contact083@adjacent-industry-083.io,https://adjacent-industry-083.io,Ari Gomez,https://linkedin.com/company/adjacent-industry-083,adjacent_industry,LOW
+adjacent industry account 084,adjacent-industry-084.io,Cloud Infrastructure,330,20000000,United States,"Salesforce, AWS",contact084@adjacent-industry-084.io,https://adjacent-industry-084.io,Leah Chen,https://linkedin.com/company/adjacent-industry-084,adjacent_industry,LOW
+adjacent industry account 085,adjacent-industry-085.io,Cloud Infrastructure,180,24000000,United States,"Salesforce, AWS",contact085@adjacent-industry-085.io,https://adjacent-industry-085.io,Maya Patel,https://linkedin.com/company/adjacent-industry-085,adjacent_industry,LOW
+adjacent industry account 086,adjacent-industry-086.io,Cloud Infrastructure,205,28000000,United States,"Salesforce, AWS",contact086@adjacent-industry-086.io,https://adjacent-industry-086.io,Jon Bell,https://linkedin.com/company/adjacent-industry-086,adjacent_industry,LOW
+adjacent industry account 087,adjacent-industry-087.io,Cloud Infrastructure,230,32000000,United States,"Salesforce, AWS",contact087@adjacent-industry-087.io,https://adjacent-industry-087.io,Ari Gomez,https://linkedin.com/company/adjacent-industry-087,adjacent_industry,LOW
+adjacent industry account 088,adjacent-industry-088.io,Cloud Infrastructure,255,36000000,United States,"Salesforce, AWS",contact088@adjacent-industry-088.io,https://adjacent-industry-088.io,Leah Chen,https://linkedin.com/company/adjacent-industry-088,adjacent_industry,LOW
+adjacent industry account 089,adjacent-industry-089.io,Cloud Infrastructure,280,8000000,United States,"Salesforce, AWS",contact089@adjacent-industry-089.io,https://adjacent-industry-089.io,Maya Patel,https://linkedin.com/company/adjacent-industry-089,adjacent_industry,LOW
+adjacent industry account 090,adjacent-industry-090.io,Cloud Infrastructure,305,12000000,United States,"Salesforce, AWS",contact090@adjacent-industry-090.io,https://adjacent-industry-090.io,Jon Bell,https://linkedin.com/company/adjacent-industry-090,adjacent_industry,LOW
+adjacent industry account 091,adjacent-industry-091.io,Cloud Infrastructure,330,16000000,United States,"Salesforce, AWS",contact091@adjacent-industry-091.io,https://adjacent-industry-091.io,Ari Gomez,https://linkedin.com/company/adjacent-industry-091,adjacent_industry,LOW
+adjacent industry account 092,adjacent-industry-092.io,Cloud Infrastructure,180,20000000,United States,"Salesforce, AWS",contact092@adjacent-industry-092.io,https://adjacent-industry-092.io,Leah Chen,https://linkedin.com/company/adjacent-industry-092,adjacent_industry,LOW
+adjacent industry account 093,adjacent-industry-093.io,Cloud Infrastructure,205,24000000,United States,"Salesforce, AWS",contact093@adjacent-industry-093.io,https://adjacent-industry-093.io,Maya Patel,https://linkedin.com/company/adjacent-industry-093,adjacent_industry,LOW
+adjacent industry account 094,adjacent-industry-094.io,Cloud Infrastructure,230,28000000,United States,"Salesforce, AWS",contact094@adjacent-industry-094.io,https://adjacent-industry-094.io,Jon Bell,https://linkedin.com/company/adjacent-industry-094,adjacent_industry,LOW
+adjacent industry account 095,adjacent-industry-095.io,Cloud Infrastructure,255,32000000,United States,"Salesforce, AWS",contact095@adjacent-industry-095.io,https://adjacent-industry-095.io,Ari Gomez,https://linkedin.com/company/adjacent-industry-095,adjacent_industry,LOW
+adjacent industry account 096,adjacent-industry-096.io,Cloud Infrastructure,280,36000000,United States,"Salesforce, AWS",contact096@adjacent-industry-096.io,https://adjacent-industry-096.io,Leah Chen,https://linkedin.com/company/adjacent-industry-096,adjacent_industry,LOW
+wrong geography account 097,wrong-geography-097.io,SaaS,305,8000000,Germany,"Salesforce, AWS",contact097@wrong-geography-097.io,https://wrong-geography-097.io,Maya Patel,https://linkedin.com/company/wrong-geography-097,wrong_geography,MEDIUM
+wrong geography account 098,wrong-geography-098.io,SaaS,330,12000000,United Kingdom,"Salesforce, AWS",contact098@wrong-geography-098.io,https://wrong-geography-098.io,Jon Bell,https://linkedin.com/company/wrong-geography-098,wrong_geography,MEDIUM
+wrong geography account 099,wrong-geography-099.io,SaaS,180,16000000,Germany,"Salesforce, AWS",contact099@wrong-geography-099.io,https://wrong-geography-099.io,Ari Gomez,https://linkedin.com/company/wrong-geography-099,wrong_geography,MEDIUM
+wrong geography account 100,wrong-geography-100.io,SaaS,205,20000000,United Kingdom,"Salesforce, AWS",contact100@wrong-geography-100.io,https://wrong-geography-100.io,Leah Chen,https://linkedin.com/company/wrong-geography-100,wrong_geography,MEDIUM
+wrong geography account 101,wrong-geography-101.io,SaaS,230,24000000,Germany,"Salesforce, AWS",contact101@wrong-geography-101.io,https://wrong-geography-101.io,Maya Patel,https://linkedin.com/company/wrong-geography-101,wrong_geography,MEDIUM
+wrong geography account 102,wrong-geography-102.io,SaaS,255,28000000,United Kingdom,"Salesforce, AWS",contact102@wrong-geography-102.io,https://wrong-geography-102.io,Jon Bell,https://linkedin.com/company/wrong-geography-102,wrong_geography,MEDIUM
+wrong geography account 103,wrong-geography-103.io,SaaS,280,32000000,Germany,"Salesforce, AWS",contact103@wrong-geography-103.io,https://wrong-geography-103.io,Ari Gomez,https://linkedin.com/company/wrong-geography-103,wrong_geography,MEDIUM
+wrong geography account 104,wrong-geography-104.io,SaaS,305,36000000,United Kingdom,"Salesforce, AWS",contact104@wrong-geography-104.io,https://wrong-geography-104.io,Leah Chen,https://linkedin.com/company/wrong-geography-104,wrong_geography,MEDIUM
+wrong geography account 105,wrong-geography-105.io,SaaS,330,8000000,Germany,"Salesforce, AWS",contact105@wrong-geography-105.io,https://wrong-geography-105.io,Maya Patel,https://linkedin.com/company/wrong-geography-105,wrong_geography,MEDIUM
+wrong geography account 106,wrong-geography-106.io,SaaS,180,12000000,United Kingdom,"Salesforce, AWS",contact106@wrong-geography-106.io,https://wrong-geography-106.io,Jon Bell,https://linkedin.com/company/wrong-geography-106,wrong_geography,MEDIUM
+wrong geography account 107,wrong-geography-107.io,SaaS,205,16000000,Germany,"Salesforce, AWS",contact107@wrong-geography-107.io,https://wrong-geography-107.io,Ari Gomez,https://linkedin.com/company/wrong-geography-107,wrong_geography,MEDIUM
+wrong geography account 108,wrong-geography-108.io,SaaS,230,20000000,United Kingdom,"Salesforce, AWS",contact108@wrong-geography-108.io,https://wrong-geography-108.io,Leah Chen,https://linkedin.com/company/wrong-geography-108,wrong_geography,MEDIUM
+wrong geography account 109,wrong-geography-109.io,SaaS,255,24000000,Germany,"Salesforce, AWS",contact109@wrong-geography-109.io,https://wrong-geography-109.io,Maya Patel,https://linkedin.com/company/wrong-geography-109,wrong_geography,MEDIUM
+wrong geography account 110,wrong-geography-110.io,SaaS,280,28000000,United Kingdom,"Salesforce, AWS",contact110@wrong-geography-110.io,https://wrong-geography-110.io,Jon Bell,https://linkedin.com/company/wrong-geography-110,wrong_geography,MEDIUM
+wrong geography account 111,wrong-geography-111.io,SaaS,305,32000000,Germany,"Salesforce, AWS",contact111@wrong-geography-111.io,https://wrong-geography-111.io,Ari Gomez,https://linkedin.com/company/wrong-geography-111,wrong_geography,MEDIUM
+wrong geography account 112,wrong-geography-112.io,SaaS,330,36000000,United Kingdom,"Salesforce, AWS",contact112@wrong-geography-112.io,https://wrong-geography-112.io,Leah Chen,https://linkedin.com/company/wrong-geography-112,wrong_geography,MEDIUM
+wrong geography account 113,wrong-geography-113.io,SaaS,180,8000000,Germany,"Salesforce, AWS",contact113@wrong-geography-113.io,https://wrong-geography-113.io,Maya Patel,https://linkedin.com/company/wrong-geography-113,wrong_geography,MEDIUM
+wrong geography account 114,wrong-geography-114.io,SaaS,205,12000000,United Kingdom,"Salesforce, AWS",contact114@wrong-geography-114.io,https://wrong-geography-114.io,Jon Bell,https://linkedin.com/company/wrong-geography-114,wrong_geography,MEDIUM
+wrong geography account 115,wrong-geography-115.io,SaaS,230,16000000,Germany,"Salesforce, AWS",contact115@wrong-geography-115.io,https://wrong-geography-115.io,Ari Gomez,https://linkedin.com/company/wrong-geography-115,wrong_geography,MEDIUM
+wrong geography account 116,wrong-geography-116.io,SaaS,255,20000000,United Kingdom,"Salesforce, AWS",contact116@wrong-geography-116.io,https://wrong-geography-116.io,Leah Chen,https://linkedin.com/company/wrong-geography-116,wrong_geography,MEDIUM
+wrong geography account 117,wrong-geography-117.io,SaaS,280,24000000,Germany,"Salesforce, AWS",contact117@wrong-geography-117.io,https://wrong-geography-117.io,Maya Patel,https://linkedin.com/company/wrong-geography-117,wrong_geography,MEDIUM
+wrong geography account 118,wrong-geography-118.io,SaaS,305,28000000,United Kingdom,"Salesforce, AWS",contact118@wrong-geography-118.io,https://wrong-geography-118.io,Jon Bell,https://linkedin.com/company/wrong-geography-118,wrong_geography,MEDIUM
+wrong geography account 119,wrong-geography-119.io,SaaS,330,32000000,Germany,"Salesforce, AWS",contact119@wrong-geography-119.io,https://wrong-geography-119.io,Ari Gomez,https://linkedin.com/company/wrong-geography-119,wrong_geography,MEDIUM
+wrong geography account 120,wrong-geography-120.io,SaaS,180,36000000,United Kingdom,"Salesforce, AWS",contact120@wrong-geography-120.io,https://wrong-geography-120.io,Leah Chen,https://linkedin.com/company/wrong-geography-120,wrong_geography,MEDIUM
+missing firmographics account 121,missing-firmographics-121.io,SaaS,,,United States,HubSpot,contact121@missing-firmographics-121.io,https://missing-firmographics-121.io,Maya Patel,https://linkedin.com/company/missing-firmographics-121,missing_firmographics,MEDIUM
+missing firmographics account 122,missing-firmographics-122.io,SaaS,,,United States,HubSpot,contact122@missing-firmographics-122.io,https://missing-firmographics-122.io,Jon Bell,https://linkedin.com/company/missing-firmographics-122,missing_firmographics,MEDIUM
+missing firmographics account 123,missing-firmographics-123.io,SaaS,,,United States,HubSpot,contact123@missing-firmographics-123.io,https://missing-firmographics-123.io,Ari Gomez,https://linkedin.com/company/missing-firmographics-123,missing_firmographics,MEDIUM
+missing firmographics account 124,missing-firmographics-124.io,SaaS,,,United States,HubSpot,contact124@missing-firmographics-124.io,https://missing-firmographics-124.io,Leah Chen,https://linkedin.com/company/missing-firmographics-124,missing_firmographics,MEDIUM
+missing firmographics account 125,missing-firmographics-125.io,SaaS,,,United States,HubSpot,contact125@missing-firmographics-125.io,https://missing-firmographics-125.io,Maya Patel,https://linkedin.com/company/missing-firmographics-125,missing_firmographics,MEDIUM
+missing firmographics account 126,missing-firmographics-126.io,SaaS,,,United States,HubSpot,contact126@missing-firmographics-126.io,https://missing-firmographics-126.io,Jon Bell,https://linkedin.com/company/missing-firmographics-126,missing_firmographics,MEDIUM
+missing firmographics account 127,missing-firmographics-127.io,SaaS,,,United States,HubSpot,contact127@missing-firmographics-127.io,https://missing-firmographics-127.io,Ari Gomez,https://linkedin.com/company/missing-firmographics-127,missing_firmographics,MEDIUM
+missing firmographics account 128,missing-firmographics-128.io,SaaS,,,United States,HubSpot,contact128@missing-firmographics-128.io,https://missing-firmographics-128.io,Leah Chen,https://linkedin.com/company/missing-firmographics-128,missing_firmographics,MEDIUM
+missing firmographics account 129,missing-firmographics-129.io,SaaS,,,United States,HubSpot,contact129@missing-firmographics-129.io,https://missing-firmographics-129.io,Maya Patel,https://linkedin.com/company/missing-firmographics-129,missing_firmographics,MEDIUM
+missing firmographics account 130,missing-firmographics-130.io,SaaS,,,United States,HubSpot,contact130@missing-firmographics-130.io,https://missing-firmographics-130.io,Jon Bell,https://linkedin.com/company/missing-firmographics-130,missing_firmographics,MEDIUM
+missing firmographics account 131,missing-firmographics-131.io,SaaS,,,United States,HubSpot,contact131@missing-firmographics-131.io,https://missing-firmographics-131.io,Ari Gomez,https://linkedin.com/company/missing-firmographics-131,missing_firmographics,MEDIUM
+missing firmographics account 132,missing-firmographics-132.io,SaaS,,,United States,HubSpot,contact132@missing-firmographics-132.io,https://missing-firmographics-132.io,Leah Chen,https://linkedin.com/company/missing-firmographics-132,missing_firmographics,MEDIUM
+missing firmographics account 133,missing-firmographics-133.io,SaaS,,,United States,HubSpot,contact133@missing-firmographics-133.io,https://missing-firmographics-133.io,Maya Patel,https://linkedin.com/company/missing-firmographics-133,missing_firmographics,MEDIUM
+missing firmographics account 134,missing-firmographics-134.io,SaaS,,,United States,HubSpot,contact134@missing-firmographics-134.io,https://missing-firmographics-134.io,Jon Bell,https://linkedin.com/company/missing-firmographics-134,missing_firmographics,MEDIUM
+missing firmographics account 135,missing-firmographics-135.io,SaaS,,,United States,HubSpot,contact135@missing-firmographics-135.io,https://missing-firmographics-135.io,Ari Gomez,https://linkedin.com/company/missing-firmographics-135,missing_firmographics,MEDIUM
+missing firmographics account 136,missing-firmographics-136.io,SaaS,,,United States,HubSpot,contact136@missing-firmographics-136.io,https://missing-firmographics-136.io,Leah Chen,https://linkedin.com/company/missing-firmographics-136,missing_firmographics,MEDIUM
+missing firmographics account 137,missing-firmographics-137.io,SaaS,,,United States,HubSpot,contact137@missing-firmographics-137.io,https://missing-firmographics-137.io,Maya Patel,https://linkedin.com/company/missing-firmographics-137,missing_firmographics,MEDIUM
+missing firmographics account 138,missing-firmographics-138.io,SaaS,,,United States,HubSpot,contact138@missing-firmographics-138.io,https://missing-firmographics-138.io,Jon Bell,https://linkedin.com/company/missing-firmographics-138,missing_firmographics,MEDIUM
+missing firmographics account 139,missing-firmographics-139.io,SaaS,,,United States,HubSpot,contact139@missing-firmographics-139.io,https://missing-firmographics-139.io,Ari Gomez,https://linkedin.com/company/missing-firmographics-139,missing_firmographics,MEDIUM
+missing firmographics account 140,missing-firmographics-140.io,SaaS,,,United States,HubSpot,contact140@missing-firmographics-140.io,https://missing-firmographics-140.io,Leah Chen,https://linkedin.com/company/missing-firmographics-140,missing_firmographics,MEDIUM
+missing firmographics account 141,missing-firmographics-141.io,SaaS,,,United States,HubSpot,contact141@missing-firmographics-141.io,https://missing-firmographics-141.io,Maya Patel,https://linkedin.com/company/missing-firmographics-141,missing_firmographics,MEDIUM
+missing firmographics account 142,missing-firmographics-142.io,SaaS,,,United States,HubSpot,contact142@missing-firmographics-142.io,https://missing-firmographics-142.io,Jon Bell,https://linkedin.com/company/missing-firmographics-142,missing_firmographics,MEDIUM
+missing firmographics account 143,missing-firmographics-143.io,SaaS,,,United States,HubSpot,contact143@missing-firmographics-143.io,https://missing-firmographics-143.io,Ari Gomez,https://linkedin.com/company/missing-firmographics-143,missing_firmographics,MEDIUM
+missing firmographics account 144,missing-firmographics-144.io,SaaS,,,United States,HubSpot,contact144@missing-firmographics-144.io,https://missing-firmographics-144.io,Leah Chen,https://linkedin.com/company/missing-firmographics-144,missing_firmographics,MEDIUM
+wrong industry account 145,wrong-industry-145.io,E-commerce,280,8000000,United States,"Salesforce, AWS",contact145@wrong-industry-145.io,https://wrong-industry-145.io,Maya Patel,https://linkedin.com/company/wrong-industry-145,wrong_industry,LOW
+wrong industry account 146,wrong-industry-146.io,Real Estate,305,12000000,United States,"Salesforce, AWS",contact146@wrong-industry-146.io,https://wrong-industry-146.io,Jon Bell,https://linkedin.com/company/wrong-industry-146,wrong_industry,LOW
+wrong industry account 147,wrong-industry-147.io,E-commerce,330,16000000,United States,"Salesforce, AWS",contact147@wrong-industry-147.io,https://wrong-industry-147.io,Ari Gomez,https://linkedin.com/company/wrong-industry-147,wrong_industry,LOW
+wrong industry account 148,wrong-industry-148.io,Real Estate,180,20000000,United States,"Salesforce, AWS",contact148@wrong-industry-148.io,https://wrong-industry-148.io,Leah Chen,https://linkedin.com/company/wrong-industry-148,wrong_industry,LOW
+wrong industry account 149,wrong-industry-149.io,E-commerce,205,24000000,United States,"Salesforce, AWS",contact149@wrong-industry-149.io,https://wrong-industry-149.io,Maya Patel,https://linkedin.com/company/wrong-industry-149,wrong_industry,LOW
+wrong industry account 150,wrong-industry-150.io,Real Estate,230,28000000,United States,"Salesforce, AWS",contact150@wrong-industry-150.io,https://wrong-industry-150.io,Jon Bell,https://linkedin.com/company/wrong-industry-150,wrong_industry,LOW
+wrong industry account 151,wrong-industry-151.io,E-commerce,255,32000000,United States,"Salesforce, AWS",contact151@wrong-industry-151.io,https://wrong-industry-151.io,Ari Gomez,https://linkedin.com/company/wrong-industry-151,wrong_industry,LOW
+wrong industry account 152,wrong-industry-152.io,Real Estate,280,36000000,United States,"Salesforce, AWS",contact152@wrong-industry-152.io,https://wrong-industry-152.io,Leah Chen,https://linkedin.com/company/wrong-industry-152,wrong_industry,LOW
+wrong industry account 153,wrong-industry-153.io,E-commerce,305,8000000,United States,"Salesforce, AWS",contact153@wrong-industry-153.io,https://wrong-industry-153.io,Maya Patel,https://linkedin.com/company/wrong-industry-153,wrong_industry,LOW
+wrong industry account 154,wrong-industry-154.io,Real Estate,330,12000000,United States,"Salesforce, AWS",contact154@wrong-industry-154.io,https://wrong-industry-154.io,Jon Bell,https://linkedin.com/company/wrong-industry-154,wrong_industry,LOW
+wrong industry account 155,wrong-industry-155.io,E-commerce,180,16000000,United States,"Salesforce, AWS",contact155@wrong-industry-155.io,https://wrong-industry-155.io,Ari Gomez,https://linkedin.com/company/wrong-industry-155,wrong_industry,LOW
+wrong industry account 156,wrong-industry-156.io,Real Estate,205,20000000,United States,"Salesforce, AWS",contact156@wrong-industry-156.io,https://wrong-industry-156.io,Leah Chen,https://linkedin.com/company/wrong-industry-156,wrong_industry,LOW
+wrong industry account 157,wrong-industry-157.io,E-commerce,230,24000000,United States,"Salesforce, AWS",contact157@wrong-industry-157.io,https://wrong-industry-157.io,Maya Patel,https://linkedin.com/company/wrong-industry-157,wrong_industry,LOW
+wrong industry account 158,wrong-industry-158.io,Real Estate,255,28000000,United States,"Salesforce, AWS",contact158@wrong-industry-158.io,https://wrong-industry-158.io,Jon Bell,https://linkedin.com/company/wrong-industry-158,wrong_industry,LOW
+wrong industry account 159,wrong-industry-159.io,E-commerce,280,32000000,United States,"Salesforce, AWS",contact159@wrong-industry-159.io,https://wrong-industry-159.io,Ari Gomez,https://linkedin.com/company/wrong-industry-159,wrong_industry,LOW
+wrong industry account 160,wrong-industry-160.io,Real Estate,305,36000000,United States,"Salesforce, AWS",contact160@wrong-industry-160.io,https://wrong-industry-160.io,Leah Chen,https://linkedin.com/company/wrong-industry-160,wrong_industry,LOW
+wrong industry account 161,wrong-industry-161.io,E-commerce,330,8000000,United States,"Salesforce, AWS",contact161@wrong-industry-161.io,https://wrong-industry-161.io,Maya Patel,https://linkedin.com/company/wrong-industry-161,wrong_industry,LOW
+wrong industry account 162,wrong-industry-162.io,Real Estate,180,12000000,United States,"Salesforce, AWS",contact162@wrong-industry-162.io,https://wrong-industry-162.io,Jon Bell,https://linkedin.com/company/wrong-industry-162,wrong_industry,LOW
+wrong industry account 163,wrong-industry-163.io,E-commerce,205,16000000,United States,"Salesforce, AWS",contact163@wrong-industry-163.io,https://wrong-industry-163.io,Ari Gomez,https://linkedin.com/company/wrong-industry-163,wrong_industry,LOW
+wrong industry account 164,wrong-industry-164.io,Real Estate,230,20000000,United States,"Salesforce, AWS",contact164@wrong-industry-164.io,https://wrong-industry-164.io,Leah Chen,https://linkedin.com/company/wrong-industry-164,wrong_industry,LOW
+wrong industry account 165,wrong-industry-165.io,E-commerce,255,24000000,United States,"Salesforce, AWS",contact165@wrong-industry-165.io,https://wrong-industry-165.io,Maya Patel,https://linkedin.com/company/wrong-industry-165,wrong_industry,LOW
+wrong industry account 166,wrong-industry-166.io,Real Estate,280,28000000,United States,"Salesforce, AWS",contact166@wrong-industry-166.io,https://wrong-industry-166.io,Jon Bell,https://linkedin.com/company/wrong-industry-166,wrong_industry,LOW
+wrong industry account 167,wrong-industry-167.io,E-commerce,305,32000000,United States,"Salesforce, AWS",contact167@wrong-industry-167.io,https://wrong-industry-167.io,Ari Gomez,https://linkedin.com/company/wrong-industry-167,wrong_industry,LOW
+wrong industry account 168,wrong-industry-168.io,Real Estate,330,36000000,United States,"Salesforce, AWS",contact168@wrong-industry-168.io,https://wrong-industry-168.io,Leah Chen,https://linkedin.com/company/wrong-industry-168,wrong_industry,LOW
+far size account 169,far-size-169.io,SaaS,10,500000,United States,Salesforce,contact169@far-size-169.io,https://far-size-169.io,Maya Patel,https://linkedin.com/company/far-size-169,far_size,MEDIUM
+far size account 170,far-size-170.io,SaaS,15,750000,United States,Salesforce,contact170@far-size-170.io,https://far-size-170.io,Jon Bell,https://linkedin.com/company/far-size-170,far_size,MEDIUM
+far size account 171,far-size-171.io,SaaS,20,1000000,United States,Salesforce,contact171@far-size-171.io,https://far-size-171.io,Ari Gomez,https://linkedin.com/company/far-size-171,far_size,MEDIUM
+far size account 172,far-size-172.io,SaaS,10,500000,United States,Salesforce,contact172@far-size-172.io,https://far-size-172.io,Leah Chen,https://linkedin.com/company/far-size-172,far_size,MEDIUM
+far size account 173,far-size-173.io,SaaS,15,750000,United States,Salesforce,contact173@far-size-173.io,https://far-size-173.io,Maya Patel,https://linkedin.com/company/far-size-173,far_size,MEDIUM
+far size account 174,far-size-174.io,SaaS,20,1000000,United States,Salesforce,contact174@far-size-174.io,https://far-size-174.io,Jon Bell,https://linkedin.com/company/far-size-174,far_size,MEDIUM
+far size account 175,far-size-175.io,SaaS,10,500000,United States,Salesforce,contact175@far-size-175.io,https://far-size-175.io,Ari Gomez,https://linkedin.com/company/far-size-175,far_size,MEDIUM
+far size account 176,far-size-176.io,SaaS,15,750000,United States,Salesforce,contact176@far-size-176.io,https://far-size-176.io,Leah Chen,https://linkedin.com/company/far-size-176,far_size,MEDIUM
+far size account 177,far-size-177.io,SaaS,20,1000000,United States,Salesforce,contact177@far-size-177.io,https://far-size-177.io,Maya Patel,https://linkedin.com/company/far-size-177,far_size,MEDIUM
+far size account 178,far-size-178.io,SaaS,10,500000,United States,Salesforce,contact178@far-size-178.io,https://far-size-178.io,Jon Bell,https://linkedin.com/company/far-size-178,far_size,MEDIUM
+far size account 179,far-size-179.io,SaaS,15,750000,United States,Salesforce,contact179@far-size-179.io,https://far-size-179.io,Ari Gomez,https://linkedin.com/company/far-size-179,far_size,MEDIUM
+far size account 180,far-size-180.io,SaaS,20,1000000,United States,Salesforce,contact180@far-size-180.io,https://far-size-180.io,Leah Chen,https://linkedin.com/company/far-size-180,far_size,MEDIUM
+far size account 181,far-size-181.io,SaaS,10,500000,United States,Salesforce,contact181@far-size-181.io,https://far-size-181.io,Maya Patel,https://linkedin.com/company/far-size-181,far_size,MEDIUM
+far size account 182,far-size-182.io,SaaS,15,750000,United States,Salesforce,contact182@far-size-182.io,https://far-size-182.io,Jon Bell,https://linkedin.com/company/far-size-182,far_size,MEDIUM
+far size account 183,far-size-183.io,SaaS,20,1000000,United States,Salesforce,contact183@far-size-183.io,https://far-size-183.io,Ari Gomez,https://linkedin.com/company/far-size-183,far_size,MEDIUM
+far size account 184,far-size-184.io,SaaS,10,500000,United States,Salesforce,contact184@far-size-184.io,https://far-size-184.io,Leah Chen,https://linkedin.com/company/far-size-184,far_size,MEDIUM
+far size account 185,far-size-185.io,SaaS,15,750000,United States,Salesforce,contact185@far-size-185.io,https://far-size-185.io,Maya Patel,https://linkedin.com/company/far-size-185,far_size,MEDIUM
+far size account 186,far-size-186.io,SaaS,20,1000000,United States,Salesforce,contact186@far-size-186.io,https://far-size-186.io,Jon Bell,https://linkedin.com/company/far-size-186,far_size,MEDIUM
+far size account 187,far-size-187.io,SaaS,10,500000,United States,Salesforce,contact187@far-size-187.io,https://far-size-187.io,Ari Gomez,https://linkedin.com/company/far-size-187,far_size,MEDIUM
+far size account 188,far-size-188.io,SaaS,15,750000,United States,Salesforce,contact188@far-size-188.io,https://far-size-188.io,Leah Chen,https://linkedin.com/company/far-size-188,far_size,MEDIUM
+far size account 189,far-size-189.io,SaaS,20,1000000,United States,Salesforce,contact189@far-size-189.io,https://far-size-189.io,Maya Patel,https://linkedin.com/company/far-size-189,far_size,MEDIUM
+far size account 190,far-size-190.io,SaaS,10,500000,United States,Salesforce,contact190@far-size-190.io,https://far-size-190.io,Jon Bell,https://linkedin.com/company/far-size-190,far_size,MEDIUM
+far size account 191,far-size-191.io,SaaS,15,750000,United States,Salesforce,contact191@far-size-191.io,https://far-size-191.io,Ari Gomez,https://linkedin.com/company/far-size-191,far_size,MEDIUM
+far size account 192,far-size-192.io,SaaS,20,1000000,United States,Salesforce,contact192@far-size-192.io,https://far-size-192.io,Leah Chen,https://linkedin.com/company/far-size-192,far_size,MEDIUM
+sparse account 193,sparse-193.io,,,,,,,,,,sparse,VERY_LOW
+sparse account 194,sparse-194.io,,,,,,,,,,sparse,VERY_LOW
+sparse account 195,sparse-195.io,,,,,,,,,,sparse,VERY_LOW
+sparse account 196,sparse-196.io,,,,,,,,,,sparse,VERY_LOW
+sparse account 197,sparse-197.io,,,,,,,,,,sparse,VERY_LOW
+sparse account 198,sparse-198.io,,,,,,,,,,sparse,VERY_LOW
+sparse account 199,sparse-199.io,,,,,,,,,,sparse,VERY_LOW
+sparse account 200,sparse-200.io,,,,,,,,,,sparse,VERY_LOW
+sparse account 201,sparse-201.io,,,,,,,,,,sparse,VERY_LOW
+sparse account 202,sparse-202.io,,,,,,,,,,sparse,VERY_LOW
+sparse account 203,sparse-203.io,,,,,,,,,,sparse,VERY_LOW
+sparse account 204,sparse-204.io,,,,,,,,,,sparse,VERY_LOW
+sparse account 205,sparse-205.io,,,,,,,,,,sparse,VERY_LOW
+sparse account 206,sparse-206.io,,,,,,,,,,sparse,VERY_LOW
+sparse account 207,sparse-207.io,,,,,,,,,,sparse,VERY_LOW
+sparse account 208,sparse-208.io,,,,,,,,,,sparse,VERY_LOW
+sparse account 209,sparse-209.io,,,,,,,,,,sparse,VERY_LOW
+sparse account 210,sparse-210.io,,,,,,,,,,sparse,VERY_LOW
+sparse account 211,sparse-211.io,,,,,,,,,,sparse,VERY_LOW
+sparse account 212,sparse-212.io,,,,,,,,,,sparse,VERY_LOW
+sparse account 213,sparse-213.io,,,,,,,,,,sparse,VERY_LOW
+sparse account 214,sparse-214.io,,,,,,,,,,sparse,VERY_LOW
+sparse account 215,sparse-215.io,,,,,,,,,,sparse,VERY_LOW
+sparse account 216,sparse-216.io,,,,,,,,,,sparse,VERY_LOW
+near lower range account 217,near-lower-range-217.io,SaaS,45,4000000,United States,HubSpot,,,,,near_lower_range,LOW
+near lower range account 218,near-lower-range-218.io,SaaS,45,4000000,United States,HubSpot,,,,,near_lower_range,LOW
+near lower range account 219,near-lower-range-219.io,SaaS,45,4000000,United States,HubSpot,,,,,near_lower_range,LOW
+near lower range account 220,near-lower-range-220.io,SaaS,45,4000000,United States,HubSpot,,,,,near_lower_range,LOW
+near lower range account 221,near-lower-range-221.io,SaaS,45,4000000,United States,HubSpot,,,,,near_lower_range,LOW
+near lower range account 222,near-lower-range-222.io,SaaS,45,4000000,United States,HubSpot,,,,,near_lower_range,LOW
+near lower range account 223,near-lower-range-223.io,SaaS,45,4000000,United States,HubSpot,,,,,near_lower_range,LOW
+near lower range account 224,near-lower-range-224.io,SaaS,45,4000000,United States,HubSpot,,,,,near_lower_range,LOW
+near lower range account 225,near-lower-range-225.io,SaaS,45,4000000,United States,HubSpot,,,,,near_lower_range,LOW
+near lower range account 226,near-lower-range-226.io,SaaS,45,4000000,United States,HubSpot,,,,,near_lower_range,LOW
+near lower range account 227,near-lower-range-227.io,SaaS,45,4000000,United States,HubSpot,,,,,near_lower_range,LOW
+near lower range account 228,near-lower-range-228.io,SaaS,45,4000000,United States,HubSpot,,,,,near_lower_range,LOW
+near lower range account 229,near-lower-range-229.io,SaaS,45,4000000,United States,HubSpot,,,,,near_lower_range,LOW
+near lower range account 230,near-lower-range-230.io,SaaS,45,4000000,United States,HubSpot,,,,,near_lower_range,LOW
+near lower range account 231,near-lower-range-231.io,SaaS,45,4000000,United States,HubSpot,,,,,near_lower_range,LOW
+near lower range account 232,near-lower-range-232.io,SaaS,45,4000000,United States,HubSpot,,,,,near_lower_range,LOW
+near lower range account 233,near-lower-range-233.io,SaaS,45,4000000,United States,HubSpot,,,,,near_lower_range,LOW
+near lower range account 234,near-lower-range-234.io,SaaS,45,4000000,United States,HubSpot,,,,,near_lower_range,LOW
+near lower range account 235,near-lower-range-235.io,SaaS,45,4000000,United States,HubSpot,,,,,near_lower_range,LOW
+near lower range account 236,near-lower-range-236.io,SaaS,45,4000000,United States,HubSpot,,,,,near_lower_range,LOW
+near lower range account 237,near-lower-range-237.io,SaaS,45,4000000,United States,HubSpot,,,,,near_lower_range,LOW
+near lower range account 238,near-lower-range-238.io,SaaS,45,4000000,United States,HubSpot,,,,,near_lower_range,LOW
+near lower range account 239,near-lower-range-239.io,SaaS,45,4000000,United States,HubSpot,,,,,near_lower_range,LOW
+near lower range account 240,near-lower-range-240.io,SaaS,45,4000000,United States,HubSpot,,,,,near_lower_range,LOW

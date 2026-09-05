@@ -10,6 +10,7 @@
     "test:watch": "jest --watch",
     "db:migrate": "node src/db/migrate.js",
     "db:seed": "node src/db/seed.js",
+    "datasets": "node benchmark/generate-datasets.js",
     "benchmark": "node benchmark/run.js",
     "benchmark:json": "node benchmark/run.js --json"
   },

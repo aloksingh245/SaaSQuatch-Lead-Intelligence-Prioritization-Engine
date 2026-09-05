@@ -114,6 +114,9 @@ router.get('/export', async (req, res) => {
       maxScore:  req.query.maxScore,
       country:   req.query.country,
       industry:  req.query.industry,
+      q:         req.query.q,
+      hasEmail:  req.query.hasEmail,
+      hasDecisionMaker: req.query.hasDecisionMaker,
     };
     await exportLeadsCsv(res, filters);
   } catch (err) {
@@ -142,8 +145,8 @@ router.get('/export', async (req, res) => {
 
 router.get('/', async (req, res) => {
   try {
-    const page  = Math.max(1, parseInt(req.query.page  || '1',  10));
-    const limit = Math.min(100, Math.max(1, parseInt(req.query.limit || '20', 10)));
+    const page  = parsePositiveInt(req.query.page, 1);
+    const limit = Math.min(100, Math.max(1, parsePositiveInt(req.query.limit, 20)));
     const offset = (page - 1) * limit;
 
     const conditions = [];
@@ -151,16 +154,22 @@ router.get('/', async (req, res) => {
     let   idx        = 1;
 
     if (req.query.priority) {
+      const priority = String(req.query.priority).toUpperCase();
+      if (!['HIGH', 'MEDIUM', 'LOW', 'VERY_LOW'].includes(priority)) {
+        return res.status(400).json({ error: 'Invalid priority filter.' });
+      }
       conditions.push(`ls.priority = $${idx++}`);
-      values.push(req.query.priority.toUpperCase());
+      values.push(priority);
     }
     if (req.query.minScore != null) {
+      const minScore = parseScore(req.query.minScore, 'minScore');
       conditions.push(`ls.total_score >= $${idx++}`);
-      values.push(Number(req.query.minScore));
+      values.push(minScore);
     }
     if (req.query.maxScore != null) {
+      const maxScore = parseScore(req.query.maxScore, 'maxScore');
       conditions.push(`ls.total_score <= $${idx++}`);
-      values.push(Number(req.query.maxScore));
+      values.push(maxScore);
     }
     if (req.query.country) {
       conditions.push(`LOWER(l.country) = LOWER($${idx++})`);
@@ -170,11 +179,24 @@ router.get('/', async (req, res) => {
       conditions.push(`LOWER(l.industry) = LOWER($${idx++})`);
       values.push(req.query.industry);
     }
+    if (req.query.q) {
+      conditions.push(`(l.company_name ILIKE $${idx} OR l.domain ILIKE $${idx})`);
+      values.push(`%${String(req.query.q).trim()}%`);
+      idx++;
+    }
+    if (req.query.hasEmail === 'true') conditions.push(`NULLIF(l.email, '') IS NOT NULL`);
+    if (req.query.hasEmail === 'false') conditions.push(`NULLIF(l.email, '') IS NULL`);
+    if (req.query.hasDecisionMaker === 'true') conditions.push(`NULLIF(l.decision_maker, '') IS NOT NULL`);
+    if (req.query.hasDecisionMaker === 'false') conditions.push(`NULLIF(l.decision_maker, '') IS NULL`);
 
     const where = conditions.length > 0 ? 'WHERE ' + conditions.join(' AND ') : '';
 
     const countRes = await pool.query(
-      `SELECT COUNT(*) FROM leads l JOIN lead_scores ls ON ls.lead_id = l.id ${where}`,
+      `SELECT COUNT(*) FROM leads l
+       JOIN LATERAL (
+         SELECT total_score, priority, fit_score, readiness_score
+         FROM lead_scores WHERE lead_id = l.id ORDER BY created_at DESC LIMIT 1
+       ) ls ON TRUE ${where}`,
       values
     );
     const total = parseInt(countRes.rows[0].count, 10);
@@ -184,22 +206,41 @@ router.get('/', async (req, res) => {
          l.id, l.company_name, l.domain, l.industry, l.employees,
          l.revenue, l.country, l.technologies, l.email,
          l.website, l.decision_maker, l.linkedin_url, l.created_at,
-         ls.total_score, ls.priority
+         ls.total_score, ls.fit_score, ls.readiness_score, ls.priority
        FROM leads l
-       JOIN lead_scores ls ON ls.lead_id = l.id
+       JOIN LATERAL (
+         SELECT total_score, priority, fit_score, readiness_score
+         FROM lead_scores WHERE lead_id = l.id ORDER BY created_at DESC LIMIT 1
+       ) ls ON TRUE
        ${where}
        ORDER BY ls.total_score DESC
        LIMIT $${idx++} OFFSET $${idx++}`,
       [...values, limit, offset]
     );
 
+    const summaryRes = await pool.query(
+      `SELECT
+         COUNT(*)::INT AS total,
+         COUNT(*) FILTER (WHERE ls.priority = 'HIGH')::INT AS high,
+         COUNT(*) FILTER (WHERE ls.priority = 'MEDIUM')::INT AS medium,
+         COUNT(*) FILTER (WHERE ls.priority = 'LOW')::INT AS low,
+         COUNT(*) FILTER (WHERE ls.priority = 'VERY_LOW')::INT AS very_low,
+         COUNT(*) FILTER (WHERE NULLIF(l.email, '') IS NOT NULL)::INT AS contactable
+       FROM leads l
+       JOIN LATERAL (
+         SELECT priority FROM lead_scores
+         WHERE lead_id = l.id ORDER BY created_at DESC LIMIT 1
+       ) ls ON TRUE`
+    );
+
     return res.json({
       data:       dataRes.rows,
       pagination: { page, limit, total, pages: Math.ceil(total / limit) },
+      summary:    summaryRes.rows[0],
     });
   } catch (err) {
     console.error('[GET /leads]', err.message);
-    return res.status(500).json({ error: err.message });
+    return res.status(err.status || 500).json({ error: err.message });
   }
 });
 
@@ -215,10 +256,15 @@ router.get('/:id', async (req, res) => {
       `SELECT
          l.*,
          ls.total_score, ls.priority, ls.component_scores,
-         ls.explanation, ls.created_at AS scored_at,
+         ls.fit_score, ls.readiness_score, ls.explanation, ls.created_at AS scored_at,
          ls.icp_profile_id
        FROM leads l
-       LEFT JOIN lead_scores ls ON ls.lead_id = l.id
+       LEFT JOIN LATERAL (
+         SELECT * FROM lead_scores
+         WHERE lead_id = l.id
+         ORDER BY created_at DESC
+         LIMIT 1
+       ) ls ON TRUE
        WHERE l.id = $1`,
       [req.params.id]
     );
@@ -279,11 +325,14 @@ router.post('/:id/score', async (req, res) => {
     // Save new score record (keeps history — doesn't overwrite old scores)
     await pool.query(
       `INSERT INTO lead_scores
-         (lead_id, total_score, priority, component_scores, explanation, icp_profile_id)
-       VALUES ($1, $2, $3, $4, $5, $6)`,
+         (lead_id, total_score, fit_score, readiness_score, priority,
+          component_scores, explanation, icp_profile_id)
+       VALUES ($1, $2, $3, $4, $5, $6, $7, $8)`,
       [
         lead.id,
         scored.score,
+        scored.fitScore,
+        scored.readinessScore,
         scored.priority,
         JSON.stringify(scored.componentScores),
         JSON.stringify({ leadId: lead.id, score: scored.score, priority: scored.priority, reasons: scored.reasons }),
@@ -294,6 +343,8 @@ router.post('/:id/score', async (req, res) => {
     return res.json({
       leadId:   lead.id,
       score:    scored.score,
+      fitScore: scored.fitScore,
+      readinessScore: scored.readinessScore,
       priority: scored.priority,
       reasons:  scored.reasons,
     });
@@ -304,3 +355,24 @@ router.post('/:id/score', async (req, res) => {
 });
 
 module.exports = router;
+
+function parsePositiveInt(value, fallback) {
+  if (value == null || value === '') return fallback;
+  const parsed = Number(value);
+  if (!Number.isInteger(parsed) || parsed < 1) {
+    const error = new Error('Pagination values must be positive integers.');
+    error.status = 400;
+    throw error;
+  }
+  return parsed;
+}
+
+function parseScore(value, label) {
+  const parsed = Number(value);
+  if (!Number.isFinite(parsed) || parsed < 0 || parsed > 100) {
+    const error = new Error(`${label} must be a number between 0 and 100.`);
+    error.status = 400;
+    throw error;
+  }
+  return parsed;
+}

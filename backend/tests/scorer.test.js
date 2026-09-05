@@ -61,6 +61,11 @@ describe('scoreIndustry', () => {
     const r = scoreIndustry({ industry: 'Real Estate' }, DEMO_ICP);
     expect(r.points).toBe(0);
   });
+  test('related industry → 13 (partial)', () => {
+    const r = scoreIndustry({ industry: 'Cloud Infrastructure' }, DEMO_ICP);
+    expect(r.points).toBe(13);
+    expect(r.reason).toContain('partial credit');
+  });
   test('missing industry → 0', () => {
     const r = scoreIndustry({ industry: null }, DEMO_ICP);
     expect(r.points).toBe(0);
@@ -92,6 +97,10 @@ describe('scoreEmployees', () => {
     // 600 / 500 = 1.20 → 20% over → within 25% buffer
     const r = scoreEmployees({ employees: 600 }, DEMO_ICP);
     expect(r.points).toBe(10);
+  });
+  test('very near max (≤10% over) → 15 (strong partial)', () => {
+    const r = scoreEmployees({ employees: 550 }, DEMO_ICP);
+    expect(r.points).toBe(15);
   });
   test('slightly below min (≤25% under) → 10 (partial)', () => {
     // min=50, e=40 → 50/40 = 1.25 → exactly 25% → still qualifies
@@ -129,10 +138,10 @@ describe('scoreRevenue', () => {
     const r = scoreRevenue({ revenue: 100_000_000 }, DEMO_ICP);
     expect(r.points).toBe(15);
   });
-  test('slightly above max (≤25% over) → 8 (partial, rounded)', () => {
-    // $110M / $100M = 1.10 → 10% over → partial
+  test('slightly above max (≤10% over) → 11 (strong partial, rounded)', () => {
+    // $110M / $100M = 1.10 → 10% over → 75% of 15 = 11.25 → 11
     const r = scoreRevenue({ revenue: 110_000_000 }, DEMO_ICP);
-    expect(r.points).toBe(8);
+    expect(r.points).toBe(11);
   });
   test('slightly below min (≤25% under) → 8 (partial)', () => {
     // $5M * 0.8 = $4M → 20% under → partial
@@ -177,13 +186,21 @@ describe('scoreGeography', () => {
 // ─────────────────────────────────────────────────────────────────────────────
 
 describe('scoreTechnology', () => {
-  test('one match → 10', () => {
+  test('one match → 5 (partial)', () => {
     const r = scoreTechnology({ technologies: ['Salesforce', 'Slack'] }, DEMO_ICP);
+    expect(r.points).toBe(5);
+  });
+  test('two matches → 10', () => {
+    const r = scoreTechnology({ technologies: ['salesforce', 'HubSpot'] }, DEMO_ICP);
     expect(r.points).toBe(10);
   });
-  test('case-insensitive match → 10', () => {
+  test('duplicate technology entries do not fake a second match', () => {
+    const r = scoreTechnology({ technologies: ['Salesforce', 'salesforce'] }, DEMO_ICP);
+    expect(r.points).toBe(5);
+  });
+  test('case-insensitive match → 5 (partial)', () => {
     const r = scoreTechnology({ technologies: ['salesforce'] }, DEMO_ICP);
-    expect(r.points).toBe(10);
+    expect(r.points).toBe(5);
   });
   test('no overlap → 0', () => {
     const r = scoreTechnology({ technologies: ['Jira', 'Confluence'] }, DEMO_ICP);
@@ -276,7 +293,7 @@ describe('scoreLead', () => {
       employees: 250,
       revenue: 20_000_000,
       country: 'United States',
-      technologies: ['Salesforce'],
+      technologies: ['Salesforce', 'AWS'],
       website: 'https://acme.com',
       email: 'ceo@acme.com',
       decision_maker: 'Jane Smith',
@@ -311,9 +328,31 @@ describe('scoreLead', () => {
     expect(result.priority).toBe('VERY_LOW');
   });
 
+  test('fit and readiness are exposed separately', () => {
+    const result = scoreLead({
+      industry: 'SaaS', employees: 250, revenue: 20_000_000,
+      country: 'United States', technologies: ['Salesforce', 'AWS'],
+      website: 'https://acme.com', email: 'a@acme.com',
+      decision_maker: null, linkedin_url: null,
+    }, DEMO_ICP);
+    expect(result.fitScore).toBe(100);
+    expect(result.readinessScore).toBe(50);
+  });
+
+  test('non-target industry cannot become MEDIUM from complete contact data', () => {
+    const result = scoreLead({
+      industry: 'E-commerce', employees: 200, revenue: 25_000_000,
+      country: 'United States', technologies: ['Salesforce'],
+      website: 'https://shop.example.com', email: 'hello@shop.example.com',
+      decision_maker: 'Nina Scott', linkedin_url: null,
+    }, DEMO_ICP);
+    expect(result.score).toBeGreaterThanOrEqual(60);
+    expect(result.priority).toBe('LOW');
+  });
+
   test('result includes componentScores with all 9 factors', () => {
     const lead = { industry: 'SaaS', employees: 250, revenue: 20_000_000,
-                   country: 'United States', technologies: ['Salesforce'],
+                   country: 'United States', technologies: ['Salesforce', 'AWS'],
                    website: 'https://acme.com', email: 'a@b.com',
                    decision_maker: 'Alice', linkedin_url: null };
     const result = scoreLead(lead, DEMO_ICP);

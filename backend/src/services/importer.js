@@ -110,7 +110,8 @@ async function processFile(runId, filePath, icpId) {
   icp.technologies      = icp.technologies      || [];
   icp.countries         = icp.countries         || [];
 
-  // Parse the file into raw rows
+  // Parse the file into raw rows; rows are still processed sequentially so
+  // duplicate detection and progress counters remain deterministic.
   const rawRows = await parseFile(filePath);
 
   // Counters
@@ -118,6 +119,11 @@ async function processFile(runId, filePath, icpId) {
   let duplicates = 0;
   let failures   = 0;
   const rowErrors = [];
+
+  await pool.query(
+    `UPDATE processing_runs SET total_rows = $2 WHERE id = $1`,
+    [runId, rawRows.length]
+  );
 
   // Process rows one at a time (not in parallel — avoids race conditions on
   // the unique domain index and keeps memory flat for large files)
@@ -143,6 +149,21 @@ async function processFile(runId, filePath, icpId) {
         console.warn(`[importer] run=${runId} row=${rowNumber} error:`, err.message);
       }
     }
+
+    await pool.query(
+      `UPDATE processing_runs
+       SET total_rows = $2, imported = $3, duplicates = $4, failures = $5,
+           error_detail = $6
+       WHERE id = $1`,
+      [
+        runId,
+        rawRows.length,
+        imported,
+        duplicates,
+        failures,
+        rowErrors.length > 0 ? JSON.stringify(rowErrors) : null,
+      ]
+    );
   }
 
   // Clean up the uploaded file (we don't need it anymore)
@@ -194,26 +215,30 @@ async function processRow({ rawRow, rowNumber, runId, icp }) {
     throw new Error(`Row ${rowNumber}: no company name or domain — skipping`);
   }
 
-  // 2. Deduplicate (uses a pool connection internally)
-  const { exists, existingLead, matchReason } = await findDuplicate(normalized);
+  const client = await pool.connect();
+  try {
+    await client.query('BEGIN');
 
-  if (exists) {
-    // Log the duplicate for data quality tracking, then signal the caller
-    await logDuplicate({
-      processingRunId: runId,
-      rowNumber,
-      normalizedLead:  normalized,
-      existingLead,
-      matchReason,
-      rawRow,
-    });
-    const err = new Error(`Duplicate: matched existing lead ${existingLead.id} by ${matchReason}`);
-    err.code = 'DUPLICATE_SKIPPED';
-    throw err;
-  }
+    // 2. Deduplicate inside the same transaction as the insert.
+    const { exists, existingLead, matchReason } = await findDuplicate(normalized, client);
 
-  // 3. Insert the lead
-  const leadRes = await pool.query(
+    if (exists) {
+      await logDuplicate({
+        processingRunId: runId,
+        rowNumber,
+        normalizedLead: normalized,
+        existingLead,
+        matchReason,
+        rawRow,
+      }, client);
+      await client.query('COMMIT');
+      const err = new Error(`Duplicate: matched existing lead ${existingLead.id} by ${matchReason}`);
+      err.code = 'DUPLICATE_SKIPPED';
+      throw err;
+    }
+
+    // 3. Insert the lead
+    const leadRes = await client.query(
     `INSERT INTO leads
        (company_name, domain, industry, employees, revenue, country,
         technologies, email, linkedin_url, decision_maker, website,
@@ -235,7 +260,7 @@ async function processRow({ rawRow, rowNumber, runId, icp }) {
       JSON.stringify(rawRow),
       runId,
     ]
-  );
+    );
 
   const leadId = leadRes.rows[0].id;
 
@@ -243,19 +268,30 @@ async function processRow({ rawRow, rowNumber, runId, icp }) {
   const scored = scoreLead({ ...normalized, id: leadId }, icp);
 
   // 5. Save the score
-  await pool.query(
+    await client.query(
     `INSERT INTO lead_scores
-       (lead_id, total_score, priority, component_scores, explanation, icp_profile_id)
-     VALUES ($1, $2, $3, $4, $5, $6)`,
+       (lead_id, total_score, fit_score, readiness_score, priority,
+        component_scores, explanation, icp_profile_id)
+     VALUES ($1, $2, $3, $4, $5, $6, $7, $8)`,
     [
       leadId,
       scored.score,
+      scored.fitScore,
+      scored.readinessScore,
       scored.priority,
       JSON.stringify(scored.componentScores),
       JSON.stringify({ leadId, score: scored.score, priority: scored.priority, reasons: scored.reasons }),
       icp.id,
     ]
-  );
+    );
+
+    await client.query('COMMIT');
+  } catch (err) {
+    try { await client.query('ROLLBACK'); } catch (_) {}
+    throw err;
+  } finally {
+    client.release();
+  }
 }
 
 // ─────────────────────────────────────────────────────────────────────────────

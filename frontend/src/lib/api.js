@@ -43,7 +43,9 @@ export const LeadsAPI = {
 
   // 4. Export leads
   getExportUrl: (params = {}) => {
-    const query = new URLSearchParams(params).toString();
+    const query = new URLSearchParams(
+      Object.fromEntries(Object.entries(params).filter(([, value]) => value !== '' && value != null))
+    ).toString();
     return `/api/leads/export?${query}`;
   },
 
@@ -55,7 +57,7 @@ export const LeadsAPI = {
 
   // 6. Force re-score a lead
   rescoreLead: async (id, icpId) => {
-    const res = await api.post(`/leads/${id}/score`, { icpId });
+    const res = await api.post(`/leads/${id}/score`, icpId ? { icpId } : {});
     return res.data;
   }
 };
