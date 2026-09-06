@@ -1,0 +1,26 @@
+company_name,domain,industry,employees,revenue,country,technologies,email,website,decision_maker,linkedin_url,quality
+Quantum Dynamics,quantumdyn.io,SaaS,280,24000000,United States,"Salesforce, AWS",contact@quantumdyn.io,https://quantumdyn.io,Ethan Vance,https://linkedin.com/company/quantumdyn,Good
+Aether Software,aethersoft.com,Cloud Software,160,14000000,United States,"AWS, Azure",info@aethersoft.com,https://aethersoft.com,Clara Oswald,https://linkedin.com/company/aethersoft,Good
+Hyperion Analytics,hyperiondata.ai,B2B SaaS,95,9800000,Canada,"GCP, Snowflake",sales@hyperiondata.ai,https://hyperiondata.ai,Victor Stone,https://linkedin.com/company/hyperiondata,Good
+PayFlow Global,payflowglobal.com,Fintech,310,28000000,United Kingdom,"Stripe, HubSpot",hello@payflowglobal.com,https://payflowglobal.com,Fiona Gallagher,https://linkedin.com/company/payflowglobal,Good
+BioHealth Tech,biohealth.org,HealthTech,480,52000000,United States,"Salesforce, FHIR",support@biohealth.org,https://biohealth.org,Dr. Arthur Pendelton,https://linkedin.com/company/biohealth,Good
+Apex Retail Engine,apexretail.store,E-commerce,210,16500000,Australia,"Shopify, Klaviyo",contact@apexretail.store,https://apexretail.store,Nora West,https://linkedin.com/company/apexretail,Good
+Nexus Data Corp,nexusdata.co,Software,620,95000000,Germany,"AWS, Snowflake",admin@nexusdata.co,https://nexusdata.co,Stefan Meyer,https://linkedin.com/company/nexusdata,Good
+TalentGrid HR,talentgrid.io,HR Tech,85,6200000,United States,"HubSpot, Slack",people@talentgrid.io,https://talentgrid.io,Samantha Wright,https://linkedin.com/company/talentgrid,Good
+Ironclad Cyber,ironcladcyber.sec,Cybersecurity,390,41000000,United States,"AWS, Palo Alto",sec@ironcladcyber.sec,https://ironcladcyber.sec,Gabriel Ross,https://linkedin.com/company/ironcladcyber,Good
+Orbit Logistics,orbitlogistics.global,Logistics Tech,130,14500000,United Kingdom,"Salesforce, GCP",ops@orbitlogistics.global,https://orbitlogistics.global,Julian Bashir,https://linkedin.com/company/orbitlogistics,Good
+Strata Cloud,stratacloud.net,SaaS,230,19000000,United States,"AWS, Salesforce",contact@stratacloud.net,https://stratacloud.net,Diana Prince,https://linkedin.com/company/stratacloud,Good
+FinEdge Capital,finedge.co,Fintech,175,15000000,United Kingdom,"Stripe, Plaid",info@finedge.co,https://finedge.co,Bruce Wayne,https://linkedin.com/company/finedge,Good
+CarePulse Systems,carepulse.health,HealthTech,340,31000000,United States,"Azure, Epic",support@carepulse.health,https://carepulse.health,Clark Kent,https://linkedin.com/company/carepulse,Good
+CartShift Engine,cartshift.io,E-commerce,90,7800000,Canada,"Shopify, Stripe",sales@cartshift.io,https://cartshift.io,Barry Allen,https://linkedin.com/company/cartshift,Good
+Synapse Software,synapsesoft.de,Software,810,135000000,Germany,"AWS, SAP",contact@synapsesoft.de,https://synapsesoft.de,Hal Jordan,https://linkedin.com/company/synapsesoft,Good
+WorkPulse HR,workpulse.app,HR Tech,110,8900000,United States,"HubSpot, Workday",hello@workpulse.app,https://workpulse.app,Arthur Curry,https://linkedin.com/company/workpulse,Good
+ShieldDefense,shielddefense.com,Cybersecurity,290,26000000,United States,"AWS, Cisco",info@shielddefense.com,https://shielddefense.com,Oliver Queen,https://linkedin.com/company/shielddefense,Good
+Velocity Logistics,velocitylog.co,Logistics Tech,145,16000000,United Kingdom,"GCP, Oracle",ops@velocitylog.co,https://velocitylog.co,Ray Palmer,https://linkedin.com/company/velocitylog,Good
+Vortex Dynamics,vortexdyn.io,SaaS,500,45000000,United States,"AWS, Salesforce",contact@vortexdyn.io,https://vortexdyn.io,Sarah Connor,https://linkedin.com/company/vortexdyn,Good
+OmniCorp Tech,omnicorp.ai,AI & ML,420,38000000,United States,"GCP, PyTorch",info@omnicorp.ai,https://omnicorp.ai,Miles Dyson,https://linkedin.com/company/omnicorp,Good
+Prism Security,prismsec.net,Cybersecurity,210,18500000,Canada,"AWS, Cloudflare",sec@prismsec.net,https://prismsec.net,Elliot Alderson,https://linkedin.com/company/prismsec,Good
+CloudScale Networks,cloudscale.io,Cloud Software,330,29000000,United States,"AWS, Kubernetes",sales@cloudscale.io,https://cloudscale.io,Angela Moss,https://linkedin.com/company/cloudscale,Good
+,,SaaS,,,,,invalid_no_company,,,Bad
+Spam Enterprise,spam12345.xyz,Unknown,1,0,Antarctica,,spam@spam12345.xyz,http://spam12345.xyz,,Bad
+Fake Corp,,Fintech,0,0,Invalid,,fakeemail@invalid,https://fake.corp,,Bad

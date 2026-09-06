@@ -179,6 +179,10 @@ router.get('/', async (req, res) => {
       conditions.push(`LOWER(l.industry) = LOWER($${idx++})`);
       values.push(req.query.industry);
     }
+    if (req.query.jobId) {
+      conditions.push(`l.processing_run_id = $${idx++}`);
+      values.push(req.query.jobId);
+    }
     if (req.query.q) {
       conditions.push(`(l.company_name ILIKE $${idx} OR l.domain ILIKE $${idx})`);
       values.push(`%${String(req.query.q).trim()}%`);

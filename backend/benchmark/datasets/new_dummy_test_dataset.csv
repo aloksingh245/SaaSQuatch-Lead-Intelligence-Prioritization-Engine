@@ -1,0 +1,11 @@
+company_name,domain,industry,employees,revenue,country,technologies,email,website,decision_maker,linkedin_url
+Apex Cloud Systems,apexcloud.io,SaaS,250,15000000,United States,"Salesforce, AWS",contact@apexcloud.io,https://apexcloud.io,Sarah Jenkins,https://linkedin.com/company/apexcloud
+FinPay Global,finpayglobal.com,Fintech,120,8500000,United Kingdom,"Stripe, HubSpot",hello@finpayglobal.com,https://finpayglobal.com,David Ross,https://linkedin.com/company/finpayglobal
+HealthPulse,healthpulse.app,HealthTech,450,45000000,United States,"AWS, Snowflake",info@healthpulse.app,https://healthpulse.app,Elena Rostova,https://linkedin.com/company/healthpulse
+ShopFlow Commerce,shopflow.store,E-commerce,80,6200000,Canada,"Shopify, Klaviyo",sales@shopflow.store,https://shopflow.store,Marcus Vance,https://linkedin.com/company/shopflow
+DataLogix Inc,datalogix.net,Software,550,110000000,Germany,"AWS, Azure",support@datalogix.net,https://datalogix.net,Karl Becker,https://linkedin.com/company/datalogix
+Pulsar CRM,pulsarcrm.com,Cloud Software,55,5500000,United States,CRM,ceo@pulsarcrm.com,https://pulsarcrm.com,Tom Reed,https://linkedin.com/company/pulsarcrm
+Quantum Analytics,,Analytics,30,2000000,United States,Python,contact@quantum.io,,Alex Rivera,
+Starlight Media,starlight.co,Media,12,800000,Australia,WordPress,hello@starlight.co,https://starlight.co,,
+,,SaaS,,,,,n/a,,,,
+Legacy Hardware Corp,legacyhardware.com,Manufacturing,1200,250000000,Japan,Oracle,info@legacyhardware.com,https://legacyhardware.com,Kenji Sato,https://linkedin.com/company/legacyhardware

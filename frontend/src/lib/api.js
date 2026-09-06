@@ -34,6 +34,12 @@ export const LeadsAPI = {
     return res.data;
   },
 
+  // 2b. List recent import jobs
+  getRecentJobs: async () => {
+    const res = await api.get('/jobs');
+    return res.data;
+  },
+
   // 3. List leads (Dashboard)
   getLeads: async (params = {}) => {
     // params can include: page, limit, priority, minScore, country, etc.

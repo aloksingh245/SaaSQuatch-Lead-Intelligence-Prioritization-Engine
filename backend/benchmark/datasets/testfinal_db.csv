@@ -1,0 +1,11 @@
+company_name,domain,industry,employees,revenue,country,technologies,email,website,decision_maker,linkedin_url
+FinalTech Solutions,finaltech.io,SaaS,310,22000000,United States,"Salesforce, AWS, HubSpot",contact@finaltech.io,https://finaltech.io,David Miller,https://linkedin.com/company/finaltech
+SecureOps Systems,secureops.net,Cloud Software,140,11500000,United States,"AWS, Azure",security@secureops.net,https://secureops.net,Rachel Adams,https://linkedin.com/company/secureops
+CloudScale AI,cloudscale.ai,B2B SaaS,85,9200000,Canada,"GCP, Snowflake",hello@cloudscale.ai,https://cloudscale.ai,Liam O'Connor,https://linkedin.com/company/cloudscale
+PayPulse Systems,paypulse.com,Fintech,220,18000000,United Kingdom,"Stripe, AWS",info@paypulse.com,https://paypulse.com,Sophia Zhang,https://linkedin.com/company/paypulse
+Vanguard Health,vanguardhealth.org,HealthTech,500,60000000,United States,"Salesforce, FHIR",support@vanguardhealth.org,https://vanguardhealth.org,Dr. Robert Vance,https://linkedin.com/company/vanguardhealth
+OmniCommerce Tech,omnicommerce.store,E-commerce,190,14000000,Australia,"Shopify, Klaviyo",sales@omnicommerce.store,https://omnicommerce.store,Chloe Bennett,https://linkedin.com/company/omnicommerce
+DataMetrics Analytics,datametrics.co,Software,750,140000000,Germany,"AWS, Snowflake",admin@datametrics.co,https://datametrics.co,Hans Weber,https://linkedin.com/company/datametrics
+NextGen HR Tech,nextgenhr.io,HR Tech,65,4800000,United States,"HubSpot, Slack",people@nextgenhr.io,https://nextgenhr.io,Emily Thorne,https://linkedin.com/company/nextgenhr
+Alpha Cyber,alphacyber.security,Cybersecurity,420,38000000,United States,"AWS, Palo Alto",contact@alphacyber.security,https://alphacyber.security,Marcus Sterling,https://linkedin.com/company/alphacyber
+Matrix Logistics,matrixlogistics.global,Logistics Tech,110,12500000,United Kingdom,"Salesforce, GCP",ops@matrixlogistics.global,https://matrixlogistics.global,Simon Hughes,https://linkedin.com/company/matrixlogistics

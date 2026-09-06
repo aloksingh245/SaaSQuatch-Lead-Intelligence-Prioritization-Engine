@@ -12,7 +12,29 @@ const express = require('express');
 const { getRunStatus }        = require('../services/importer');
 const { getDuplicateSummary } = require('../services/deduplicator');
 
+const pool = require('../db/pool');
+
 const router = express.Router();
+
+// ─────────────────────────────────────────────────────────────────────────────
+// GET /api/jobs
+// List recent import runs for dataset segregation dropdown
+// ─────────────────────────────────────────────────────────────────────────────
+router.get('/', async (_req, res) => {
+  try {
+    const result = await pool.query(
+      `SELECT id, status, total_rows, imported, duplicates, failures, created_at, error_detail
+       FROM processing_runs
+       WHERE status = 'done'
+       ORDER BY created_at DESC
+       LIMIT 20`
+    );
+    return res.json(result.rows);
+  } catch (err) {
+    console.error('[GET /jobs]', err.message);
+    return res.status(500).json({ error: err.message });
+  }
+});
 
 // ─────────────────────────────────────────────────────────────────────────────
 // GET /api/jobs/:id

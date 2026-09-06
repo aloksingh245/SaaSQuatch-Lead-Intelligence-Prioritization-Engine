@@ -1,0 +1,29 @@
+company_name,domain,industry,employees,revenue,country,technologies,email,website,decision_maker,linkedin_url,lead_type
+Apex Cloud Analytics,apexcloud.ai,SaaS,220,18500000,United States,"AWS, Snowflake",contact@apexcloud.ai,https://apexcloud.ai,Marcus Vance,https://linkedin.com/company/apexcloud,Good
+CloudScale Flow,cloudscale.io,SaaS,140,12000000,United States,"AWS, React",info@cloudscale.io,https://cloudscale.io,Elena Rostova,https://linkedin.com/company/cloudscale,Good
+DataPulse Systems,datapulse.net,SaaS,310,26000000,Canada,"GCP, BigQuery",sales@datapulse.net,https://datapulse.net,David Kim,https://linkedin.com/company/datapulse,Good
+OmniStream Software,omnistream.app,SaaS,95,8500000,United States,"Azure, PostgreSQL",hello@omnistream.app,https://omnistream.app,Sarah Jenkins,https://linkedin.com/company/omnistream,Good
+NetGrid Security,netgrid.sec,SaaS,450,41000000,United Kingdom,"AWS, Palo Alto",sec@netgrid.sec,https://netgrid.sec,Arthur Pendelton,https://linkedin.com/company/netgrid,Good
+SyncMetrics Tech,syncmetrics.io,SaaS,180,15000000,United States,"HubSpot, Stripe",contact@syncmetrics.io,https://syncmetrics.io,Rachel Green,https://linkedin.com/company/syncmetrics,Good
+FlowHQ Automation,flowhq.co,SaaS,260,22000000,Germany,"AWS, Datadog",admin@flowhq.co,https://flowhq.co,Lucas Webber,https://linkedin.com/company/flowhq,Good
+TalentSphere AI,talentsphere.ai,SaaS,110,9200000,United States,"GCP, OpenAI",people@talentsphere.ai,https://talentsphere.ai,Amanda Waller,https://linkedin.com/company/talentsphere,Good
+CyberFortress Systems,cyberfortress.io,SaaS,390,34000000,United States,"AWS, CrowdStrike",info@cyberfortress.io,https://cyberfortress.io,Victor Stone,https://linkedin.com/company/cyberfortress,Good
+PulseOps Platform,pulseops.dev,SaaS,130,11500000,United Kingdom,"Kubernetes, AWS",ops@pulseops.dev,https://pulseops.dev,Julian Bashir,https://linkedin.com/company/pulseops,Good
+StrataStack,stratastack.io,SaaS,290,25000000,United States,"AWS, Salesforce",contact@stratastack.io,https://stratastack.io,Diana Prince,https://linkedin.com/company/stratastack,Good
+FinMatrix Core,finmatrix.co,SaaS,210,19500000,United Kingdom,"Stripe, Plaid",info@finmatrix.co,https://finmatrix.co,Bruce Wayne,https://linkedin.com/company/finmatrix,Good
+HealthCloud Hub,healthcloud.care,SaaS,340,31000000,United States,"Azure, FHIR",support@healthcloud.care,https://healthcloud.care,Clark Kent,https://linkedin.com/company/healthcloud,Good
+CommerceEngine,commerceengine.app,SaaS,175,14800000,Canada,"Shopify, Klaviyo",sales@commerceengine.app,https://commerceengine.app,Barry Allen,https://linkedin.com/company/commerceengine,Good
+LogiTrack Cloud,logitrack.global,SaaS,510,48000000,Germany,"AWS, SAP",contact@logitrack.global,https://logitrack.global,Hal Jordan,https://linkedin.com/company/logitrack,Good
+WorkForce Hub,workforcehub.io,SaaS,125,10200000,United States,"HubSpot, Workday",hello@workforcehub.io,https://workforcehub.io,Arthur Curry,https://linkedin.com/company/workforcehub,Good
+SecureLayer AI,securelayer.ai,SaaS,310,27000000,United States,"AWS, Cloudflare",info@securelayer.ai,https://securelayer.ai,Oliver Queen,https://linkedin.com/company/securelayer,Good
+Velociti Cloud,velociticloud.com,SaaS,160,13500000,United Kingdom,"GCP, Terraform",ops@velociticloud.com,https://velociticloud.com,Ray Palmer,https://linkedin.com/company/velociticloud,Good
+NeuroTech SaaS,neurotech.ai,SaaS,275,23000000,United States,"AWS, PyTorch",tech@neurotech.ai,https://neurotech.ai,Miles Dyson,https://linkedin.com/company/neurotech,Good
+InfraCore Software,infracore.io,SaaS,430,39000000,United States,"Azure, Docker",contact@infracore.io,https://infracore.io,Sarah Connor,https://linkedin.com/company/infracore,Good
+InsightIO Analytics,insightio.dev,SaaS,195,16800000,Canada,"GCP, Snowflake",sales@insightio.dev,https://insightio.dev,Elliot Alderson,https://linkedin.com/company/insightio,Good
+Zenith Software,zenithsoftware.net,SaaS,350,30000000,United States,"AWS, Salesforce",hello@zenithsoftware.net,https://zenithsoftware.net,Angela Moss,https://linkedin.com/company/zenithsoftware,Good
+KubeScale Systems,kubescale.io,SaaS,240,21000000,United States,"AWS, Kubernetes",info@kubescale.io,https://kubescale.io,Tyrell Wellick,https://linkedin.com/company/kubescale,Good
+CloudNets Software,cloudnets.app,SaaS,185,15500000,Australia,"AWS, React",support@cloudnets.app,https://cloudnets.app,Darlene Alderson,https://linkedin.com/company/cloudnets,Good
+DataVault Platform,datavault.co,SaaS,410,36000000,United Kingdom,"Azure, Snowflake",admin@datavault.co,https://datavault.co,Gideon Goddard,https://linkedin.com/company/datavault,Good
+Solo Local Bakery,,Brick & Mortar,2,45000,United States,None,bakery123@gmail.com,http://localbakery.com,John Baker,,Undesired
+Personal Blog site,,Personal Blog,1,0,United States,WordPress,john_personal_blog@yahoo.com,http://myblog123.blogspot.com,John Doe,,Undesired
+Out of Business LLC,,Defunct,0,0,United States,None,contact@defunctco.com,http://defunctco.com,Jane Doe,,Undesired

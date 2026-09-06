@@ -1,0 +1,16 @@
+company_name,domain,industry,employees,revenue,country,technologies,email,website,decision_maker,linkedin_url,score,status
+Quantum Dynamics,quantumdyn.io,SaaS,280,24000000,United States,"Salesforce, AWS",contact@quantumdyn.io,https://quantumdyn.io,Ethan Vance,https://linkedin.com/company/quantumdyn,92,Verified
+Aether Software,aethersoft.com,Cloud Software,160,14000000,United States,"AWS, Azure",info@aethersoft.com,https://aethersoft.com,Clara Oswald,https://linkedin.com/company/aethersoft,88,Verified
+Hyperion Analytics,hyperiondata.ai,B2B SaaS,95,9800000,Canada,"GCP, Snowflake",sales@hyperiondata.ai,https://hyperiondata.ai,Victor Stone,https://linkedin.com/company/hyperiondata,85,Verified
+PayFlow Global,payflowglobal.com,Fintech,310,28000000,United Kingdom,"Stripe, HubSpot",hello@payflowglobal.com,https://payflowglobal.com,Fiona Gallagher,https://linkedin.com/company/payflowglobal,94,Verified
+BioHealth Tech,biohealth.org,HealthTech,480,52000000,United States,"Salesforce, FHIR",support@biohealth.org,https://biohealth.org,Dr. Arthur Pendelton,https://linkedin.com/company/biohealth,96,Verified
+Apex Retail Engine,apexretail.store,E-commerce,210,16500000,Australia,"Shopify, Klaviyo",contact@apexretail.store,https://apexretail.store,Nora West,https://linkedin.com/company/apexretail,82,Verified
+Nexus Data Corp,nexusdata.co,Software,620,95000000,Germany,"AWS, Snowflake",admin@nexusdata.co,https://nexusdata.co,Stefan Meyer,https://linkedin.com/company/nexusdata,98,Verified
+TalentGrid HR,talentgrid.io,HR Tech,85,6200000,United States,"HubSpot, Slack",people@talentgrid.io,https://talentgrid.io,Samantha Wright,https://linkedin.com/company/talentgrid,79,Verified
+Ironclad Cyber,ironcladcyber.sec,Cybersecurity,390,41000000,United States,"AWS, Palo Alto",sec@ironcladcyber.sec,https://ironcladcyber.sec,Gabriel Ross,https://linkedin.com/company/ironcladcyber,91,Verified
+Orbit Logistics,orbitlogistics.global,Logistics Tech,130,14500000,United Kingdom,"Salesforce, GCP",ops@orbitlogistics.global,https://orbitlogistics.global,Julian Bashir,https://linkedin.com/company/orbitlogistics,84,Verified
+Unverified Enterprise,,SaaS,100,5000000,United States,"Salesforce",review@unverified.com,https://unverified.com,Jane Doe,https://linkedin.com/company/unverified,50,Under Review
+Pending Audit Co,,Fintech,50,2000000,United Kingdom,"Stripe",audit@pendingaudit.co,https://pendingaudit.co,John Smith,https://linkedin.com/company/pendingaudit,45,Under Review
+,,SaaS,,,,,invalid_no_company,,,10,Bad
+Spam Enterprise,spam12345.xyz,Unknown,1,0,Antarctica,,spam@spam12345.xyz,http://spam12345.xyz,,5,Bad
+Fake Corp,,Fintech,0,0,Invalid,,fakeemail@invalid,https://fake.corp,,0,Bad

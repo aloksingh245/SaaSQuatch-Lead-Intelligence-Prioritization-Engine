@@ -1,0 +1,24 @@
+company_name,domain,industry,employees,revenue,country,technologies,email,website,decision_maker,linkedin_url,lead_status
+AetherCloud Systems,aethercloud.io,SaaS,180,16000000,United States,"AWS, Kubernetes",contact@aethercloud.io,https://aethercloud.io,Marcus Vance,https://linkedin.com/company/aethercloud,New Lead
+NexusFlow AI,nexusflow.ai,SaaS,240,21000000,United States,"GCP, PyTorch",info@nexusflow.ai,https://nexusflow.ai,Elena Rostova,https://linkedin.com/company/nexusflow,New Lead
+OmniMetrics Platform,omnimetrics.net,SaaS,95,8900000,Canada,"AWS, Snowflake",sales@omnimetrics.net,https://omnimetrics.net,David Kim,https://linkedin.com/company/omnimetrics,New Lead
+DataGrid Core,datagridcore.app,SaaS,310,27000000,United States,"Azure, PostgreSQL",hello@datagridcore.app,https://datagridcore.app,Sarah Jenkins,https://linkedin.com/company/datagridcore,New Lead
+CyberShield Hub,cybershieldhub.sec,SaaS,420,38000000,United Kingdom,"AWS, Palo Alto",sec@cybershieldhub.sec,https://cybershieldhub.sec,Arthur Pendelton,https://linkedin.com/company/cybershieldhub,New Lead
+SyncScale Tech,syncscale.io,SaaS,150,13200000,United States,"HubSpot, Stripe",contact@syncscale.io,https://syncscale.io,Rachel Green,https://linkedin.com/company/syncscale,New Lead
+PulseOps Global,pulseops.co,SaaS,270,23500000,Germany,"AWS, Datadog",admin@pulseops.co,https://pulseops.co,Lucas Webber,https://linkedin.com/company/pulseops,New Lead
+TalentStack AI,talentstack.ai,SaaS,115,9800000,United States,"GCP, OpenAI",people@talentstack.ai,https://talentstack.ai,Amanda Waller,https://linkedin.com/company/talentstack,New Lead
+FortressCloud,fortresscloud.io,SaaS,380,33000000,United States,"AWS, CrowdStrike",info@fortresscloud.io,https://fortresscloud.io,Victor Stone,https://linkedin.com/company/fortresscloud,New Lead
+FlowMatrix Dev,flowmatrix.dev,SaaS,135,12000000,United Kingdom,"Kubernetes, AWS",ops@flowmatrix.dev,https://flowmatrix.dev,Julian Bashir,https://linkedin.com/company/flowmatrix,New Lead
+StrataSphere,stratasphere.io,SaaS,285,24500000,United States,"AWS, Salesforce",contact@stratasphere.io,https://stratasphere.io,Diana Prince,https://linkedin.com/company/stratasphere,New Lead
+FinLogic Hub,finlogichub.co,SaaS,205,18800000,United Kingdom,"Stripe, Plaid",info@finlogichub.co,https://finlogichub.co,Bruce Wayne,https://linkedin.com/company/finlogichub,New Lead
+CareCloud Systems,carecloud.health,SaaS,330,30000000,United States,"Azure, FHIR",support@carecloud.health,https://carecloud.health,Clark Kent,https://linkedin.com/company/carecloud,New Lead
+CartPulse Engine,cartpulse.app,SaaS,165,14200000,Canada,"Shopify, Klaviyo",sales@cartpulse.app,https://cartpulse.app,Barry Allen,https://linkedin.com/company/cartpulse,New Lead
+SynapseGrid,synapsegrid.de,SaaS,490,46000000,Germany,"AWS, SAP",contact@synapsegrid.de,https://synapsegrid.de,Hal Jordan,https://linkedin.com/company/synapsegrid,New Lead
+WorkSuite AI,worksuiteai.io,SaaS,120,10500000,United States,"HubSpot, Workday",hello@worksuiteai.io,https://worksuiteai.io,Arthur Curry,https://linkedin.com/company/worksuiteai,New Lead
+ShieldOps AI,shieldops.ai,SaaS,305,26500000,United States,"AWS, Cloudflare",info@shieldops.ai,https://shieldops.ai,Oliver Queen,https://linkedin.com/company/shieldops,New Lead
+VelocityScale,velocityscale.com,SaaS,155,13000000,United Kingdom,"GCP, Terraform",ops@velocityscale.com,https://velocityscale.com,Ray Palmer,https://linkedin.com/company/velocityscale,New Lead
+NeuroCloud Tech,neurocloud.ai,SaaS,260,22500000,United States,"AWS, PyTorch",tech@neurocloud.ai,https://neurocloud.ai,Miles Dyson,https://linkedin.com/company/neurocloud,New Lead
+InfraStack IO,infrastack.io,SaaS,415,37500000,United States,"Azure, Docker",contact@infrastack.io,https://infrastack.io,Sarah Connor,https://linkedin.com/company/infrastack,New Lead
+InsightOps Analytics,insightops.dev,SaaS,190,16200000,Canada,"GCP, Snowflake",sales@insightops.dev,https://insightops.dev,Elliot Alderson,https://linkedin.com/company/insightops,New Lead
+ZenithCloud Platform,zenithcloud.net,SaaS,340,29500000,United States,"AWS, Salesforce",hello@zenithcloud.net,https://zenithcloud.net,Angela Moss,https://linkedin.com/company/zenithcloud,New Lead
+Pending Audit Enterprise,,SaaS,100,5000000,United States,"Salesforce",review@pendingaudit.com,https://pendingaudit.com,Jane Doe,https://linkedin.com/company/pendingaudit,Under Review
