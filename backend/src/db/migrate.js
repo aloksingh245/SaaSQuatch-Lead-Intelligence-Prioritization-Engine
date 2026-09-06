@@ -133,11 +133,16 @@ async function migrate() {
     console.log('[migrate] Done. All tables created/verified.');
   } catch (err) {
     console.error('[migrate] Error:', err.message);
-    process.exit(1);
+    throw err;
   } finally {
     client.release();
-    await pool.end();
   }
 }
 
-migrate();
+if (require.main === module) {
+  migrate()
+    .then(() => pool.end())
+    .catch(() => process.exit(1));
+}
+
+module.exports = migrate;

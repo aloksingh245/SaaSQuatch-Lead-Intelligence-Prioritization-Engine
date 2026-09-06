@@ -206,11 +206,16 @@ async function seed() {
   } catch (err) {
     await client.query('ROLLBACK');
     console.error('[seed] Error:', err.message);
-    process.exitCode = 1;
+    throw err;
   } finally {
     client.release();
-    await pool.end();
   }
 }
 
-seed();
+if (require.main === module) {
+  seed()
+    .then(() => pool.end())
+    .catch(() => process.exit(1));
+}
+
+module.exports = seed;
