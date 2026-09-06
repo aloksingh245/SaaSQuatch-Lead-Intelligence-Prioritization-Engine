@@ -15,6 +15,22 @@ require('dotenv').config();
 
 const express = require('express');
 const morgan  = require('morgan');
+const pool = require('./db/pool');
+const migrate = require('./db/migrate');
+const seed = require('./db/seed');
+
+// Run migrations & seeding automatically on server start
+(async () => {
+  try {
+    console.log('[DB] Running auto-migrations...');
+    await migrate();
+    console.log('[DB] Running auto-seed...');
+    await seed();
+    console.log('[DB] Database auto-initialization complete.');
+  } catch (err) {
+    console.error('[DB] Auto-migration/seed notice:', err.message);
+  }
+})();
 const path    = require('path');
 const fs      = require('fs');
 
